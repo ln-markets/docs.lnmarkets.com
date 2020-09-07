@@ -2,6 +2,10 @@
 
 set -o errexit
 
+cp ./images/logo.png ./slate/source/images/logo.png
+
+cp ./_api.md ./slate/source/includes/_api.md
+
 cd docs
 
 for filename in *.md

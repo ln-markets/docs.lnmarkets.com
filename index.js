@@ -7,7 +7,7 @@ const converter = require('widdershins')
 const SwaggerParser = require('@apidevtools/swagger-parser')
 
 const apiPath = path.join(__dirname, './spec/openapi.yaml')
-const slateFile = path.join(__dirname, './docs/api.md')
+const slateFile = path.join(__dirname, './_api.md')
 const JSONFile = path.join(__dirname, './dist/openapi.json')
 
 const openApiToSlate = async () => {

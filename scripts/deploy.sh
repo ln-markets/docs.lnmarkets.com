@@ -2,9 +2,6 @@
 
 set -o errexit
 
-deploy_directory=build
-deploy_branch=gh-pages
-
 default_username=${GIT_DEPLOY_USERNAME:-deploy.sh}
 default_email=${GIT_DEPLOY_EMAIL:-}
 
