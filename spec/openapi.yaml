@@ -127,7 +127,7 @@ components:
     cookieAuth:
       type: apiKey
       in: cookie
-      name: session # Will be automaticly changed by loaders/express.js
+      name: session
 
     jwtAuth:
       type: http
