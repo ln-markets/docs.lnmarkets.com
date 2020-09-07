@@ -1,0 +1,57 @@
+tags:
+  - Login
+
+security: []
+deprecated: false
+description: 'Use the browser extension [Joule](https://lightningjoule.com/) to authentificate user.'
+operationId: Login_loginJoule
+
+requestBody:
+  required: true
+  content:
+    application/json:
+      schema:
+        type: object
+        required:
+          - 'message'
+          - 'signature'
+          - 'alias'
+        properties:
+          'message':
+            type: string
+            example: 'Test-Joule'
+          'signature':
+            type: string
+            example: 'rd1nn7qbnibf58mzaknokqu6eciiqr64gahrzzxy3h8ybdygbun7s86zrms1dedqnh7t4gxz3esqmaqi9pkf85f48rexai7qztbdznfp'
+          'alias':
+            type: string
+            example: 'Test-node'
+        additionalProperties: false
+
+responses:
+  200:
+    description: 'Sucessfuly logged user.'
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            'username':
+              type: string
+              example: 'Test-node'
+            'balance':
+              type: string
+              example: '0'
+            'linkingpublickey':
+              type: string
+              example: '02b21cc4667e2d5e14920013d187d2af8c3ccfd32a310f63c7767cf8564f126357'
+            'account_type':
+              type: string
+              example: 'joule'
+    headers:
+      Set-Cookie:
+        schema:
+          type: string
+
+  400:
+    $ref: '../../../responses.yaml#/badParameters'

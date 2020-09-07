@@ -1,0 +1,135 @@
+openapi: '3.0.3'
+
+info:
+  title: 'LN-Markets API'
+  description: 'Trade derivatives on the **[Lightning Network](https://lightning.network/).**'
+  version: '1.0.0'
+
+servers:
+  - description: 'Mainnet API'
+    url: 'https://api.lnmarkets.com'
+
+tags:
+  - name: LNURL
+    description: 'Interactions with Lightning Network'
+
+  - name: Login
+    description: 'Authentification processes'
+
+  - name: Positions
+    description: 'Interactions with the market'
+
+  - name: User
+    description: 'Interactions with the website'
+
+  - name: State
+    description: 'Services availability'
+
+security:
+  - cookieAuth: []
+  - jwtAuth: []
+
+paths:
+  '/login/credentials':
+    get:
+      $ref: 'paths/login/credentials/get.yaml'
+
+    put:
+      $ref: 'paths/login/credentials/put.yaml'
+
+    post:
+      $ref: 'paths/login/credentials/post.yaml'
+
+  '/lnurl/a':
+    get:
+      $ref: 'paths/lnurl/a/get.yaml'
+
+  '/lnurl/a/c':
+    get:
+      $ref: 'paths/lnurl/a/c/get.yaml'
+
+  '/lnurl/w':
+    get:
+      $ref: 'paths/lnurl/w/get.yaml'
+
+  '/lnurl/w/r':
+    get:
+      $ref: 'paths/lnurl/w/r/get.yaml'
+
+  '/login/joule':
+    post:
+      $ref: 'paths/login/joule/post.yaml'
+
+  '/positions':
+    get:
+      $ref: 'paths/position/get.yaml'
+
+    put:
+      $ref: 'paths/position/put.yaml'
+
+    post:
+      $ref: 'paths/position/post.yaml'
+
+    delete:
+      $ref: 'paths/position/delete.yaml'
+
+  '/positions/cancel':
+    post:
+      $ref: 'paths/position/cancel/post.yaml'
+
+  '/state/api':
+    get:
+      $ref: 'paths/state/api/get.yaml'
+
+  '/state/node':
+    get:
+      $ref: 'paths/state/node/get.yaml'
+
+  '/user':
+    get:
+      $ref: 'paths/user/get.yaml'
+
+    put:
+      $ref: 'paths/user/put.yaml'
+
+  '/user/deposit':
+    post:
+      $ref: 'paths/user/deposit/post.yaml'
+
+  '/user/history':
+    get:
+      $ref: 'paths/user/history/get.yaml'
+
+  '/user/jwt':
+    get:
+      $ref: 'paths/user/jwt/get.yaml'
+
+    delete:
+      $ref: 'paths/user/jwt/delete.yaml'
+
+    post:
+      $ref: 'paths/user/jwt/post.yaml'
+
+  '/user/withdraw':
+    post:
+      $ref: 'paths/user/withdraw/post.yaml'
+
+  '/user/withdraw/lnurl':
+    post:
+      $ref: 'paths/user/withdraw/lnurl/post.yaml'
+
+  '/user/logout':
+    post:
+      $ref: 'paths/user/logout/post.yaml'
+
+components:
+  securitySchemes:
+    cookieAuth:
+      type: apiKey
+      in: cookie
+      name: session # Will be automaticly changed by loaders/express.js
+
+    jwtAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT

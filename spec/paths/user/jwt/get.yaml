@@ -1,0 +1,42 @@
+tags:
+  - User
+
+security:
+  - cookieAuth: []
+
+deprecated: false
+summary: 'Lists active JSON Web Tokens.'
+description: 'Retrieves the list of active JSON Web Token user currently holds.'
+operationId: User_GetJWTList
+
+responses:
+  200:
+    description: 'Token list retrieved.'
+    content:
+      application/json:
+        schema:
+          type: array
+          items:
+            type: object
+            properties:
+              'aud':
+                type: array
+                items:
+                  type: string
+                  enum: ['position', 'withdraw', 'deposit', 'user']
+                uniqueItems: true
+                maxItems: 4
+              'exp':
+                type: string
+                format: date-time
+              'iat':
+                type: string
+                format: date-time
+              'jti':
+                type: string
+                example: 'ckea35me20019r8u36374585f'
+              'revoked':
+                type: boolean
+
+  401:
+    $ref: '../../../responses.yaml#/unauthorized'

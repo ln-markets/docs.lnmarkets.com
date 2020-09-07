@@ -1,0 +1,52 @@
+tags:
+  - Positions
+
+security:
+  - jwtAuth: ['positions']
+  - cookieAuth: []
+
+deprecated: false
+summary: 'Positions history. (Rework API Response - Object with Array of Objects)'
+description: 'Retrieves either opened, closed or all positions.'
+operationId: Position_getPositionList
+
+parameters:
+  - name: open
+    in: query
+    description: 'List opened positions.'
+    schema:
+      type: boolean
+      default: true
+
+  - name: closed
+    in: query
+    description: 'List closed positions.'
+    schema:
+      type: boolean
+      default: false
+
+  - name: all
+    in: query
+    description: 'List all positions.'
+    schema:
+      type: boolean
+      default: false
+
+responses:
+  200:
+    description: 'Positions history sucessfuly fetched.'
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            'positions':
+              type: array
+              items:
+                $ref: '../../schemas/position.yaml'
+
+  400:
+    $ref: '../../responses.yaml#/badParameters'
+
+  401:
+    $ref: '../../responses.yaml#/unauthorized'

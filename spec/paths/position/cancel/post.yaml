@@ -1,0 +1,35 @@
+tags:
+  - Positions
+
+security:
+  - jwtAuth: ['positions']
+  - cookieAuth: []
+
+deprecated: false
+description: 'Cancel the position linked to the given `pid`.**Only works on positions that are not currently filled**.'
+operationId: Position_cancelPosition
+
+requestBody:
+  description: 'Payload containing the position id that will be cancelled.'
+  required: true
+  content:
+    application/json:
+      schema:
+        type: object
+        required:
+        - 'pid'
+        properties:
+          'pid':
+            type: string
+            pattern: '^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$'
+            example: 'b87eef8a-52ab-2fea-1adc-c41fba870b0f'
+
+responses:
+  200:
+    description: 'Successfully cancelled the given position.'
+
+  400:
+    $ref: '../../../responses.yaml#/badParameters'
+
+  401:
+    $ref: '../../../responses.yaml#/unauthorized'

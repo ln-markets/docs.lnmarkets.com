@@ -1,0 +1,68 @@
+tags:
+  - LNURL
+
+security: []
+
+deprecated: false
+summary: 'Second LNURL withdraw request.'
+description: 'Ask the Lightning wallet to create an invoice with amount and description.'
+operationId: LNURL_WithdrawRequest
+
+parameters:
+  - name: signature
+    in: query
+    required: true
+    description: 'HMAC payload signature.'
+    schema:
+      type: string
+
+  - name: 'n'
+    in: query
+    required: true
+    description: 'Nonce.'
+    schema:
+      type: string
+      minLength: 32
+      maxLength: 32
+
+  - name: expiry
+    in: query
+    description: 'Timestamp when the LNURL is expired.'
+    required: true
+    schema:
+      type: integer
+      format: int32
+      minimum: 0
+      example: 45
+
+responses:
+  200:
+    description: 'LNURL withdraw invoice parameter.'
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            'callback':
+              type: string
+              example: 'https://api.lnmarkets.com/lnurl/w'
+            'defaultDescription':
+              type: string
+              example: 'LN Markets withdraw'
+            'tag':
+              type: string
+              example: 'withdrawRequest'
+            'maxWithdrawable':
+                type: integer
+                format: int32
+                example: 1000
+            'minWithdrawable':
+                type: integer
+                format: int32
+                example: 1000
+            'k1':
+              type: string
+              example: '31c92c1bd79d2ae5f96a153ceda105cb67888c61bfb76baa1d2505a6bf8a06ca'
+
+  400:
+    $ref: '../../../../responses.yaml#/badParameters'

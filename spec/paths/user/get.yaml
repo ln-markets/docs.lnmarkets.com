@@ -1,0 +1,35 @@
+tags:
+  - User
+
+security:
+  - jwtAuth: ['user']
+  - cookieAuth: []
+
+deprecated: false
+summary: 'Retrieves user informations.'
+description: 'Fetches UID, username, account type and current balance.'
+operationId: User_getUser
+
+responses:
+  200:
+    description: 'User found and informations are fetched.'
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            'uid':
+              type: string
+              example: 'd068f829-26e6-4743-b10d-ebb5a83b3624'
+            'balance':
+              type: string
+              example: '361086'
+            'username':
+              type: string
+              example: 'Test-user'
+            'account_type':
+              type: string
+              example: 'credentials'
+
+  401:
+    $ref: '../../responses.yaml#/unauthorized'

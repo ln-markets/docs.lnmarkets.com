@@ -1,0 +1,51 @@
+tags:
+  - User
+
+security:
+  - cookieAuth: []
+
+deprecated: false
+summary: 'Create a new JSON Web Token.'
+description: 'Using the given scopes, allow the token bearer to get access to different parts of the public API.'
+operationId: User_CreateJWT
+
+requestBody:
+  description: 'Scopes of authorization that the token will grant to the bearer.'
+  required: true
+  content:
+    application/json:
+      schema:
+        type: object
+        required:
+        - scopes
+        - expiry
+        properties:
+          'scopes':
+            type: array
+            items:
+              type: string
+              enum: ['deposit', 'withdraw', 'positions', 'user']
+              example: ['deposit', 'withdraw']
+            uniqueItems: true
+            maxItems: 4
+          'expiry':
+            type: integer
+            format: int32
+            minimum: 0
+            example: 86400
+
+responses:
+  200:
+    description: 'Token successfuly created, its Base64URL encoded signature is returned for future use.'
+    content:
+      application/json:
+        schema:
+          properties:
+            'signature':
+              type: string
+              example: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjMwMDAiLCJpYXQiOjE1OTgwNTg2NDQsInNjb3BlcyI6WyJ3aXRoZHJhdyIsImRlcG9zaXQiXX0.xJ3f5eMeRiN0eSzo3IDviny9B9v_-bLg4t_EWmXFBxc'
+  400:
+    $ref: '../../../responses.yaml#/badParameters'
+
+  401:
+    $ref: '../../../responses.yaml#/unauthorized'

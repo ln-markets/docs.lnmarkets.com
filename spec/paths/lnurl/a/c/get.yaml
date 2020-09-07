@@ -1,0 +1,21 @@
+tags:
+  - LNURL
+
+security: []
+
+deprecated: false
+summary: 'LNURL Auth creation.'
+description: 'LNURL string used  used to create a account or connect to a existing account.'
+operationId: LNURL_authCreate
+
+responses:
+  200:
+    description: 'Bech32 encoded string.'
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            'lnurl':
+              type: string
+              example: 'lnurl1dp68gup69uhkcmmrv9kxsmmnwsarxvpsxqhkcmn4wfkz7cflw3skw0tvdankjm3xdvcn6venvgcrjenpx3nrwdtpxsur2vfsvdjk2dfkxe3kgceexymkgcmrxpjkgc3jvgmrqdnzvvurjwtr89jk2dp4vccrxvmrvvmxzdehxuejv6rdv93n6wpkv56rxcf4xqcxgwfsvsuxget9vymnqcfnv43rgwfjv5ex2cn9vyckgwtyvejrgc3excekyetpx43rvd3nxeskxvm9xqcxvwtpv5mq9uwr0k'

@@ -1,0 +1,79 @@
+tags:
+  - User
+
+security:
+  - jwtAuth: ['user']
+  - cookieAuth: []
+
+deprecated: false
+summary: '(Rework API Response - Object with Array of Objects)'
+description: 'Retrieves all funds that either went in or out of the **[Lightning channel](https://medium.com/suredbits/lightning-101-what-are-lightning-channels-cfb80f440298)** between user and LN-Markets.'
+operationId: User_getHistory
+
+parameters:
+  - name: 'type'
+    in: query
+    description: 'Which kind of transactions will be fetched.'
+    required: true
+    schema:
+      type: string
+      pattern: '^[a-z]+$'
+      enum: ['withdraw', 'deposit']
+
+responses:
+  200:
+    description: 'History sucessfully pulled.'
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            'transaction':
+              type: array
+              items:
+                type: object
+                properties:
+                  'amount':
+                    type: string
+                    example: '99400'
+                  'creation_ts':
+                    type: string
+                    format: date-time
+                  'details':
+                    type: string
+                    nullable: true
+                    example: null
+                  'did':
+                    type: string
+                    example: '269157f3-d4a1-4493-afcb-5e8fdaa49288'
+                  'fail':
+                    type: boolean
+                    example: false
+                  'fail_reason':
+                    type: string
+                    nullable: true
+                    example: null
+                  'fail_ts':
+                    type: string
+                    format: date-time
+                    nullable: true
+                    example: null
+                  'payment_hash':
+                    type: string
+                    example: '33f45c13c7ddcae46c6732414552893ca599f9399c62ffc2cfae209e8b17c5c3'
+                  'success':
+                    type: boolean
+                  'sucess_ts':
+                    type: string
+                    format: date-time
+                    nullable: true
+                    example: null
+                  'uid':
+                    type: string
+                    example: 'd068f829-26e6-4743-b10d-ebb5a83b3624'
+
+  400:
+    $ref: '../../../responses.yaml#/badParameters'
+
+  401:
+    $ref: '../../../responses.yaml#/unauthorized'

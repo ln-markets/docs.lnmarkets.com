@@ -1,0 +1,22 @@
+tags:
+  - State
+
+security: []
+deprecated: false
+summary: 'module statuses.'
+description: 'Shows available interactions with the platform.'
+operationId: State_apiState
+responses:
+  200:
+    description: 'Services are running (not necessarly available).'
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            'withdraw':
+              type: boolean
+            'newposition':
+              type: boolean
+            'accountCreation':
+              type: boolean
