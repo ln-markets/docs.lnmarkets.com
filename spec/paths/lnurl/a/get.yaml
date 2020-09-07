@@ -5,7 +5,9 @@ security: []
 
 deprecated: false
 summary: 'First request for LNURL where the wallet send the public key with the k1 and signature.'
-description: 'Verify the public key with the signature and the k1 to create a account or connect into a existing account.'
+description: |
+  Verify the public key with the signature and the k1 to create a account or connect into a existing account.
+  The connected state will be push over websockets
 operationId: LNURL_authentificate
 
 parameters:
@@ -16,6 +18,7 @@ parameters:
     schema:
       type: string
       pattern: '^[a-fA-F0-9]{32}$'
+    example: kyNVmR6HDtAW2aplYk6XmmpDrIhvzzq6
 
   - name: tag
     in: query
@@ -24,6 +27,7 @@ parameters:
     schema:
       type: string
       enum: ['login']
+    example: login
 
   - name: sig
     in: query
@@ -31,6 +35,7 @@ parameters:
     required: true
     schema:
       type: string
+    example: qep5sAqwleQS27UdKLGNsCBTWB4soS45us9vJAbk1hMEdCAXoeB6IESi3Nz7SXJM
 
   - name: key
     in: query
@@ -38,6 +43,7 @@ parameters:
     required: true
     schema:
       type: string
+    example: Yc4h1Z5BZVmgmVQfIbdPWRVj9kHAo3uf
 
   - name: hmac
     in: query
@@ -45,6 +51,7 @@ parameters:
     required: true
     schema:
       type: string
+    example: kuSHSXXDiP4qofiL2LGelesLLlRXUCJd
 
   - name: t
     in: query
@@ -52,6 +59,7 @@ parameters:
     schema:
       type: string
       pattern: '^[0-9]+$'
+    example: '1599492534790'
 
 responses:
   200:

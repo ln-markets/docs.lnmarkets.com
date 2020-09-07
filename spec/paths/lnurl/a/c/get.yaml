@@ -4,8 +4,10 @@ tags:
 security: []
 
 deprecated: false
-summary: 'LNURL Auth creation.'
-description: 'LNURL string used  used to create a account or connect to a existing account.'
+summary: 'LNURL Auth String'
+description: |
+  LNURL string used to create a account or connect to a existing account.
+  The user wallet will sign a message using the provided k1 inside the LNURL
 operationId: LNURL_authCreate
 
 responses:

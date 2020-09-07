@@ -13,12 +13,13 @@ const JSONFile = path.join(__dirname, './dist/openapi.json')
 const openApiToSlate = async () => {
   try {
     const options = {
-      httpsnippet: false,
-      codeSamples: false,
-      codeSamples: false,
+      codeSamples: true,
       resolve: true,
       source: apiPath,
-      omitHeader: true
+      omitHeader: true,
+      httpsnippet: true,
+      language_tabs: [{ python: "Python" }, { 'javascript--node': "Node.js" }, { shell: 'Shell' }],
+      language_clients: [{ shell: 'curl' }, { 'javascript--node': 'native' }, { python: "Python" }]
     }
 
     const raw = await fs.readFile(apiPath, 'utf-8')

@@ -6,12 +6,14 @@ security:
   - cookieAuth: []
 
 deprecated: false
-summary: 'Create a new position.'
+summary: 'New position'
 description: 'Send the order form parameters to add a new position in database.'
 operationId: Position_createPosition
 
 requestBody:
-  description: 'Payload with all the information needed to setup a new position. if `side="l"`, the property `price` must be included in the request to know when the position should be filled.'
+  description: |
+    Payload with all the information needed to setup a new position. 
+    if `side="l"`, the property `price` must be included in the request to know when the position should be filled.
   content:
     application/json:
       schema:
@@ -21,45 +23,52 @@ requestBody:
         - 'type'
         - 'margin'
         properties:
-          'type':
+          type:
             type: string
             enum: ['l', 'm']
-          'side':
+
+          side:
             type: string
             enum: ['b', 's']
-          'margin':
+
+          margin:
             type: integer
             format: int32
             minimum: 1
-          'leverage':
+
+          leverage:
             type: number
             format: double
             multipleOf: 0.0000000001
-          'quantity':
+
+          quantity:
             type: integer
             minimum: 1
-          'takeprofit':
+
+          takeprofit:
             type: number
             format: double
             multipleOf: 0.1
             minimum: 1
-          'stoploss':
+
+          stoploss:
             type: number
             format: double
             multipleOf: 0.1
             minimum: 1
-          'price':
+
+          price:
             type: number
             format: double
             multipleOf: 0.1
             minimum: 1
 
         example:
-          'type': 'm'
-          'side': 'b'
-          'margin': 100000
-          'leverage': 25
-          'quantity': 500
+          type: m
+          side: b
+          margin: 100000
+          leverage: 25
+          quantity: 500
 
 responses:
   200:
