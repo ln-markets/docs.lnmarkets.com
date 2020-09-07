@@ -2,7 +2,4 @@
 
 set -o errexit
 
-deploy_directory=dist
-deploy_branch=dist
-
-./scripts/deploy.sh
+deploy_branch=dist deploy_directory=dist ./scripts/deploy.sh

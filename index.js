@@ -34,6 +34,12 @@ const openApiToJSON = async () => {
   try {
     const parser = new SwaggerParser()
     const apiSpec = await parser.validate(apiPath)
+    await fs.mkdir(path.join(__dirname, 'dist')).catch(error => {
+      if (error.code !== 'EEXIST') {
+        return Promise.reject(error)
+      }
+      return Promise.resolve()
+    })
     await fs.writeFile(JSONFile, JSON.stringify(apiSpec, null, 2))
     return apiSpec
   } catch (error) {
