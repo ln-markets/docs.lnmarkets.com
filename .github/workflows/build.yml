@@ -57,7 +57,6 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: _api.md
-          path: ./_api.md
 
       - name: Setup ruby
         uses: ruby/setup-ruby@v1
@@ -112,5 +111,5 @@ jobs:
           name: dist
           path: ./dist
 
-      - name: Push the slate doc to github page
-        run: ./scrits/dist.sh
+      - name: Push the dist folder to dist branch
+        run: ./scripts/dist.sh
