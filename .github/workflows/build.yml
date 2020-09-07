@@ -95,7 +95,7 @@ jobs:
           path: ./build
 
       - name: Push the slate doc to github page
-        run: ./scrits/github-pages.sh
+        run: ./scripts/github-pages.sh
 
   dist:
     name: Dist
