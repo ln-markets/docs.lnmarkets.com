@@ -9,4 +9,4 @@ operationId: User_logout
 
 responses:
   200:
-    description: 'Sucessfuly logged out.'
+    description: 'Sucessfully logged out.'
