@@ -34,7 +34,7 @@ parameters:
 
 responses:
   200:
-    description: 'Positions history sucessfuly fetched.'
+    description: 'Positions history sucessfully fetched.'
     content:
       application/json:
         schema:
