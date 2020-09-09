@@ -72,7 +72,7 @@ requestBody:
 
 responses:
   200:
-    description: 'Position sucessfuly created.'
+    description: 'Position sucessfully created.'
     content:
       application/json:
         schema:
