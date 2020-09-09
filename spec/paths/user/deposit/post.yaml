@@ -6,7 +6,7 @@ security:
   - cookieAuth: []
 
 deprecated: false
-description: 'Move funds from user wallet to the **[Lightning channel](https://medium.com/suredbits/lightning-101-what-are-lightning-channels-cfb80f440298)** with LN-Markets.'
+description: 'Move funds from user wallet to the **[Lightning channel](https://medium.com/suredbits/lightning-101-what-are-lightning-channels-cfb80f440298)** with LN Markets.'
 operationId: User_deposit
 
 requestBody:
