@@ -10,7 +10,7 @@ description: 'Create a LNURL Withdraw.'
 operationId: User_withdrawLnurl
 
 requestBody:
-  description: 'Amount the user want to withdraw.'
+  description: 'Amount the user wants to withdraw.'
   required: true
   content:
     application/json:
