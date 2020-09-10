@@ -17,7 +17,7 @@ parameters:
     required: true
     schema:
       type: string
-      pattern: '^[a-fA-F0-9]{32}$'
+      pattern: '^[a-fA-F0-9]{64}$'
     example: kyNVmR6HDtAW2aplYk6XmmpDrIhvzzq6
 
   - name: tag
