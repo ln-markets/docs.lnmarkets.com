@@ -14,7 +14,7 @@ tags:
     description: 'Interactions with Lightning Network'
 
   - name: Login
-    description: 'Authentification processes'
+    description: 'Authentication processes'
 
   - name: Positions
     description: 'Interactions with the market'

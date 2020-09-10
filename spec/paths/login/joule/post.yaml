@@ -3,7 +3,7 @@ tags:
 
 security: []
 deprecated: false
-description: 'Use the browser extension [Joule](https://lightningjoule.com/) to authentificate user.'
+description: 'Use the browser extension [Joule](https://lightningjoule.com/) to authenticate user.'
 operationId: Login_loginJoule
 
 requestBody:

@@ -8,7 +8,7 @@ description: 'Shows available interactions with the platform.'
 operationId: State_apiState
 responses:
   200:
-    description: 'Services are running (not necessarly available).'
+    description: 'Services are running (not necessarily available).'
     content:
       application/json:
         schema:

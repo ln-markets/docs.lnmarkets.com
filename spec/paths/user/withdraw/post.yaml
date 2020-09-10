@@ -6,7 +6,7 @@ security:
   - cookieAuth: []
 
 deprecated: false
-description: 'Move funds from the **[Lightning channel](https://medium.com/suredbits/lightning-101-what-are-lightning-channels-cfb80f440298)** with LN-Markets to user wallet by using an invoice directly.'
+description: 'Move funds from the **[Lightning channel](https://medium.com/suredbits/lightning-101-what-are-lightning-channels-cfb80f440298)** with LN Markets to user wallet by using an invoice directly.'
 operationId: User_withdraw
 
 requestBody:
