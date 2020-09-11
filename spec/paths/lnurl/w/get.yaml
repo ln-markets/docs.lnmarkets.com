@@ -15,8 +15,8 @@ parameters:
     description: 'Random hex string to identify the user Lightning Wallet.'
     schema:
       type: string
-      minLength: 32
-      maxLength: 32
+      minLength: 64
+      maxLength: 64
 
   - name: pr
     in: query

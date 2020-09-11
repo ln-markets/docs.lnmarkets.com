@@ -22,8 +22,8 @@ parameters:
     description: 'Nonce.'
     schema:
       type: string
-      minLength: 32
-      maxLength: 32
+      minLength: 64
+      maxLength: 64
 
   - name: expiry
     in: query
@@ -31,9 +31,8 @@ parameters:
     required: true
     schema:
       type: integer
-      format: int32
       minimum: 0
-      example: 45
+      example: 1599841538304
 
 responses:
   200:
