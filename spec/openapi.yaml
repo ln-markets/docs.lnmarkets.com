@@ -115,7 +115,7 @@ paths:
       $ref: 'paths/user/withdraw/post.yaml'
 
   '/user/withdraw/lnurl':
-    get:
+    post:
       $ref: 'paths/user/withdraw/lnurl/post.yaml'
 
   '/user/logout':
