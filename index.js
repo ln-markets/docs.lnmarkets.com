@@ -18,6 +18,7 @@ const openApiToSlate = async () => {
       source: apiPath,
       omitHeader: true,
       httpsnippet: true,
+      tocSummary: true,
       language_tabs: [{ python: "Python" }, { 'javascript--node': "Node.js" }, { shell: 'Shell' }],
       language_clients: [{ shell: 'curl' }, { 'javascript--node': 'native' }, { python: "Python" }]
     }
