@@ -6,11 +6,11 @@ security:
   - cookieAuth: []
 
 deprecated: false
-description: 'Move funds from the **[Lightning channel](https://medium.com/suredbits/lightning-101-what-are-lightning-channels-cfb80f440298)** with LN Markets to user wallet by using an invoice directly.'
+description: Move funds from the **[Lightning channel](https://medium.com/suredbits/lightning-101-what-are-lightning-channels-cfb80f440298)** with LN Markets to user wallet by using an invoice directly.
 operationId: User_withdraw
 
 requestBody:
-  description: 'Payload that countains all informations to initiate a new withdraw.'
+  description: Payload that countains all informations to initiate a new withdraw.
   required: true
   content:
     application/json:
@@ -27,15 +27,15 @@ requestBody:
           'unit':
             type: string
             pattern: '^[a-zA-Z0-9]+$'
-            example: 'sat'
+            example: sat
           'invoice':
             type: string
             pattern: '^[a-zA-Z0-9]+$'
-            example: 'lntb100u1p0jr0ykpp5ldx3un8ym6z0uwjxd083mp2rcr04d2dv0fkx729ajs62pq9pfjqqdql23jhxapdwa5hg6rywfshwttjda6hgegcqzpgxq92fjuqsp5m6q0fzynu2qr624mzjc285duurhccmkfg94mcdctc0p9s7qkrq8q9qy9qsqp862cjznpey5r76e7amhlpmhwn2c7xvke59srhv0xf75m4ksjm4hzn8y9xy0zs5ec6gxmsr8gj4q23w8ped32llscjcneyjz2afeapqpu4gamz'
+            example: lntb100u1p0jr0ykpp5ldx3un8ym6z0uwjxd083mp2rcr04d2dv0fkx729ajs62pq9pfjqqdql23jhxapdwa5hg6rywfshwttjda6hgegcqzpgxq92fjuqsp5m6q0fzynu2qr624mzjc285duurhccmkfg94mcdctc0p9s7qkrq8q9qy9qsqp862cjznpey5r76e7amhlpmhwn2c7xvke59srhv0xf75m4ksjm4hzn8y9xy0zs5ec6gxmsr8gj4q23w8ped32llscjcneyjz2afeapqpu4gamz
 
 responses:
   200:
-    description: 'Funds are removed from user account and added to user wallet.'
+    description: Funds are removed from user account and added to user wallet.
     content:
       application/json:
         schema:
@@ -46,13 +46,13 @@ responses:
               example: 10000
             'paymentsecret':
               type: string
-              example: '1b84c9852e929f99700b6cbabc4ca9d1593afc3736938b348c4d3d143e418bd4'
+              example: 1b84c9852e929f99700b6cbabc4ca9d1593afc3736938b348c4d3d143e418bd4
             'wid':
               type: string
-              example: '3fcbd8b7-c35b-4e83-87bc-111d5bd186b7'
+              example: 3fcbd8b7-c35b-4e83-87bc-111d5bd186b7
             'paymenthash':
               type: string
-              example: 'fb4d1e4ce4de84fe3a466bcf1d8543c0df56a9ac7a6c6f28bd9434a080a14c80'
+              example: fb4d1e4ce4de84fe3a466bcf1d8543c0df56a9ac7a6c6f28bd9434a080a14c80
 
   400:
     $ref: '../../../responses.yaml#/badParameters'

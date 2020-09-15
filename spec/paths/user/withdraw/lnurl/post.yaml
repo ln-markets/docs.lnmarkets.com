@@ -6,11 +6,11 @@ security:
   - cookieAuth: []
 
 deprecated: false
-description: 'Create a LNURL Withdraw.'
+description: Create a LNURL Withdraw.
 operationId: User_withdrawLnurl
 
 requestBody:
-  description: 'Amount the user wants to withdraw.'
+  description: Amount the user wants to withdraw.
   required: true
   content:
     application/json:
@@ -26,12 +26,12 @@ requestBody:
           'unit':
             type: string
             enum: ['sat', 'msat']
-            default: 'sat'
-            example: 'sat'
+            default: sat
+            example: sat
 
 responses:
   200:
-    description: 'Bech32 encoded string'
+    description: Bech32 encoded string
     content:
       application/json:
         schema:
@@ -39,7 +39,7 @@ responses:
           properties:
             'lnurl':
               type: string
-              example: 'LNURL1DP68GURN8GHJ7UM9WFMXJCM99E3K7MF0V9CXJ0M385EKVCENXC6R2C35XVUKXEFCV5MKVV34X5EKZD3EV56NYD3HXQURZEPEXEJXXEPNXSCRVWFNV9NXZCN9XQ6XYEFHVGCXXCMYXYMNSERXFQ5FNS'
+              example: LNURL1DP68GURN8GHJ7UM9WFMXJCM99E3K7MF0V9CXJ0M385EKVCENXC6R2C35XVUKXEFCV5MKVV34X5EKZD3EV56NYD3HXQURZEPEXEJXXEPNXSCRVWFNV9NXZCN9XQ6XYEFHVGCXXCMYXYMNSERXFQ5FNS
 
   400:
     $ref: '../../../../responses.yaml#/badParameters'

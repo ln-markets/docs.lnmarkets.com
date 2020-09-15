@@ -6,11 +6,11 @@ security:
   - cookieAuth: []
 
 deprecated: false
-description: 'Move funds from user wallet to the **[Lightning channel](https://medium.com/suredbits/lightning-101-what-are-lightning-channels-cfb80f440298)** with LN Markets.'
+description: Move funds from user wallet to the **[Lightning channel](https://medium.com/suredbits/lightning-101-what-are-lightning-channels-cfb80f440298)** with LN Markets.
 operationId: User_deposit
 
 requestBody:
-  description: 'Payload that contains all informations to initialize a new deposit.'
+  description: Payload that contains all informations to initialize a new deposit.
   required: true
   content:
     application/json:
@@ -27,12 +27,12 @@ requestBody:
           'unit':
             type: string
             pattern: '^[a-zA-Z0-9]+$'
-            default: 'sat'
-            example: 'sat'
+            default: sat
+            example: sat
 
 responses:
   200:
-    description: 'New deposit entry in database waiting for payment. Using `paymentRequest` afterwards, user will confirm the deposit and funds will be added to his account.'
+    description: New deposit entry in database waiting for payment. Using `paymentRequest` afterwards, user will confirm the deposit and funds will be added to his account.
     content:
       application/json:
         schema:
@@ -40,7 +40,7 @@ responses:
           properties:
             'paymentRequest':
               type: string
-              example: 'lntb100u1p0jrfz0pp5q0ntrkf052dvep8w6vf0z77rek3fz8xm6c2yau4zhy7f4mzauqgsdzcf3hy6ctjddjhgueqg3jhqmmnd96zqgmxxquryvesvv6z6dehv43z6drpvycj6wfevs6j6dmyxcunxefcxccxxvn9cqzpgxqzpdsp5z40mxcrfqtsxf55u9ju3lvqdw36htsjh4xl2ujrzdff3953fg2yq9qy9qsqv7gfvp0tryme3e8r5xfrpg39j645302fkggps4h5j0aj708lzdgh2dq3pdz6lqazgvkt3wm7qq20vcff46vu5549m3v2d6h0uw3sjacqrkjqcv'
+              example: lntb100u1p0jrfz0pp5q0ntrkf052dvep8w6vf0z77rek3fz8xm6c2yau4zhy7f4mzauqgsdzcf3hy6ctjddjhgueqg3jhqmmnd96zqgmxxquryvesvv6z6dehv43z6drpvycj6wfevs6j6dmyxcunxefcxccxxvn9cqzpgxqzpdsp5z40mxcrfqtsxf55u9ju3lvqdw36htsjh4xl2ujrzdff3953fg2yq9qy9qsqv7gfvp0tryme3e8r5xfrpg39j645302fkggps4h5j0aj708lzdgh2dq3pdz6lqazgvkt3wm7qq20vcff46vu5549m3v2d6h0uw3sjacqrkjqcv
             'expiry':
               type: integer
               example: 45

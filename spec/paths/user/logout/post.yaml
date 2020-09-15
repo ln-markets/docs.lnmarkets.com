@@ -4,9 +4,9 @@ tags:
 security: []
 
 deprecated: false
-description: 'Delete session cookie.'
+description: Delete session cookie.
 operationId: User_logout
 
 responses:
   200:
-    description: 'Sucessfully logged out.'
+    description: Sucessfully logged out.

@@ -15,10 +15,12 @@ properties:
     type: string
     format: date-time
     nullable: true
+    example: null
   'creation_ts':
     type: string
     format: date-time
     nullable: true
+    example: 020-09-15T10:50:40.332Z
   'exit_price':
     type: string
     example: '10010.0'
@@ -44,21 +46,22 @@ properties:
     example: '136536'
   'margin_wi':
     type: string
-    example: 'closed'
+    example: closed
   'market_filled_ts':
     type: string
     format: date-time
     nullable: true
+    example: 020-09-15T10:50:40.332Z
   'market_wi':
     type: string
-    example: 'filled'
+    example: filled
   'payment_hash':
     type: string
     nullable: true
     example: null
   'pid':
     type: string
-    example: '249dc818-f8a5-4713-a3a3-8fe85f2e8969'
+    example: 249dc818-f8a5-4713-a3a3-8fe85f2e8969
   'pl':
     type: string
     example: '-13640'
@@ -70,7 +73,7 @@ properties:
     example: '682'
   'side':
     type: string
-    example: 's'
+    example: s
   'sign':
     type: string
     example: '-1'
@@ -92,10 +95,10 @@ properties:
     example: null
   'type':
     type: string
-    example: 'm'
+    example: m
   'uid':
     type: string
-    example: 'd068f829-26e6-4743-b10d-ebb5a83b3624'
+    example: d068f829-26e6-4743-b10d-ebb5a83b3624
   'user_id':
     type: string
     nullable: true

@@ -1,29 +1,29 @@
 openapi: '3.0.3'
 
 info:
-  title: 'LN-Markets API'
-  description: 'Trade derivatives on the **[Lightning Network](https://lightning.network/).**'
+  title: LN-Markets API
+  description: Trade derivatives on the **[Lightning Network](https://lightning.network/).**
   version: '1.0.0'
 
 servers:
-  - description: 'Mainnet API'
-    url: 'https://api.lnmarkets.com'
+  - description: Mainnet API
+    url: https://api.lnmarkets.com
 
 tags:
   - name: LNURL
-    description: 'Interactions with Lightning Network'
+    description: Interactions with Lightning Network
 
   - name: Login
-    description: 'Authentication processes'
+    description: Authentication processes
 
   - name: Positions
-    description: 'Interactions with the market'
+    description: Interactions with the market
 
   - name: User
-    description: 'Interactions with the website'
+    description: Interactions with the website
 
   - name: State
-    description: 'Services availability'
+    description: Services availability
 
 security:
   - cookieAuth: []

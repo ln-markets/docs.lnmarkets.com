@@ -6,8 +6,8 @@ security:
   - cookieAuth: []
 
 deprecated: false
-summary: 'Update position parameters.'
-description: 'Allows user to modify `stoploss` and `takeprofit` parameters of an existing position.'
+summary: Update position parameters.
+description: Allows user to modify `stoploss` and `takeprofit` parameters of an existing position.
 operationId: Position_updatePosition
 
 requestBody:
@@ -25,11 +25,13 @@ requestBody:
             'pid':
               type: string
               pattern: '^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$'
+              example: b87eef8a-52ab-2fea-1adc-c41fba870b0f
             'takeprofit':
               type: number
               format: double
               minimum: 0
               multipleOf: 0.1
+              example: 9800.5
           additionalProperties: false
 
         - type: object
@@ -40,20 +42,18 @@ requestBody:
             'pid':
               type: string
               pattern: '^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$'
+              example: b87eef8a-52ab-2fea-1adc-c41fba870b0f
             'stoploss':
               type: number
               format: double
               minimum: 0
               multipleOf: 0.1
+              example: 6700
           additionalProperties: false
-
-      example:
-        'pid': 'b87eef8a-52ab-2fea-1adc-c41fba870b0f'
-        'takeprofit': 9800.5
 
 responses:
   200:
-    description: 'Says whether or not the position was updated.'
+    description: Says whether or not the position was updated.
     content:
       application/json:
         schema:
@@ -61,6 +61,7 @@ responses:
           properties:
             'success':
               type: boolean
+              example: true
 
   400:
     $ref: '../../responses.yaml#/badParameters'

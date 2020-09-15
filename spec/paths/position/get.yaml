@@ -6,35 +6,38 @@ security:
   - cookieAuth: []
 
 deprecated: false
-summary: 'Positions history. (Rework API Response - Object with Array of Objects)'
-description: 'Retrieves either opened, closed or all positions.'
+summary: Positions history. (Rework API Response - Object with Array of Objects)
+description: Retrieves either opened, closed or all positions.
 operationId: Position_getPositionList
 
 parameters:
   - name: open
     in: query
-    description: 'List opened positions.'
+    description: List opened positions.
     schema:
       type: boolean
       default: true
+      example: true
 
   - name: closed
     in: query
-    description: 'List closed positions.'
+    description: List closed positions.
     schema:
       type: boolean
       default: false
+      example: false
 
   - name: all
     in: query
-    description: 'List all positions.'
+    description: List all positions.
     schema:
       type: boolean
       default: false
+      example: false
 
 responses:
   200:
-    description: 'Positions history sucessfully fetched.'
+    description: Positions history sucessfully fetched.
     content:
       application/json:
         schema:

@@ -5,21 +5,21 @@ security:
   - cookieAuth: []
 
 deprecated: false
-summary: 'Revoked an active JSON Web Toekn.'
-description: 'Using the `jti` parameter, identifies and revoke usage of a given JWT.'
+summary: Revoked an active JSON Web Toekn.
+description: Using the `jti` parameter, identifies and revoke usage of a given JWT.
 operationId: User_RevokeJWT
 
 parameters:
   - name: jti
     in: query
-    description: 'Token unique identifier.'
+    description: Token unique identifier.
     schema:
       type: string
-      example: 'ckea35me20019r8u36374585f'
+      example: ckea35me20019r8u36374585f
 
 responses:
   200:
-    description: 'Token successfuly revoked.'
+    description: Token successfuly revoked.
 
   400:
     $ref: '../../../responses.yaml#/badParameters'

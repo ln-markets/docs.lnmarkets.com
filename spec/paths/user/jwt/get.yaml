@@ -5,13 +5,13 @@ security:
   - cookieAuth: []
 
 deprecated: false
-summary: 'Lists active JSON Web Tokens.'
-description: 'Retrieves the list of active JSON Web Token user currently holds.'
+summary: Lists active JSON Web Tokens.
+description: Retrieves the list of active JSON Web Token user currently holds.
 operationId: User_GetJWTList
 
 responses:
   200:
-    description: 'Token list retrieved.'
+    description: Token list retrieved.
     content:
       application/json:
         schema:
@@ -26,17 +26,21 @@ responses:
                   enum: ['position', 'withdraw', 'deposit', 'user']
                 uniqueItems: true
                 maxItems: 4
+                example: ['withdraw', 'deposit']
               'exp':
                 type: string
                 format: date-time
+                example: 020-09-15T10:50:40.332Z
               'iat':
                 type: string
                 format: date-time
+                example: 020-09-15T10:50:40.332Z
               'jti':
                 type: string
-                example: 'ckea35me20019r8u36374585f'
+                example: ckea35me20019r8u36374585f
               'revoked':
                 type: boolean
+                example: false
 
   401:
     $ref: '../../../responses.yaml#/unauthorized'

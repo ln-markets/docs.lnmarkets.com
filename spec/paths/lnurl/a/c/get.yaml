@@ -4,7 +4,7 @@ tags:
 security: []
 
 deprecated: false
-summary: 'LNURL Auth String'
+summary: LNURL Auth String
 description: |
   LNURL string used to create an account or connect to a existing account.
   The user wallet will sign a message using the provided k1 inside the LNURL.
@@ -12,7 +12,7 @@ operationId: LNURL_authCreate
 
 responses:
   200:
-    description: 'Bech32 encoded string.'
+    description: Bech32 encoded string.
     content:
       application/json:
         schema:
@@ -20,4 +20,4 @@ responses:
           properties:
             'lnurl':
               type: string
-              example: 'lnurl1dp68gup69uhkcmmrv9kxsmmnwsarxvpsxqhkcmn4wfkz7cflw3skw0tvdankjm3xdvcn6venvgcrjenpx3nrwdtpxsur2vfsvdjk2dfkxe3kgceexymkgcmrxpjkgc3jvgmrqdnzvvurjwtr89jk2dp4vccrxvmrvvmxzdehxuejv6rdv93n6wpkv56rxcf4xqcxgwfsvsuxget9vymnqcfnv43rgwfjv5ex2cn9vyckgwtyvejrgc3excekyetpx43rvd3nxeskxvm9xqcxvwtpv5mq9uwr0k'
+              example: lnurl1dp68gup69uhkcmmrv9kxsmmnwsarxvpsxqhkcmn4wfkz7cflw3skw0tvdankjm3xdvcn6venvgcrjenpx3nrwdtpxsur2vfsvdjk2dfkxe3kgceexymkgcmrxpjkgc3jvgmrqdnzvvurjwtr89jk2dp4vccrxvmrvvmxzdehxuejv6rdv93n6wpkv56rxcf4xqcxgwfsvsuxget9vymnqcfnv43rgwfjv5ex2cn9vyckgwtyvejrgc3excekyetpx43rvd3nxeskxvm9xqcxvwtpv5mq9uwr0k

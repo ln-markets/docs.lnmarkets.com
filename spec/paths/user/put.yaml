@@ -6,12 +6,12 @@ security:
   - cookieAuth: []
 
 deprecated: false
-summary: 'Update user informations.'
-description: 'Update the current password to the requested one.'
+summary: Update user informations.
+description: Update the current password to the requested one.
 operationId: User_updateUser
 
 requestBody:
-  description: 'Payload containing user credentials.'
+  description: Payload containing user credentials.
   required: true
   content:
     application/json:
@@ -27,18 +27,18 @@ requestBody:
             pattern: '^(?=\S)(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).\S{7,63}'
             minLength: 8
             maxLength: 64
-            example: 'Password01'
+            example: Password01
           'newPassword':
             type: string
             format: password
             pattern: '^(?=\S)(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).\S{7,63}'
             minLength: 8
             maxLength: 64
-            example: 'Password02'
+            example: Password02
 
 responses:
   200:
-    description: 'Password successfuly.'
+    description: Password successfuly.
 
   400:
     $ref: '../../responses.yaml#/badParameters'

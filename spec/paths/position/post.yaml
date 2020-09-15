@@ -6,13 +6,13 @@ security:
   - cookieAuth: []
 
 deprecated: false
-summary: 'New position'
-description: 'Send the order form parameters to add a new position in database.'
+summary: New position
+description: Send the order form parameters to add a new position in database.
 operationId: Position_createPosition
 
 requestBody:
   description: |
-    Payload with all the information needed to setup a new position. 
+    Payload with all the information needed to setup a new position.
     if `side="l"`, the property `price` must be included in the request to know when the position should be filled.
   content:
     application/json:
@@ -26,53 +26,56 @@ requestBody:
           type:
             type: string
             enum: ['l', 'm']
+            example: m
 
           side:
             type: string
             enum: ['b', 's']
+            example: b
 
           margin:
             type: integer
             format: int32
             minimum: 1
+            example: 100000
 
           leverage:
             type: number
             format: double
             multipleOf: 0.0000000001
+            minimum: 1
+            maximum: 50
+            example: 25
 
           quantity:
             type: integer
             minimum: 1
+            example: 250
 
           takeprofit:
             type: number
             format: double
             multipleOf: 0.1
             minimum: 1
+            example: 11110
 
           stoploss:
             type: number
             format: double
             multipleOf: 0.1
             minimum: 1
+            example: 6700
 
           price:
             type: number
             format: double
             multipleOf: 0.1
             minimum: 1
-
-        example:
-          type: m
-          side: b
-          margin: 100000
-          leverage: 25
-          quantity: 500
+            example: 10010
 
 responses:
   200:
-    description: 'Position sucessfully created.'
+    description: Position sucessfully created.
     content:
       application/json:
         schema:
