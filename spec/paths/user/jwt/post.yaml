@@ -5,12 +5,14 @@ security:
   - cookieAuth: []
 
 deprecated: false
-summary: Create a new JSON Web Token.
-description: Using the given scopes, allow the token bearer to get access to different parts of the public API.
+summary: Generate API Key
+description: |
+  Using the given scopes, allow the token bearer to get access to different parts of the public API.
 operationId: User_CreateJWT
 
 requestBody:
-  description: Scopes of authorization that the token will grant to the bearer.
+  description: |
+    Scopes of authorization that the token will grant to the bearer.
   required: true
   content:
     application/json:
@@ -28,6 +30,7 @@ requestBody:
               example: ['deposit', 'withdraw']
             uniqueItems: true
             maxItems: 4
+
           'expiry':
             type: integer
             format: int32
@@ -36,7 +39,8 @@ requestBody:
 
 responses:
   200:
-    description: Token successfuly created, its Base64URL encoded signature is returned for future use.
+    description: |
+      Token successfuly created, its Base64URL encoded signature is returned for future use.
     content:
       application/json:
         schema:

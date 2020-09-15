@@ -5,8 +5,9 @@ security:
   - cookieAuth: []
 
 deprecated: false
-summary: Revoked an active JSON Web Toekn.
-description: Using the `jti` parameter, identifies and revoke usage of a given JWT.
+summary: Revoke API Key
+description: |
+  Using the `jti` parameter, identifies and revoke usage of a given JWT.
 operationId: User_RevokeJWT
 
 parameters:
@@ -19,7 +20,8 @@ parameters:
 
 responses:
   200:
-    description: Token successfuly revoked.
+    description: |
+      Token successfuly revoked.
 
   400:
     $ref: '../../../responses.yaml#/badParameters'

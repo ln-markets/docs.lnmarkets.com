@@ -4,10 +4,10 @@ tags:
 security: []
 
 deprecated: false
-summary: First request for LNURL where the wallet send the public key with the k1 and signature.
+summary: Login via LNURL
 description: |
   Verify the public key with the signature and the k1 to create a account or connect into a existing account.
-  The connected state will be push over websockets
+  The connected state will be push over websockets.
 operationId: LNURL_authentificate
 
 parameters:

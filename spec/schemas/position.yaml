@@ -3,110 +3,139 @@ properties:
   'canceled':
     type: boolean
     example: false
+
   'canceled_ts':
     type: string
     format: date-time
     nullable: true
     example: null
+
   'closed':
     type: boolean
     example: true
+
   'closed_ts':
     type: string
     format: date-time
     nullable: true
     example: null
+
   'creation_ts':
     type: string
     format: date-time
     nullable: true
     example: 020-09-15T10:50:40.332Z
+
   'exit_price':
     type: string
     example: '10010.0'
+
   'funded':
     type: boolean
     example: true
+
   'funded_ts':
     type: string
     format: date-time
     nullable: true
     example: null
+
   'id':
     type: string
     example: '98'
+
   'leverage':
     type: string
     example: '50.0000'
+
   'liquidation':
     type: string
     example: '10194.0'
+
   'margin':
     type: string
     example: '136536'
+
   'margin_wi':
     type: string
     example: closed
+
   'market_filled_ts':
     type: string
     format: date-time
     nullable: true
     example: 020-09-15T10:50:40.332Z
+
   'market_wi':
     type: string
     example: filled
+
   'payment_hash':
     type: string
     nullable: true
     example: null
+
   'pid':
     type: string
     example: 249dc818-f8a5-4713-a3a3-8fe85f2e8969
+
   'pl':
     type: string
     example: '-13640'
   'price':
     type: string
     example: '9990.0'
+
   'quantity':
     type: string
     example: '682'
+
   'side':
     type: string
     example: s
+
   'sign':
     type: string
     example: '-1'
+
   'stoploss':
     type: string
     nullable: true
     example: null
+
   'stoploss_wi':
     type: string
     nullable: true
     example: null
+
   'takeprofit':
     type: string
     nullable: true
     example: null
+
   'takeprofit_wi':
     type: string
     nullable: true
     example: null
+
   'type':
     type: string
     example: m
+
   'uid':
     type: string
     example: d068f829-26e6-4743-b10d-ebb5a83b3624
+
   'user_id':
     type: string
     nullable: true
     example: null
+
   'wid':
     type: string
     nullable: true
     example: null
+
   'withdraw':
     type: boolean
     example: false

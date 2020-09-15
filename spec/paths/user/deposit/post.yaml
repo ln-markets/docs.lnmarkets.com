@@ -6,11 +6,14 @@ security:
   - cookieAuth: []
 
 deprecated: false
-description: Move funds from user wallet to the **[Lightning channel](https://medium.com/suredbits/lightning-101-what-are-lightning-channels-cfb80f440298)** with LN Markets.
+summary: Deposit funds
+description: |
+  Move funds from user wallet to the **[Lightning channel](https://medium.com/suredbits/lightning-101-what-are-lightning-channels-cfb80f440298)** with LN Markets.
 operationId: User_deposit
 
 requestBody:
-  description: Payload that contains all informations to initialize a new deposit.
+  description: |
+    Payload that contains all informations to initialize a new deposit.
   required: true
   content:
     application/json:
@@ -24,6 +27,7 @@ requestBody:
             minimum: 100
             maximum: 1000000
             example: 10000
+
           'unit':
             type: string
             pattern: '^[a-zA-Z0-9]+$'
@@ -32,7 +36,8 @@ requestBody:
 
 responses:
   200:
-    description: New deposit entry in database waiting for payment. Using `paymentRequest` afterwards, user will confirm the deposit and funds will be added to his account.
+    description: |
+      New deposit entry in database waiting for payment. Using `paymentRequest` afterwards, user will confirm the deposit and funds will be added to his account.
     content:
       application/json:
         schema:

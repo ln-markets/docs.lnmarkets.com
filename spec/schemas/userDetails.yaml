@@ -3,9 +3,11 @@ properties:
   'username':
     type: string
     example: Test-login
+
   'balance':
     type: string
     example: '0'
+
   'account_type':
     type: string
     example: credentials

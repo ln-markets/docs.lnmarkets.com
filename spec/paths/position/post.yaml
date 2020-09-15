@@ -7,13 +7,15 @@ security:
 
 deprecated: false
 summary: New position
-description: Send the order form parameters to add a new position in database.
+description: |
+  Send the order form parameters to add a new position in database.
 operationId: Position_createPosition
 
 requestBody:
   description: |
     Payload with all the information needed to setup a new position.
-    if `side="l"`, the property `price` must be included in the request to know when the position should be filled.
+
+    **If `type="l"`, the property `price` must be included in the request to know when the position should be filled.**
   content:
     application/json:
       schema:
@@ -75,7 +77,8 @@ requestBody:
 
 responses:
   200:
-    description: Position sucessfully created.
+    description: |
+      Position sucessfully created.
     content:
       application/json:
         schema:

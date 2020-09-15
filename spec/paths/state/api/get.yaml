@@ -3,12 +3,14 @@ tags:
 
 security: []
 deprecated: false
-summary: module statuses.
-description: Shows available interactions with the platform.
+summary: API
+description: |
+  Shows available interactions with the platform.
 operationId: State_apiState
 responses:
   200:
-    description: Services are running (not necessarily available).
+    description: |
+      Services are running (not necessarily available).
     content:
       application/json:
         schema:
@@ -17,9 +19,11 @@ responses:
             'withdraw':
               type: boolean
               example: true
+
             'newposition':
               type: boolean
               example: true
+
             'accountCreation':
               type: boolean
               example: true

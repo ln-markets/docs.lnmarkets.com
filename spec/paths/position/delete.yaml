@@ -6,8 +6,9 @@ security:
   - cookieAuth: []
 
 deprecated: false
-summary: Close a position.
-description: Ends a contract and update user balance according to the **[P&L](https://investinganswers.com/dictionary/p/profit-loss-pl-statement)**
+summary: Close a position
+description: |
+  Ends a contract and update user balance according to the **[P&L](https://investinganswers.com/dictionary/p/profit-loss-pl-statement)**
 operationId:  Position_closePosition
 
 parameters:
@@ -21,7 +22,8 @@ parameters:
 
 responses:
   200:
-    description: Sucessfuly closed position.
+    description: |
+      Sucessfuly closed position.
     content:
       application/json:
         schema:

@@ -4,7 +4,7 @@ tags:
 security: []
 
 deprecated: false
-summary: Third LNURL withdraw request.
+summary: Withdraw
 description: Use LNURL to withdraw from the user balance.
 operationId: LNURL_Withdraw
 

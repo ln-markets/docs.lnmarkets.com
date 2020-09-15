@@ -6,11 +6,14 @@ security:
   - cookieAuth: []
 
 deprecated: false
-description: Create a LNURL Withdraw.
+summary: Withdraw funds via LNURL
+description: |
+  Create a LNURL Withdraw.
 operationId: User_withdrawLnurl
 
 requestBody:
-  description: Amount the user wants to withdraw.
+  description: |
+    Amount the user wants to withdraw.
   required: true
   content:
     application/json:
@@ -23,6 +26,7 @@ requestBody:
             type: integer
             minimum: 1000
             example: 10000
+
           'unit':
             type: string
             enum: ['sat', 'msat']
@@ -31,7 +35,8 @@ requestBody:
 
 responses:
   200:
-    description: Bech32 encoded string
+    description: |
+      Bech32 encoded string
     content:
       application/json:
         schema:

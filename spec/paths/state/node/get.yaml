@@ -3,13 +3,15 @@ tags:
 
 security: []
 deprecated: false
-summary: Lightning node status.
-description: Shows informations about the node.
+summary: Lightning node
+description: |
+  Shows informations about the node.
 operationId: State_nodeState
 
 responses:
   200:
-    description: The Lightning node is online.
+    description: |
+      The Lightning node is online.
     content:
       application/json:
         schema:
@@ -18,9 +20,11 @@ responses:
             'uri':
               type: string
               example: 03375e4d3218dde2524feecaab7dc3a11a6ea186ff86c3cf2722e7237abc0d6d68@34.192.102.161:9735
+
             'alias':
               type: string
               example: Localnode
+
             'pubkey':
               type: string
               example: 03375ead3218dd78024fe0caab7dc3a11a6ea186be86c3cf2722e7237abc0d6dc8
