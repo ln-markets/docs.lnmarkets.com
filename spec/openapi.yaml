@@ -77,13 +77,9 @@ paths:
     post:
       $ref: 'paths/position/cancel/post.yaml'
 
-  '/state/api':
+  '/state':
     get:
-      $ref: 'paths/state/api/get.yaml'
-
-  '/state/node':
-    get:
-      $ref: 'paths/state/node/get.yaml'
+      $ref: 'paths/state/get.yaml'
 
   '/user':
     get:
