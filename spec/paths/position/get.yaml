@@ -17,7 +17,6 @@ parameters:
     description: List opened positions.
     schema:
       type: boolean
-      default: true
       example: true
 
   - name: closed
@@ -25,7 +24,6 @@ parameters:
     description: List closed positions.
     schema:
       type: boolean
-      default: false
       example: false
 
   - name: all
@@ -33,7 +31,6 @@ parameters:
     description: List all positions.
     schema:
       type: boolean
-      default: false
       example: false
 
 responses:

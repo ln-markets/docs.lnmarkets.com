@@ -25,23 +25,23 @@ requestBody:
         - 'type'
         - 'margin'
         properties:
-          type:
+          'type':
             type: string
             enum: ['l', 'm']
             example: m
 
-          side:
+          'side':
             type: string
             enum: ['b', 's']
             example: b
 
-          margin:
+          'margin':
             type: integer
             format: int32
             minimum: 1
             example: 100000
 
-          leverage:
+          'leverage':
             type: number
             format: double
             multipleOf: 0.0000000001
@@ -49,26 +49,26 @@ requestBody:
             maximum: 50
             example: 25
 
-          quantity:
+          'quantity':
             type: integer
             minimum: 1
             example: 250
 
-          takeprofit:
+          'takeprofit':
             type: number
             format: double
             multipleOf: 0.1
             minimum: 1
             example: 11110
 
-          stoploss:
+          'stoploss':
             type: number
             format: double
             multipleOf: 0.1
             minimum: 1
             example: 6700
 
-          price:
+          'price':
             type: number
             format: double
             multipleOf: 0.1
