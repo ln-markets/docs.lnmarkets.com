@@ -8,7 +8,7 @@ summary: Login via LNURL
 description: |
   Verify the public key with the signature and the k1 to create a account or connect into a existing account.
   The connected state will be push over websockets.
-operationId: LNURL_authentificate
+operationId: LNURL_authenticate
 
 parameters:
   - name: k1
