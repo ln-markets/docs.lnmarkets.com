@@ -5,7 +5,7 @@ security: []
 deprecated: false
 summary: API informations
 description: |
-  Shows informations about api, its specification and LND node.
+  Shows informations about api.
 operationId: State_apiState
 
 responses:
@@ -32,21 +32,6 @@ responses:
                 'spec':
                   type: string
                   example: 31a4964e0ab4c77e7235ce5a0b458ba32dd8ace8
-
-            'lnd':
-              type: object
-              properties:
-                'version':
-                  type: string
-                  example: 0.11.0-beta commit=v0.11.0-beta
-
-                'clearnet':
-                  type: string
-                  example: 03BAE2DB4B57738C1EC1FFA1C5E5A4423968CC592B3B39CDDF7D495E72919D6431@34.192.102.161:9735
-
-                'onion':
-                  type: string
-                  example: 03BAE2DB4B57738C1EC1FFA1C5E5A4423968CC592B3B39CDDF7D495E72919D6431@3pv4ci27cnahbztwlqtbez36rblecanoyxthrtjvxpk3en2y7dxfr3id.onion:9735
 
             'withdraw':
               type: boolean

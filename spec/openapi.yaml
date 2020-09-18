@@ -81,6 +81,10 @@ paths:
     get:
       $ref: 'paths/state/get.yaml'
 
+  '/state/node':
+    get:
+      $ref: 'paths/state/node/get.yaml'
+
   '/user':
     get:
       $ref: 'paths/user/get.yaml'

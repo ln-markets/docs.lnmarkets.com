@@ -1,0 +1,63 @@
+tags:
+  - State
+
+security: []
+deprecated: false
+summary: Node informations
+description: |
+  Shows informations about the lightning node.
+operationId: State_nodeState
+
+responses:
+  200:
+    description: |
+      The Node is online.
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            'version':
+              type: string
+              example: 0.11.0-beta commit=v0.11.0-beta'
+        
+            'alias':
+              type: string
+              example: LN Markets
+
+            'pubkey':
+              type: string
+              example: 03bae2db4b57738c1ec1ffa1c5e5a4423968cc592b3b39cddf7d495e72919d6431
+            
+            'uri':
+              type: string
+              example: 03bae2db4b57738c1ec1ffa1c5e5a4423968cc592b3b39cddf7d495e72919d6431@34.192.102.161:9735
+               
+            'onionUri':
+              type: string
+              example: 03bae2db4b57738c1ec1ffa1c5e5a4423968cc592b3b39cddf7d495e72919d6431@3pv4ci27cnahbztwlqtbez36rblecanoyxthrtjvxpk3en2y7dxfr3id.onion:9735
+
+            'peers':
+              type: integer
+              format: int64
+              example: 42
+
+            'channels':
+              type: integer
+              format: int64
+              example: 1337
+
+            'localBalance':
+              type: integer
+              format: int64
+              example: 67576048
+
+            'remoteBalance':
+              type: integer
+              format: int64
+              example: 266903254
+
+            'blockHeigth':
+              type: integer
+              format: int64
+              example: 1835008
