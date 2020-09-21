@@ -35,6 +35,13 @@ responses:
             'account_type':
               type: string
               example: credentials
+            
+            'linkingpublickey':
+              type: string
+              example: 035555cbdd2b5642bbd196b31df477fad20125ae99119fd5ffb1d42c7f4811dd3a
 
+            'last_ip':
+              type: string
+              example: '127.0.0.1'
   401:
     $ref: '../../responses.yaml#/unauthorized'
