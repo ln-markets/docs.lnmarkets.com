@@ -19,8 +19,9 @@ const openApiToSlate = async () => {
       omitHeader: true,
       httpsnippet: true,
       tocSummary: true,
+      user_templates: './template',
       language_tabs: [{ python: "Python" }, { 'javascript--node': "Node.js" }, { shell: 'Shell' }],
-      language_clients: [{ shell: 'curl' }, { 'javascript--node': 'native' }, { python: "Python" }]
+      language_clients: [{ shell: 'curl' }, { 'javascript--node': 'request' }, { python: "requests" }]
     }
 
     const raw = await fs.readFile(apiPath, 'utf-8')
