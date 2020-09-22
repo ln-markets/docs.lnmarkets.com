@@ -47,7 +47,7 @@ requestBody:
             description: Leverage of the order
             type: number
             format: double
-            multipleOf: 1
+            multipleOf: 0.01
             minimum: 1
             maximum: 50
 

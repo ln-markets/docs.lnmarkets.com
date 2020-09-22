@@ -48,12 +48,17 @@ responses:
             'pid':
               description: Position id
               type: string
+            
+            'pl':
+              description: PL of the position
+              type: integer
 
           example:
             pid: a2ca6172-1078-463d-ae3f-8733f36a9b0e
             exit_price: 2000
             closed_ts: 020-10-15T10:50:40.332Z
-            closed: false
+            closed: true
+            pl: 1337
 
   400:
     $ref: '../../responses.yaml#/badParameters'

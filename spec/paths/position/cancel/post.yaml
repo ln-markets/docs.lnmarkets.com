@@ -53,15 +53,10 @@ responses:
               type: string
               pattern: '^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$'
 
-            'pl':
-              description: PL of the position
-              type: string
-
           example:
             pid: b87eef8a-52ab-2fea-1adc-c41fba870b0f
             canceled: true
             canceled_ts: 020-11-15T10:50:40.332Z
-            pl: 1337
 
   400:
     $ref: '../../../responses.yaml#/badParameters'
