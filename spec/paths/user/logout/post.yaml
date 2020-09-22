@@ -6,7 +6,7 @@ security: []
 deprecated: false
 summary: Logout
 description: |
-  Delete session cookie.
+  Delete the session cookie.
 operationId: User_logout
 
 responses:

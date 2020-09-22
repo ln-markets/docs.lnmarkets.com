@@ -8,13 +8,15 @@ security:
 deprecated: false
 summary: Close a position
 description: |
-  Ends a contract and update user balance according to the **[P&L](https://investinganswers.com/dictionary/p/profit-loss-pl-statement)**
+  Close the user position, the PL will be calculated against the current bid or offer
+  depending on the side of the position
 operationId:  Position_closePosition
 
 parameters:
   - name: pid
     in: query
     description: ID of the position to close.
+    required: true
     schema:
       type: string
       pattern: '^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$'
@@ -23,11 +25,35 @@ parameters:
 responses:
   200:
     description: |
-      Sucessfuly closed position.
+      Position is closed
     content:
       application/json:
         schema:
-          $ref: '../../schemas/position.yaml'
+          type: object
+          properties:
+            'closed':
+              description: Is position closed
+              type: boolean
+
+            'closed_ts':
+              description: Position closed ts
+              type: string
+              format: date-time
+              nullable: true
+
+            'exit_price':
+              description: At which price the position was closed
+              type: string
+
+            'pid':
+              description: Position id
+              type: string
+
+          example:
+            pid: a2ca6172-1078-463d-ae3f-8733f36a9b0e
+            exit_price: 2000
+            closed_ts: 020-10-15T10:50:40.332Z
+            closed: false
 
   400:
     $ref: '../../responses.yaml#/badParameters'

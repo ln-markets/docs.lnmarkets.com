@@ -1,5 +1,5 @@
 unauthorized:
-  description: Does not have user permissions.
+  description: Unauthorized
 
 badParameters:
   description: The request query and / or body does not fit the schema requirements. It can also be raised by parameters leading to unexpected behaviour / results.

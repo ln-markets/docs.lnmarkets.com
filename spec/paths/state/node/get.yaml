@@ -18,46 +18,58 @@ responses:
           type: object
           properties:
             'version':
+              description: LND version
               type: string
-              example: 0.11.0-beta commit=v0.11.0-beta'
         
             'alias':
+              description: Node Alias
               type: string
-              example: LN Markets
 
             'pubkey':
+              description: Node pubkey
               type: string
-              example: 03bae2db4b57738c1ec1ffa1c5e5a4423968cc592b3b39cddf7d495e72919d6431
             
             'uri':
+              description: Node URI
               type: string
-              example: 03bae2db4b57738c1ec1ffa1c5e5a4423968cc592b3b39cddf7d495e72919d6431@34.192.102.161:9735
                
             'onionUri':
+              description: Node URI on tor
               type: string
-              example: 03bae2db4b57738c1ec1ffa1c5e5a4423968cc592b3b39cddf7d495e72919d6431@3pv4ci27cnahbztwlqtbez36rblecanoyxthrtjvxpk3en2y7dxfr3id.onion:9735
 
             'peers':
+              description: Number of peers
               type: integer
               format: int64
-              example: 42
 
             'channels':
+              description: Number of channels
               type: integer
               format: int64
-              example: 1337
 
             'localBalance':
+              description: Node local balance
               type: integer
               format: int64
-              example: 67576048
 
             'remoteBalance':
+              description: Node remote balance
               type: integer
               format: int64
-              example: 266903254
 
             'blockHeigth':
+              description: Node block heigth
               type: integer
               format: int64
-              example: 1835008
+
+          example:
+            version: 0.11.0-beta commit=v0.11.0-beta'
+            alias: LN Markets
+            pubkey: 03bae2db4b57738c1ec1ffa1c5e5a4423968cc592b3b39cddf7d495e72919d6431
+            blockHeigth: 1835008
+            remoteBalance: 266903254
+            example: localBalance
+            channels: 1337
+            peers: 42
+            onionUri: 03bae2db4b57738c1ec1ffa1c5e5a4423968cc592b3b39cddf7d495e72919d6431@3pv4ci27cnahbztwlqtbez36rblecanoyxthrtjvxpk3en2y7dxfr3id.onion:9735
+            uri: 03bae2db4b57738c1ec1ffa1c5e5a4423968cc592b3b39cddf7d495e72919d6431@34.192.102.161:9735

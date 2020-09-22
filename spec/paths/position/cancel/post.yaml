@@ -17,19 +17,51 @@ requestBody:
   content:
     application/json:
       schema:
+        additionalProperties: false
         type: object
         required:
         - 'pid'
         properties:
           'pid':
+            description: Position ID
             type: string
             pattern: '^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$'
-            example: b87eef8a-52ab-2fea-1adc-c41fba870b0f
+
+        example:
+          pid: b87eef8a-52ab-2fea-1adc-c41fba870b0f
 
 responses:
   200:
     description: |
-      Successfully cancelled the given position.
+      Position is canceled
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            'canceled':
+              description: Canncel success
+              type: boolean
+
+            'canceled_ts':
+              description: When the position was canceled
+              type: string
+              format: date-time
+
+            'pid':
+              description: Position ID
+              type: string
+              pattern: '^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$'
+
+            'pl':
+              description: PL of the position
+              type: string
+
+          example:
+            pid: b87eef8a-52ab-2fea-1adc-c41fba870b0f
+            canceled: true
+            canceled_ts: 020-11-15T10:50:40.332Z
+            pl: 1337
 
   400:
     $ref: '../../../responses.yaml#/badParameters'

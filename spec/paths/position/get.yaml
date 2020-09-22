@@ -42,12 +42,140 @@ responses:
     content:
       application/json:
         schema:
-          type: object
-          properties:
-            'positions':
-              type: array
-              items:
-                $ref: '../../schemas/position.yaml'
+          type: array
+          items:
+            type: object
+            properties:
+              'pid':
+                description: UUID of the position
+                type: string
+
+              'id':
+                description: Position ID to be deprecated
+                type: string
+
+              'type':
+                description: Position type [l,m]
+                type: string
+
+              'side':
+                description: Side of the position [s,b]
+                type: string
+            
+              'pl':
+                description: PL of the position
+                type: string
+
+              'price':
+                description: Entry price of the position
+                type: string
+
+              'quantity':
+                description: Quantity of the position
+                type: string
+
+              'leverage':
+                description: Leverage of the position
+                type: string
+
+              'liquidation':
+                description: Liquidation level when the position will be closed
+                type: string
+
+              'margin':
+                description: Margin used for the position creation
+                type: string
+
+              'margin_wi':
+                description: Margin working indicator [filled, running, closed, canceled]
+                type: string
+
+              'market_filled_ts':
+                description: When the order was filled
+                type: string
+                format: date-time
+                nullable: true
+
+              'market_wi':
+                description: Market working indicator [filled, running, closed, canceled]
+                type: string
+
+              'canceled':
+                description: Is the position canceled
+                type: boolean
+
+              'canceled_ts':
+                description: When the position was canceled
+                type: string
+                format: date-time
+                nullable: true
+
+              'closed':
+                description: Is the position closed
+                type: boolean
+
+              'closed_ts':
+                description: When the position was closed
+                type: string
+                format: date-time
+                nullable: true
+
+              'creation_ts':
+                description: When the position was created
+                type: string
+                format: date-time
+
+              'exit_price':
+                description: At which price the position was closed
+                type: string
+                nullable: true
+
+              'stoploss':
+                description: stoploss level
+                type: string
+                nullable: true
+
+              'stoploss_wi':
+                description: Stoploss working indicator [filled, running, closed, canceled]
+                type: string
+                nullable: true
+
+              'takeprofit':
+                description: Takeprofit level
+                type: string
+                nullable: true
+
+              'takeprofit_wi':
+                description: Takeprofit working indicator [filled, running, closed, canceled]
+                type: string
+                nullable: true
+
+          example:
+            positions:
+              - pid: 249dc818-f8a5-4713-a3a3-8fe85f2e8969
+                id: 666
+                type: m
+                takeprofit_wi: canceled
+                takeprofit: 13337
+                stoploss_wi: canceled
+                stoploss: 1337
+                sign: -1
+                side: s
+                quantity: 42
+                price: 8888
+                pl: -13640
+                market_wi: filled
+                market_filled_ts: 020-09-15T10:50:40.332Z
+                margin_wi: closed
+                margin: 424242
+                liquidation: 1000
+                leverage: 50
+                exit_price: 2000
+                creation_ts: 020-09-15T10:50:40.332Z
+                closed_ts: 020-10-15T10:50:40.332Z
+                closed: false
+                canceled: true
+                canceled_ts: 020-11-15T10:50:40.332Z
 
   400:
     $ref: '../../responses.yaml#/badParameters'

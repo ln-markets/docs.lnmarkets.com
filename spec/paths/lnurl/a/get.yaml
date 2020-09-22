@@ -4,10 +4,10 @@ tags:
 security: []
 
 deprecated: false
-summary: Login via LNURL
+summary: Auth 2
 description: |
   Verify the public key with the signature and the k1 to create a account or connect into a existing account.
-  The connected state will be push over websockets.
+  The connected state will be push over websocketsto the client.
 operationId: LNURL_authenticate
 
 parameters:
@@ -64,6 +64,21 @@ parameters:
 responses:
   200:
     description: Sucessfuly logged in.
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            'status':
+              description: Does the request suceed ?
+              type: string
+            'event':
+              description: State of the user
+              type: string
+          
+        example:
+          status: 'OK'
+          event: 'LOGGEDIN'
 
   400:
     $ref: '../../../responses.yaml#/badParameters'

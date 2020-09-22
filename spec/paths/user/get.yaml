@@ -21,27 +21,35 @@ responses:
           type: object
           properties:
             'uid':
+              description: User's UUID
               type: string
-              example: d068f829-26e6-4743-b10d-ebb5a83b3624
 
             'balance':
+              description: User current balance (avalaible)
               type: string
-              example: '361086'
 
             'username':
+              description: Username
               type: string
-              example: Test-user
 
             'account_type':
+              description: One of ['lnurl', 'credentials', 'joule']
               type: string
-              example: credentials
             
             'linkingpublickey':
+              description: Public key used for lnurl or joule account
               type: string
-              example: 035555cbdd2b5642bbd196b31df477fad20125ae99119fd5ffb1d42c7f4811dd3a
 
             'last_ip':
+              description: Last login ip
               type: string
-              example: '127.0.0.1'
+
+          example:
+            uid: d068f829-26e6-4743-b10d-ebb5a83b3624
+            balance: 361086
+            account_type: Joule
+            username: Testnet-node
+            linkingpublickey: 035555cbdd2b5642bbd196b31df477fad20125ae99119fd5ffb1d42c7f4811dd3a
+            last_ip: 127.0.0.1
   401:
     $ref: '../../responses.yaml#/unauthorized'

@@ -9,71 +9,81 @@ deprecated: false
 summary: New position
 description: |
   Send the order form parameters to add a new position in database.
+  **If `type="l"`, the property `price` must be included in the request to know when the position should be filled.**
+  **You can choose to use the margin or the quantity as a parameter, the other will be calculated with the one you choosed**
 operationId: Position_createPosition
 
 requestBody:
   description: |
     Payload with all the information needed to setup a new position.
-
-    **If `type="l"`, the property `price` must be included in the request to know when the position should be filled.**
+  required: true
   content:
     application/json:
       schema:
         type: object
+        additionalProperties: false
         required:
         - 'side'
         - 'type'
         - 'margin'
         properties:
           'type':
+            description: Type of the order (Market or Limit)
             type: string
             enum: ['l', 'm']
-            example: m
 
           'side':
+            description: Side of the order (Buy or Sell)
             type: string
             enum: ['b', 's']
-            example: b
 
           'margin':
+            description: Margin or quantity should be filled
             type: integer
             format: int32
             minimum: 1
-            example: 100000
 
           'leverage':
+            description: Leverage of the order
             type: number
             format: double
-            multipleOf: 0.0000000001
+            multipleOf: 1
             minimum: 1
             maximum: 50
-            example: 25
 
           'quantity':
+            description: Quantity or margin should be filled
             type: integer
             minimum: 1
-            example: 250
 
           'takeprofit':
+            description: Takeprofit level
             type: number
             format: double
             multipleOf: 0.1
             minimum: 1
-            example: 11110
 
           'stoploss':
+            description: Stoploss level
             type: number
             format: double
             multipleOf: 0.1
             minimum: 1
-            example: 6700
 
           'price':
+            description: Required when using a limit order
             type: number
             format: double
             multipleOf: 0.1
             minimum: 1
-            example: 10010
+
+        example:
+          type: l
+          side: b
+          price: 10000
+          stoploss: 9000
+          takeprofit: 11000
+          quantity: 100
 
 responses:
   200:
@@ -82,7 +92,106 @@ responses:
     content:
       application/json:
         schema:
-          $ref: '../../schemas/position.yaml'
+          type: object
+          properties:
+            'pid':
+              description: UUID of the position
+              type: string
+
+            'id':
+              description: Position ID to be deprecated
+              type: string
+
+            'type':
+              description: Position type [l,m]
+              type: string
+
+            'side':
+              description: Side of the position [s,b]
+              type: string
+
+            'price':
+              description: Entry price of the position
+              type: string
+
+            'quantity':
+              description: Quantity of the position
+              type: string
+
+            'margin':
+              description: Margin used for the position creation
+              type: string
+
+            'leverage':
+              description: Leverage of the position
+              type: string
+
+            'liquidation':
+              description: Liquidation level when the position will be closed
+              type: string
+
+            'market_filled_ts':
+              description: When the order was filled
+              type: string
+              format: date-time
+              nullable: true
+
+            'market_wi':
+              description: Market working indicator [filled, running, closed, canceled]
+              type: string
+
+            'pl':
+              description: PL of the position
+              type: string
+
+            'margin_wi':
+              description: Margin working indicator [filled, running, closed, canceled]
+              type: string
+
+            'stoploss':
+              description: stoploss level
+              type: string
+              nullable: true
+
+            'stoploss_wi':
+              description: Stoploss working indicator [filled, running, closed, canceled]
+              type: string
+              nullable: true
+
+            'takeprofit':
+              description: Takeprofit level
+              type: string
+              nullable: true
+
+            'takeprofit_wi':
+              description: Takeprofit working indicator [filled, running, closed, canceled]
+              type: string
+              nullable: true
+
+            'creation_ts':
+              description: When the position was created
+              type: string
+              format: date-time
+
+          example:
+            pid: 249dc818-f8a5-4713-a3a3-8fe85f2e8969
+            id: 666
+            type: m
+            takeprofit_wi: running
+            takeprofit: 13337
+            stoploss_wi: running
+            stoploss: 1337
+            side: s
+            quantity: 42
+            price: 8888
+            pl: -13640
+            market_wi: filled
+            market_filled_ts: 020-09-15T10:50:40.332Z
+            margin_wi: running
+            margin: 424242
+            liquidation: 1000
+            leverage: 50
+            creation_ts: 020-09-15T10:50:40.332Z
 
   400:
     $ref: '../../responses.yaml#/badParameters'

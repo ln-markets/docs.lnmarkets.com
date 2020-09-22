@@ -14,3 +14,5 @@ The JWT must be provided within the header AUTHORIZATION like :
 `Authorization: Bearer <token>`
 
 __Note :__ Never share your JWT !
+
+You can revoke any JWT on your profile page

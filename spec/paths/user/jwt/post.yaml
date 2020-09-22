@@ -5,7 +5,7 @@ security:
   - cookieAuth: []
 
 deprecated: false
-summary: Generate API Key
+summary: Generate API Token
 description: |
   Using the given scopes, allow the token bearer to get access to different parts of the public API.
 operationId: User_CreateJWT
@@ -23,19 +23,23 @@ requestBody:
         - 'expiry'
         properties:
           'scopes':
+            description: Scopes of the token
             type: array
             items:
               type: string
               enum: ['deposit', 'withdraw', 'positions', 'user']
-              example: ['deposit', 'withdraw']
             uniqueItems: true
             maxItems: 4
 
           'expiry':
+            description: Expiration of the token
             type: integer
             format: int32
             minimum: 0
-            example: 86400
+
+        example:
+          expiry: 86400
+          scopes: ['deposit', 'withdraw']
 
 responses:
   200:
@@ -45,9 +49,12 @@ responses:
       application/json:
         schema:
           properties:
-            'signature':
+            'token':
+              description: JWT
               type: string
-              example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjMwMDAiLCJpYXQiOjE1OTgwNTg2NDQsInNjb3BlcyI6WyJ3aXRoZHJhdyIsImRlcG9zaXQiXX0.xJ3f5eMeRiN0eSzo3IDviny9B9v_-bLg4t_EWmXFBxc
+
+          example:
+            token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjMwMDAiLCJpYXQiOjE1OTgwNTg2NDQsInNjb3BlcyI6WyJ3aXRoZHJhdyIsImRlcG9zaXQiXX0.xJ3f5eMeRiN0eSzo3IDviny9B9v_-bLg4t_EWmXFBxc
   400:
     $ref: '../../../responses.yaml#/badParameters'
 

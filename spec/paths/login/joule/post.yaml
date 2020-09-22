@@ -6,6 +6,8 @@ deprecated: false
 summary: Login via Joule
 description: |
   Use the browser extension [Joule](https://lightningjoule.com/) to authenticate user.
+  A random message will be signed with the user's wallet private key,
+  this message will be send with the signature to allow LND to authenticate the user
 operationId: Login_loginJoule
 
 requestBody:
@@ -14,23 +16,28 @@ requestBody:
     application/json:
       schema:
         type: object
+        additionalProperties: false
         required:
           - 'message'
           - 'signature'
           - 'alias'
         properties:
           'message':
+            description: Message signed by the wallet private key
             type: string
-            example: Test-Joule
 
           'signature':
+            description: Signature created by the wallet
             type: string
-            example: rd1nn7qbnibf58mzaknokqu6eciiqr64gahrzzxy3h8ybdygbun7s86zrms1dedqnh7t4gxz3esqmaqi9pkf85f48rexai7qztbdznfp
 
           'alias':
+            description: Node alias if avalaible
             type: string
-            example: Test-node
-        additionalProperties: false
+
+        example:
+          signature: rd1nn7qbnibf58mzaknokqu6eciiqr64gahrzzxy3h8ybdygbun7s86zrms1dedqnh7t4gxz3esqmaqi9pkf85f48rexai7qztbdznfp
+          alias: LN-BIG 1337
+          message: Sign this super secret message
 
 responses:
   200:
@@ -40,22 +47,34 @@ responses:
       application/json:
         schema:
           type: object
+          required:
+            - 'username'
+            - 'balance'
+            - 'account_type'
+            - 'linkingpublickey'
           properties:
             'username':
+              description: Username default to node alias
               type: string
-              example: Test-node
 
             'balance':
+              description: User balance
               type: string
-              example: '0'
 
             'linkingpublickey':
+              description: Pubkey of the node
               type: string
-              example: 02b21cc4667e2d5e14920013d187d2af8c3ccfd32a310f63c7767cf8564f126357
 
             'account_type':
+              description: Account type
               type: string
-              example: joule
+
+          example:
+            account_type: joule
+            linkingpublickey: 02b21cc4667e2d5e14920013d187d2af8c3ccfd32a310f63c7767cf8564f126357
+            balance: 1337
+            username: LN-BIG 1337
+
     headers:
       Set-Cookie:
         schema:

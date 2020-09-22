@@ -8,7 +8,7 @@ security:
 deprecated: false
 summary: Deposit funds
 description: |
-  Move funds from user wallet to the **[Lightning channel](https://medium.com/suredbits/lightning-101-what-are-lightning-channels-cfb80f440298)** with LN Markets.
+  Add fund to your LN Markets balance
 operationId: User_deposit
 
 requestBody:
@@ -23,16 +23,20 @@ requestBody:
         - 'amount'
         properties:
           'amount':
+            description: Amount of sat to deposit on the account
             type: integer
-            minimum: 100
+            minimum: 1000
             maximum: 1000000
-            example: 10000
 
           'unit':
+            description: Should be sat by default
             type: string
             pattern: '^[a-zA-Z0-9]+$'
             default: sat
-            example: sat
+
+        example:
+          amount: 1000
+          unit: sat
 
 responses:
   200:
@@ -44,11 +48,16 @@ responses:
           type: object
           properties:
             'paymentRequest':
+              description: Invoice you should pay to add balance to your account
               type: string
-              example: lntb100u1p0jrfz0pp5q0ntrkf052dvep8w6vf0z77rek3fz8xm6c2yau4zhy7f4mzauqgsdzcf3hy6ctjddjhgueqg3jhqmmnd96zqgmxxquryvesvv6z6dehv43z6drpvycj6wfevs6j6dmyxcunxefcxccxxvn9cqzpgxqzpdsp5z40mxcrfqtsxf55u9ju3lvqdw36htsjh4xl2ujrzdff3953fg2yq9qy9qsqv7gfvp0tryme3e8r5xfrpg39j645302fkggps4h5j0aj708lzdgh2dq3pdz6lqazgvkt3wm7qq20vcff46vu5549m3v2d6h0uw3sjacqrkjqcv
+
             'expiry':
+              description: When the invoice will expiry
               type: integer
-              example: 45
+
+          example:
+            invoice: lntb100u1p0jrfz0pp5q0ntrkf052dvep8w6vf0z77rek3fz8xm6c2yau4zhy7f4mzauqgsdzcf3hy6ctjddjhgueqg3jhqmmnd96zqgmxxquryvesvv6z6dehv43z6drpvycj6wfevs6j6dmyxcunxefcxccxxvn9cqzpgxqzpdsp5z40mxcrfqtsxf55u9ju3lvqdw36htsjh4xl2ujrzdff3953fg2yq9qy9qsqv7gfvp0tryme3e8r5xfrpg39j645302fkggps4h5j0aj708lzdgh2dq3pdz6lqazgvkt3wm7qq20vcff46vu5549m3v2d6h0uw3sjacqrkjqcv
+            expiry: 45
 
   400:
     $ref: '../../../responses.yaml#/badParameters'

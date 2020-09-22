@@ -18,29 +18,38 @@ responses:
           type: object
           properties:
             'ts':
+              description: Timestamp reported by the API
               type: integer
               format: int64
-              example: 1600244845097
 
             'version':
               type: object
               properties:
                 'api':
+                  description: API version hash
                   type: string
-                  example: 74958cef7d4416dfa7f2c13fd23cd4aa7b469047
 
                 'spec':
+                  description: Open API version hash
                   type: string
-                  example: 31a4964e0ab4c77e7235ce5a0b458ba32dd8ace8
 
             'withdraw':
+              description: Are withdraw enabled ?
               type: boolean
-              example: true
 
             'newposition':
+              description: Are new position enabled ?
               type: boolean
-              example: true
 
             'accountCreation':
+              description: Are account creation enabled ?
               type: boolean
-              example: true
+
+          example:
+            ts: 1600244845097
+            version:
+                api: 74958cef7d4416dfa7f2c13fd23cd4aa7b469047
+                soec: 31a4964e0ab4c77e7235ce5a0b458ba32dd8ace8
+            withdraw: true
+            newPosition: true
+            accountCreation: true

@@ -6,9 +6,9 @@ security:
   - cookieAuth: []
 
 deprecated: false
-summary: Transaction history
+summary: Transactions history
 description: |
-  Retrieves all funds that either went in or out of the **[Lightning channel](https://medium.com/suredbits/lightning-101-what-are-lightning-channels-cfb80f440298)** between user and LN-Markets.
+  Retrieves all withdraw or deposit you did with LN Markets
 operationId: User_getHistory
 
 parameters:
@@ -20,7 +20,7 @@ parameters:
       type: string
       pattern: '^[a-z]+$'
       enum: ['withdraw', 'deposit']
-      example: ['withdraw', 'deposit']
+      example: deposit
 
 responses:
   200:
@@ -36,25 +36,29 @@ responses:
               items:
                 type: object
                 properties:
-                  'amount':
+                  'did':
+                    description: Deposit ID in case of deposit
                     type: string
-                    example: '99400'
+
+                  'wid':
+                    description: Withdraw ID in case of withdraw
+                    type: string
+
+                  'amount':
+                    description: Amount in sat
+                    type: integer
 
                   'creation_ts':
+                    description: When the transaction was initiated
                     type: string
                     format: date-time
-                    example: 020-09-15T10:50:40.332Z
 
                   'details':
                     type: string
                     nullable: true
-                    example: null
-
-                  'did':
-                    type: string
-                    example: 269157f3-d4a1-4493-afcb-5e8fdaa49288
 
                   'fail':
+                    description: Is the transaction failed
                     type: boolean
                     example: false
 
@@ -64,6 +68,7 @@ responses:
                     example: null
 
                   'fail_ts':
+                    description: When did the transaction failed ?
                     type: string
                     format: date-time
                     nullable: true
@@ -83,9 +88,19 @@ responses:
                     nullable: true
                     example: null
 
-                  'uid':
-                    type: string
-                    example: d068f829-26e6-4743-b10d-ebb5a83b3624
+          example:
+            transaction:
+              - did: 269157f3-d4a1-4493-afcb-5e8fdaa49288
+                amount: 99400
+                creation_ts: 020-09-15T10:50:40.332Z
+                details: null
+                fail: false
+                success: true
+                fail_reason: null
+                fail_ts: null
+                payment_hash: 33f45c13c7ddcae46c6732414552893ca599f9399c62ffc2cfae209e8b17c5c3
+                sucess_ts: 020-09-15T10:50:40.332Z
+
 
   400:
     $ref: '../../../responses.yaml#/badParameters'

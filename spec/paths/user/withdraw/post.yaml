@@ -24,19 +24,25 @@ requestBody:
         - 'invoice'
         properties:
           'amount':
+            description: Amount you want to withdraw
             type: integer
             minimum: 1000
             example: 10000
-
+  
           'unit':
+            description: Unit (Only sat for now)
             type: string
             pattern: '^[a-zA-Z0-9]+$'
-            example: sat
 
           'invoice':
+            description: Bolt 11 invoice with the same amount as the request withdraw amount
             type: string
             pattern: '^[a-zA-Z0-9]+$'
-            example: lntb100u1p0jr0ykpp5ldx3un8ym6z0uwjxd083mp2rcr04d2dv0fkx729ajs62pq9pfjqqdql23jhxapdwa5hg6rywfshwttjda6hgegcqzpgxq92fjuqsp5m6q0fzynu2qr624mzjc285duurhccmkfg94mcdctc0p9s7qkrq8q9qy9qsqp862cjznpey5r76e7amhlpmhwn2c7xvke59srhv0xf75m4ksjm4hzn8y9xy0zs5ec6gxmsr8gj4q23w8ped32llscjcneyjz2afeapqpu4gamz
+
+        example:
+          amount: 1000
+          unit: sat
+          invoice: lntb100u1p0jr0ykpp5ldx3un8ym6z0uwjxd083mp2rcr04d2dv0fkx729ajs62pq9pfjqqdql23jhxapdwa5hg6rywfshwttjda6hgegcqzpgxq92fjuqsp5m6q0fzynu2qr624mzjc285duurhccmkfg94mcdctc0p9s7qkrq8q9qy9qsqp862cjznpey5r76e7amhlpmhwn2c7xvke59srhv0xf75m4ksjm4hzn8y9xy0zs5ec6gxmsr8gj4q23w8ped32llscjcneyjz2afeapqpu4gamz
 
 responses:
   200:
@@ -48,20 +54,26 @@ responses:
           type: object
           properties:
             'amount':
+              description: Amount withdrawnd
               type: integer
-              example: 10000
 
             'paymentsecret':
+              description: Payment secret of the settled invoice
               type: string
-              example: 1b84c9852e929f99700b6cbabc4ca9d1593afc3736938b348c4d3d143e418bd4
 
             'wid':
+              description: Withdraw ID
               type: string
-              example: 3fcbd8b7-c35b-4e83-87bc-111d5bd186b7
 
             'paymenthash':
+              description: Payment hash for the settled invoice
               type: string
-              example: fb4d1e4ce4de84fe3a466bcf1d8543c0df56a9ac7a6c6f28bd9434a080a14c80
+
+          example:
+            amount: 1000
+            paymentsecret: 1b84c9852e929f99700b6cbabc4ca9d1593afc3736938b348c4d3d143e418bd4
+            wid: 3fcbd8b7-c35b-4e83-87bc-111d5bd186b7
+            paymenthash: fb4d1e4ce4de84fe3a466bcf1d8543c0df56a9ac7a6c6f28bd9434a080a14c80
 
   400:
     $ref: '../../../responses.yaml#/badParameters'

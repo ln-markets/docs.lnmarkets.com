@@ -4,7 +4,7 @@ tags:
 security: []
 
 deprecated: false
-summary: Invoice to withdraw
+summary: Withdraw 2
 description: Ask the Lightning wallet to create an invoice with amount and description.
 operationId: LNURL_WithdrawRequest
 
@@ -43,30 +43,35 @@ responses:
           type: object
           properties:
             'callback':
+              description: Callback URL used by the wallet
               type: string
-              example: https://api.lnmarkets.com/lnurl/w
 
             'defaultDescription':
+              description: Invoice default description
               type: string
-              example: LN Markets withdraw
 
             'tag':
+              description: Kind of LNURL
               type: string
-              example: withdrawRequest
 
             'maxWithdrawable':
+              description: Max withdrawable amount
               type: integer
               format: int32
-              example: 1000
 
             'minWithdrawable':
+              description: Min withdrawable amount
               type: integer
               format: int32
-              example: 1000
 
             'k1':
+              description: Random hex string to identify the user Lightning Wallet.
               type: string
-              example: 31c92c1bd79d2ae5f96a153ceda105cb67888c61bfb76baa1d2505a6bf8a06ca
 
-  400:
-    $ref: '../../../../responses.yaml#/badParameters'
+        example:
+          k1: 31c92c1bd79d2ae5f96a153ceda105cb67888c61bfb76baa1d2505a6bf8a06ca
+          tag: withdrawRequest
+          maxWithdrawable: 1000
+          minWithdrawable: 1000
+          defaultDescription: LN Markets withdraw
+          callback: https://api.lnmarkets.com/lnurl/w

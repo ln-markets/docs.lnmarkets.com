@@ -4,7 +4,7 @@ tags:
 security: []
 
 deprecated: false
-summary: Withdraw
+summary: Withdraw 3
 description: Use LNURL to withdraw from the user balance.
 operationId: LNURL_Withdraw
 
@@ -13,6 +13,7 @@ parameters:
     in: query
     required: true
     description: Random hex string to identify the user Lightning Wallet.
+    example: kyNVmR6HDtAW2aplYk6XmmpDrIhvzzq6
     schema:
       type: string
       minLength: 64
@@ -22,6 +23,7 @@ parameters:
     in: query
     required: true
     description: Bolt 11 invoice.
+    example: <invoice>
     schema:
       type: string
       pattern: '^[a-zA-Z0-9]+$'
@@ -29,9 +31,3 @@ parameters:
 responses:
   200:
     description: Sucessfuly withdrawn funds from channel.
-
-  400:
-    $ref: '../../../responses.yaml#/badParameters'
-
-  401:
-    $ref: '../../../responses.yaml#/badParameters'

@@ -5,7 +5,7 @@ security:
   - cookieAuth: []
 
 deprecated: false
-summary: List API Keys
+summary: List API Tokens
 description: |
   Retrieves the list of active JSON Web Token user currently holds.
 operationId: User_GetJWTList
@@ -22,31 +22,38 @@ responses:
             type: object
             properties:
               'aud':
+                description: Scopes of the token
                 type: array
                 items:
                   type: string
                   enum: ['position', 'withdraw', 'deposit', 'user']
                 uniqueItems: true
                 maxItems: 4
-                example: ['withdraw', 'deposit']
 
               'exp':
+                description: Expiration of the token
                 type: string
                 format: date-time
-                example: 020-09-15T10:50:40.332Z
 
               'iat':
+                description: When the token was issued
                 type: string
                 format: date-time
-                example: 020-09-15T10:50:40.332Z
 
               'jti':
+                description: Unique id of the token
                 type: string
-                example: ckea35me20019r8u36374585f
 
               'revoked':
+                description: Is it revoked or not
                 type: boolean
-                example: false
+
+        example:
+          - aud: ['withdraw', 'deposit']
+            exp: 020-09-15T10:50:40.332Z
+            iat: 020-09-15T10:50:40.332Z
+            jti: ckea35me20019r8u36374585f
+            revoked: false
 
   401:
     $ref: '../../../responses.yaml#/unauthorized'
