@@ -6,7 +6,7 @@ security:
   - cookieAuth: []
 
 deprecated: false
-summary: Withdraw funds via invoice
+summary: Withdraw via invoice
 description: |
   Move funds from the **[Lightning channel](https://medium.com/suredbits/lightning-101-what-are-lightning-channels-cfb80f440298)** with LN Markets to user wallet by using an invoice directly.
 operationId: User_withdraw
@@ -28,7 +28,7 @@ requestBody:
             type: integer
             minimum: 1000
             example: 10000
-  
+
           'unit':
             description: Unit (Only sat for now)
             type: string

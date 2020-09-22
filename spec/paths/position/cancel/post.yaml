@@ -6,7 +6,7 @@ security:
   - cookieAuth: []
 
 deprecated: false
-summary: Cancel a position
+summary: Cancel
 description: |
   Cancel the position linked to the given `pid`.**Only works on positions that are not currently filled**.
 operationId: Position_cancelPosition

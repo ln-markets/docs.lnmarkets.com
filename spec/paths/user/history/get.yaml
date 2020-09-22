@@ -6,7 +6,7 @@ security:
   - cookieAuth: []
 
 deprecated: false
-summary: Transactions history
+summary: Transactions
 description: |
   Retrieves all withdraw or deposit you did with LN Markets
 operationId: User_getHistory

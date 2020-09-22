@@ -6,7 +6,7 @@ security:
   - cookieAuth: []
 
 deprecated: false
-summary: Deposit funds
+summary: Deposit
 description: |
   Add fund to your LN Markets balance
 operationId: User_deposit

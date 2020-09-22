@@ -6,7 +6,7 @@ security:
   - cookieAuth: []
 
 deprecated: false
-summary: New position
+summary: Create
 description: |
   Send the order form parameters to add a new position in database.
   **If `type="l"`, the property `price` must be included in the request to know when the position should be filled.**

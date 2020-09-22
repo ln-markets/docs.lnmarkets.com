@@ -6,7 +6,7 @@ security:
   - cookieAuth: []
 
 deprecated: false
-summary: User informations
+summary: Informations
 description: |
   Fetches UID, username, account type and current balance.
 operationId: User_getUser
@@ -35,7 +35,7 @@ responses:
             'account_type':
               description: One of ['lnurl', 'credentials', 'joule']
               type: string
-            
+
             'linkingpublickey':
               description: Public key used for lnurl or joule account
               type: string

@@ -6,7 +6,7 @@ security:
   - cookieAuth: []
 
 deprecated: false
-summary: Positions history
+summary: History
 description: |
   Retrieves either opened, closed or all positions.
 
@@ -61,7 +61,7 @@ responses:
               'side':
                 description: Side of the position [s,b]
                 type: string
-            
+
               'pl':
                 description: PL of the position
                 type: string

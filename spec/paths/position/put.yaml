@@ -6,59 +6,38 @@ security:
   - cookieAuth: []
 
 deprecated: false
-summary: Update a position
+summary: Update
 description: |
-  Allows user to modify `stoploss` and `takeprofit` parameters of an existing position.
+  Allows user to modify `stoploss` or `takeprofit` parameters of an existing position.
 operationId: Position_updatePosition
 
 requestBody:
-  description: |
-    **Pay attention : `stoploss` and `takeprofit` are mutually exclusives.
-    This means you cannot send a request containing the two parameters at once.**
   required: true
   content:
     application/json:
       schema:
-        oneOf:
-        - type: object
-          additionalProperties: false
-          required:
-            - 'pid'
-            - 'takeprofit'
-          properties:
-            'pid':
-              type: string
-              pattern: '^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$'
+        type: object
+        required:
+          - 'pid'
+          - 'type'
+          - 'value'
+        properties:
+          'pid':
+            type: string
+            pattern: '^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$'
 
-            'takeprofit':
-              type: number
-              format: double
-              minimum: 0
-              multipleOf: 0.1
+          'type':
+            type: string
+            enum: ['takeprofit', 'stoploss']
 
-          example:
-            pid: b87eef8a-52ab-2fea-1adc-c41fba870b0f
-            takeprofit: 9800.5
-
-        - type: object
-          additionalProperties: false
-          required:
-            - 'pid'
-            - 'stoploss'
-          properties:
-            'pid':
-              type: string
-              pattern: '^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$'
-
-            'stoploss':
-              type: number
-              format: double
-              minimum: 0
-              multipleOf: 0.1
-
-          example:
-            pid: b87eef8a-52ab-2fea-1adc-c41fba870b0f
-            takeprofit: 6700
+          'value':
+            type: number
+            multipleOf: 0.1
+            minimum: 0
+        example:
+          'pid': b87eef8a-52ab-2fea-1adc-c41fba870b0f
+          'type': takeprofit
+          'value': 13290.5
 
 responses:
   200:

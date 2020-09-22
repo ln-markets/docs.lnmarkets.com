@@ -6,7 +6,7 @@ security:
   - cookieAuth: []
 
 deprecated: false
-summary: Withdraw funds via LNURL
+summary: Withdraw via LNURL
 description: |
   Create a LNURL Withdraw.
 operationId: User_withdrawLnurl

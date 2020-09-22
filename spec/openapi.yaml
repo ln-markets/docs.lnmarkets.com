@@ -14,11 +14,6 @@ servers:
     url: https://api.testnet.lnmarkets.com
 
 tags:
-  - name: LNURL
-    description: |
-      Interaction with the lightning network using the [LNURL procotocol](https://github.com/btcontract/lnurl-rfc/)
-      LNURL enable simple auth process and easier withdraw
-
   - name: Login
     description: |
       Here you can find the different way to auth yourself on LN Markets, mostly use for browser.
@@ -33,6 +28,11 @@ tags:
   - name: State
     description: |
       LN Markets state with data about our node and api availability
+
+  - name: LNURL
+    description: |
+      Interaction with the lightning network using the [LNURL procotocol](https://github.com/btcontract/lnurl-rfc/)
+      LNURL enable simple auth process and easier withdraw
 
 security:
   - cookieAuth: []
@@ -49,42 +49,42 @@ paths:
     post:
       $ref: 'paths/login/credentials/post.yaml'
 
-  '/lnurl/a':
-    get:
-      $ref: 'paths/lnurl/a/get.yaml'
-
   '/lnurl/a/c':
     get:
       $ref: 'paths/lnurl/a/c/get.yaml'
 
-  '/lnurl/w':
+  '/lnurl/a':
     get:
-      $ref: 'paths/lnurl/w/get.yaml'
+      $ref: 'paths/lnurl/a/get.yaml'
 
   '/lnurl/w/r':
     get:
       $ref: 'paths/lnurl/w/r/get.yaml'
 
+  '/lnurl/w':
+    get:
+      $ref: 'paths/lnurl/w/get.yaml'
+
   '/login/joule':
     post:
       $ref: 'paths/login/joule/post.yaml'
 
+  '/positions/cancel':
+    post:
+      $ref: 'paths/position/cancel/post.yaml'
+
   '/positions':
-    get:
-      $ref: 'paths/position/get.yaml'
+    post:
+      $ref: 'paths/position/post.yaml'
 
     put:
       $ref: 'paths/position/put.yaml'
 
-    post:
-      $ref: 'paths/position/post.yaml'
-
     delete:
       $ref: 'paths/position/delete.yaml'
 
-  '/positions/cancel':
-    post:
-      $ref: 'paths/position/cancel/post.yaml'
+    get:
+      $ref: 'paths/position/get.yaml'
 
   '/state':
     get:
@@ -101,10 +101,6 @@ paths:
     put:
       $ref: 'paths/user/put.yaml'
 
-  '/user/deposit':
-    post:
-      $ref: 'paths/user/deposit/post.yaml'
-
   '/user/history':
     get:
       $ref: 'paths/user/history/get.yaml'
@@ -118,6 +114,10 @@ paths:
 
     post:
       $ref: 'paths/user/jwt/post.yaml'
+
+  '/user/deposit':
+    post:
+      $ref: 'paths/user/deposit/post.yaml'
 
   '/user/withdraw':
     post:

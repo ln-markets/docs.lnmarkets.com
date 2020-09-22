@@ -6,7 +6,7 @@ security:
   - cookieAuth: []
 
 deprecated: false
-summary: Close a position
+summary: Close
 description: |
   Close the user position, the PL will be calculated against the current bid or offer
   depending on the side of the position
@@ -48,7 +48,7 @@ responses:
             'pid':
               description: Position id
               type: string
-            
+
             'pl':
               description: PL of the position
               type: integer
