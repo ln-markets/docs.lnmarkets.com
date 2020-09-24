@@ -25,7 +25,7 @@ requestBody:
         required:
         - 'side'
         - 'type'
-        - 'margin'
+        - 'leverage'
         properties:
           'type':
             description: Type of the order (Market or Limit)
@@ -60,21 +60,21 @@ requestBody:
             description: Takeprofit level
             type: number
             format: double
-            multipleOf: 0.1
+            multipleOf: 0.5
             minimum: 1
 
           'stoploss':
             description: Stoploss level
             type: number
             format: double
-            multipleOf: 0.1
+            multipleOf: 0.5
             minimum: 1
 
           'price':
             description: Required when using a limit order
             type: number
             format: double
-            multipleOf: 0.1
+            multipleOf: 0.5
             minimum: 1
 
         example:

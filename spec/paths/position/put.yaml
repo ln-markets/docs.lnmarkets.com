@@ -32,12 +32,13 @@ requestBody:
 
           'value':
             type: number
-            multipleOf: 0.1
+            multipleOf: 0.5
             minimum: 0
+
         example:
-          'pid': b87eef8a-52ab-2fea-1adc-c41fba870b0f
-          'type': takeprofit
-          'value': 13290.5
+          pid: b87eef8a-52ab-2fea-1adc-c41fba870b0f
+          type: takeprofit
+          value: 13290.5
 
 responses:
   200:
