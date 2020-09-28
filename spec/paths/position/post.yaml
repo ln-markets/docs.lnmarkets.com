@@ -53,7 +53,8 @@ requestBody:
 
           'quantity':
             description: Quantity or margin should be filled
-            type: integer
+            format: double
+            multipleOf: 0.5
             minimum: 1
 
           'takeprofit':

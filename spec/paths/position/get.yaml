@@ -14,26 +14,13 @@ description: |
 operationId: Position_getPositionList
 
 parameters:
-  - name: open
+  - name: type
     in: query
     description: List opened positions.
     schema:
-      type: boolean
-      example: true
-
-  - name: closed
-    in: query
-    description: List closed positions.
-    schema:
-      type: boolean
-      example: false
-
-  - name: all
-    in: query
-    description: List all positions.
-    schema:
-      type: boolean
-      example: false
+      type: string
+      enum: ['all', 'open', 'closed']
+      example: all
 
 responses:
   200:
