@@ -91,12 +91,6 @@ responses:
                 description: Is the position canceled
                 type: boolean
 
-              'canceled_ts':
-                description: When the position was canceled
-                type: string
-                format: date-time
-                nullable: true
-
               'closed':
                 description: Is the position closed
                 type: boolean
@@ -162,7 +156,6 @@ responses:
                 closed_ts: 020-10-15T10:50:40.332Z
                 closed: false
                 canceled: true
-                canceled_ts: 020-11-15T10:50:40.332Z
 
   400:
     $ref: '../../responses.yaml#/badParameters'
