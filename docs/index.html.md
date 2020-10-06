@@ -12,7 +12,7 @@ toc_footers:
 includes:
   - introduction
   - authentication
-  - ratelimiter
+  - limits
   - websocket
   - errors
   - api
