@@ -8,12 +8,15 @@ If you throw too much error such as 4XX or 5XX we could ban your IP for a certai
 
 
 ### Headers
-```python
+
+```
 "retry-after": "14",
 "x-ratelimit-remaining": "0",
 "x-ratelimit-reset": "1601997680244",
 ```
 
-retry-after will tell you how many seconds you need to wait to call this endpoint
+retry-after will tell you how many seconds you need to wait to call this endpoint if your limit is down to 0.
 
-x-ratelimit-remaining is how many request do you have left
+x-ratelimit-remaining is how many request do you have left.
+
+x-ratelimit-reset is the timestamp in ms when you will be granted new points.

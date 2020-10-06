@@ -85,6 +85,7 @@ requestBody:
           stoploss: 9000
           takeprofit: 11000
           quantity: 100
+          leverage: 50
 
 responses:
   200:
