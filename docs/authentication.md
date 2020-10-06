@@ -1,6 +1,6 @@
 # Authentication
 
-One type of authentification is required, currently we are using a JSON Web Token ([JWT](https://jwt.io/))
+One type of authentication is required, currently we are using a JSON Web Token ([JWT](https://jwt.io/))
 
 The token can be generated with various scopes such as:
 - user
