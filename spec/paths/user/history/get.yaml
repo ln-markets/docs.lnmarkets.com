@@ -8,7 +8,7 @@ security:
 deprecated: false
 summary: Transactions
 description: |
-  Retrieves all withdraw or deposit you did with LN Markets
+  Retrieves all withdraw or deposit you did with LN Markets or just one page
 operationId: User_getHistory
 
 parameters:
@@ -24,35 +24,35 @@ parameters:
   - name: 'nbItem'
     in: query
     description: Maximum length of the returned table.
-    required: true
+    required: false
     schema:
       type: integer
       example: 15
   - name: 'index'
     in: query
     description: Which page we want (is used for offset computation). 
-    required: true
+    required: false
     schema:
       type: integer
       example: 1
   - name: 'getLength'
     in: query
     description: Return the length of the date slice given.
-    required: true
+    required: false
     schema:
       type: boolean
-      example: true
+      example: false
   - name: 'start'
     in: query
     description: Start of the time interval.
-    required: true
+    required: false
     schema:
       type: string
       example: '2020-06-01T00:00:00Z'
   - name: 'end'
     in: query
     description: End of the time interval.
-    required: true
+    required: false
     schema:
       type: string
       example: '2012-12-21T00:00:00Z'
