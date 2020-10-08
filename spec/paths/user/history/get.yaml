@@ -27,13 +27,15 @@ parameters:
     required: false
     schema:
       type: integer
+      minimum: 1
       example: 15
   - name: 'index'
     in: query
-    description: Which page we want (is used for offset computation). 
+    description: Which page we want (offset = nbItem * (index - 1)). 
     required: false
     schema:
       type: integer
+      minimum: 1
       example: 1
   - name: 'getLength'
     in: query
