@@ -21,6 +21,41 @@ parameters:
       pattern: '^[a-z]+$'
       enum: ['withdraw', 'deposit']
       example: deposit
+  - name: 'nbItem'
+    in: query
+    description: Maximum length of the returned table.
+    required: true
+    schema:
+      type: integer
+      example: 15
+  - name: 'index'
+    in: query
+    description: Which page we want (is used for offset computation). 
+    required: true
+    schema:
+      type: integer
+      example: 1
+  - name: 'getLength'
+    in: query
+    description: Return the length of the date slice given.
+    required: true
+    schema:
+      type: boolean
+      example: true
+  - name: 'start'
+    in: query
+    description: Start of the time interval.
+    required: true
+    schema:
+      type: string
+      example: '2020-06-01T00:00:00Z'
+  - name: 'end'
+    in: query
+    description: End of the time interval.
+    required: true
+    schema:
+      type: string
+      example: '2012-12-21T00:00:00Z'
 
 responses:
   200:
