@@ -61,6 +61,18 @@ parameters:
       pattern: '^[0-9]+$'
       example: '1599492534790'
 
+  - name: jwt
+    in: query
+    description: Request will responsd with a JWT token instead of pushing auth state to websocket
+    schema:
+      type: boolean
+
+  - name: expiry
+    in: query
+    description: JWT expiration, default to 60
+    schema:
+      type: integer
+
 responses:
   200:
     description: Sucessfuly logged in.
