@@ -6,11 +6,11 @@ There is a maximum of 50 open positions per account.
 
 ## Rate
 
-Requests to our REST API are rate limited to 1 requests per second.
+Requests to our REST API are rate limited to 1 request per second.
 
-Endpoint who does not require authentication are limited to 30 requests per minute.
+Endpoints which do not require authentication are limited to 30 requests per minute.
 
-If you throw too much error such as 4XX or 5XX we could ban your IP for a certain amount of time.
+If you throw too much error such as 4XX or 5XX, your IP could be banned for a certain period of time.
 
 
 ### Headers
