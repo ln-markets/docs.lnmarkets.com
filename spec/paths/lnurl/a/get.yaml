@@ -7,7 +7,8 @@ deprecated: false
 summary: Auth 2
 description: |
   Verify the public key with the signature and the k1 to create a account or connect into a existing account.
-  The connected state will be push over websocketsto the client.
+  If JWT is set to true, a JWT will be returned with by default all scopes and an expiry of 1h, they can be changed by setting the query paramater expiry or scopes like POST /user/jwt.
+  Else the connected state will be push over websocketsto the client.
 operationId: LNURL_authenticate
 
 parameters:
@@ -66,12 +67,25 @@ parameters:
     description: Request will responsd with a JWT token instead of pushing auth state to websocket
     schema:
       type: boolean
+      example: true
 
   - name: expiry
     in: query
-    description: JWT expiration, default to 60
+    description: JWT expiration, default to 3600
     schema:
       type: integer
+      example: 1800
+      format: int32
+      minimum: 0
+
+  - name: scopes
+    in: query
+    description: Scope of the jwt, default to 'deposit', 'withdraw', 'positions', 'user'
+    style: form
+    explode: false
+    schema:
+      type: string
+      example: deposit,withdraw
 
 responses:
   200:
@@ -86,6 +100,9 @@ responses:
               type: string
             'event':
               description: State of the user
+              type: string
+            'token':
+              description: JWT if asked
               type: string
           
         example:
