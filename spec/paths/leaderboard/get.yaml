@@ -1,0 +1,30 @@
+tags:
+  - Leaderboard
+
+security: []
+deprecated: false
+summary: Get current Leaderboard
+description: |
+  Queries the database to get the 10 users with the biggest posititve PL
+operationId: Leaderboard_getLeaderboard
+
+responses:
+  200:
+    description: Leaderboard successfully fetched
+    content:
+      application/json:
+        schema:
+          type: array
+
+        example: [
+          { pos: 1, name: 'Bob', pl: 4242424242 },
+          { pos: 2, name: 'Jean-Kevin', pl: 3491941 },
+          { pos: 3, name: 'Roger', pl: 24013441 },
+          { pos: 4, name: 'Laura', pl: 23126094 },
+          { pos: 5, name: 'Marcus', pl: 1414019 },
+          { pos: 6, name: 'Charles', pl: 242918 },
+          { pos: 7, name: 'Antoine', pl: 99999 },
+          { pos: 8, name: 'XXxRoBeRtLeBgDu24xXX', pl: 61491 },
+          { pos: 9, name: 'CRYPTOKING', pl: 10000 },
+          { pos: 10, name: 'HEY', pl: 3 }
+        ]
