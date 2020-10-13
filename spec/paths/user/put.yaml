@@ -1,0 +1,41 @@
+tags:
+  - User
+
+security:
+  - jwtAuth: ['user']
+  - cookieAuth: []
+
+deprecated: false
+summary: Update user
+description: |
+  Allows to modify account parameters
+operationId: User_updateUser
+
+requestBody:
+  required: true
+  content:
+    application/json:
+      schema:
+        type: object
+        properties:
+          'show_leaderboard':
+            type: boolean
+
+          'username':
+            type: string
+            pattern: '^[a-zA-Z0-9 _@\-^!#$%&+={}.]{1,20}$'
+
+        example:
+          show_leaderboard: true
+          type: 'bob'
+
+responses:
+  200:
+    description: |
+      Says whether or not the user was updated
+
+  400:
+    $ref: '../../responses.yaml#/badParameters'
+
+  401:
+    $ref: '../../responses.yaml#/unauthorized'
