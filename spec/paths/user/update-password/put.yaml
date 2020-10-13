@@ -49,7 +49,7 @@ responses:
       Password successfuly updated.
 
   400:
-    $ref: '../../responses.yaml#/badParameters'
+    $ref: '../../../responses.yaml#/badParameters'
 
   401:
-    $ref: '../../responses.yaml#/unauthorized'
+    $ref: '../../../responses.yaml#/unauthorized'

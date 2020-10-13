@@ -97,9 +97,13 @@ paths:
   '/user':
     get:
       $ref: 'paths/user/get.yaml'
+#
+#    put:
+#      $ref: 'paths/user/put.yaml'
 
+  '/user/update-password':
     put:
-      $ref: 'paths/user/put.yaml'
+      $ref: 'paths/user/update-password/put.yaml
 
   '/user/history':
     get:
