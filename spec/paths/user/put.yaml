@@ -7,8 +7,7 @@ security:
 
 deprecated: false
 summary: Update user
-description: |
-  Allows to modify account parameters
+description: Modifies account parameters
 operationId: User_updateUser
 
 requestBody:
@@ -20,11 +19,13 @@ requestBody:
         minProperties: 1
         properties:
           'show_leaderboard':
+            description: Show the username in the leaderboard
             type: boolean
 
           'username':
+            description: Name showed on login and in the leaderboard
             type: string
-            pattern: '^[a-zA-Z0-9 _@\-^!#$%&+={}.]{1,20}$'
+            pattern: '^[a-zA-Z0-9_-]{1,20}$'
 
         example:
           show_leaderboard: true
@@ -32,8 +33,7 @@ requestBody:
 
 responses:
   200:
-    description: |
-      Says whether or not the user was updated
+    description: The user was successfully updated
 
   400:
     $ref: '../../responses.yaml#/badParameters'
