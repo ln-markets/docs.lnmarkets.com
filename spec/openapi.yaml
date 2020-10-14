@@ -138,8 +138,6 @@ paths:
   '/leaderboard':
     get:
       $ref: 'paths/leaderboard/get.yaml'
-    put:
-      $ref: 'paths/leaderboard/put.yaml'
 
 components:
   securitySchemes:
