@@ -1,0 +1,24 @@
+tags:
+  - Login
+
+security: []
+deprecated: false
+summary: Request message
+description: |
+  Generates a message that user can sign
+operationId: Login_getMessage
+
+responses:
+  200:
+    description: Message generated
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            'message':
+              description: Invoice string
+              type: string
+
+        example:
+          message:

@@ -68,6 +68,8 @@ paths:
   '/login/joule':
     post:
       $ref: 'paths/login/joule/post.yaml'
+    get:
+      $ref: 'paths/login/joule/get.yaml'
 
   '/positions/cancel':
     post:
