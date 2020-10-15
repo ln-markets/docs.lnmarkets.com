@@ -6,8 +6,7 @@ deprecated: false
 summary: Login via Joule
 description: |
   Use the browser extension [Joule](https://lightningjoule.com/) to authenticate user.
-  A random message will be signed with the user's wallet private key,
-  this message will be send with the signature to allow LND to authenticate the user
+  The message has to be obtained using GET /login/joule
 operationId: Login_loginJoule
 
 requestBody:
@@ -20,10 +19,10 @@ requestBody:
         required:
           - 'message'
           - 'signature'
-          - 'alias'
         properties:
           'message':
-            description: Message signed by the wallet private key
+            description: |
+              Message signed by the wallet private key, who is obtained using GET /login/joule
             type: string
 
           'signature':

@@ -5,8 +5,8 @@ security: []
 deprecated: false
 summary: Request message
 description: |
-  Generates a message that user can sign
-operationId: Login_getMessage
+  Generates a message that user can sign with POST /login/joule
+operationId: Login_getJouleMessage
 
 responses:
   200:
@@ -17,8 +17,10 @@ responses:
           type: object
           properties:
             'message':
-              description: Invoice string
+              description: |
+                The message contain a fixed part : "I am signing this message to login on LN Markets"
+                and a variable one who is a 64 char hex string, the variable one is used to identify which session should be authentificated
               type: string
 
         example:
-          message:
+          message: "I am signing this message to login on LN Markets : 09d9bc06786d37eae6b60b537475d83d6b97177af22a74160a1fc3b0721f051e"
