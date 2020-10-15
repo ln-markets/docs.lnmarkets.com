@@ -17,6 +17,7 @@ requestBody:
       schema:
         type: object
         minProperties: 1
+        additionalProperties: false
         properties:
           'show_leaderboard':
             description: Show the username in the leaderboard
