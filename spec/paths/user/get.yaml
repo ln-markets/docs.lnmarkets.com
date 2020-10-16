@@ -32,6 +32,10 @@ responses:
               description: Username
               type: string
 
+            'login':
+              description: Login
+              type: string
+
             'account_type':
               description: One of ['lnurl', 'credentials', 'joule']
               type: string
@@ -47,6 +51,7 @@ responses:
           example:
             uid: d068f829-26e6-4743-b10d-ebb5a83b3624
             balance: 361086
+            login: null
             account_type: Joule
             username: Testnet-node
             linkingpublickey: 035555cbdd2b5642bbd196b31df477fad20125ae99119fd5ffb1d42c7f4811dd3a
