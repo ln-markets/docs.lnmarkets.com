@@ -133,6 +133,10 @@ paths:
     post:
       $ref: 'paths/user/logout/post.yaml'
 
+  '/user/reset-password':
+    put:
+      $ref: 'paths/user/reset-password/put.yaml'
+
 components:
   securitySchemes:
     cookieAuth:
