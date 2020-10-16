@@ -15,6 +15,19 @@ responses:
       application/json:
         schema:
           type: array
+          items:
+            type: object
+            properties:
+              'pos':
+                type: integer
+                description: User's position in the leaderboard
+              'name':
+                type: string
+                description: |
+                  Username or 'anonymous' if the Leaderboard view is disabled
+              'pl':
+                type: integer
+                description: Sum of every profits and losses of the user
 
         example: [
           { pos: 1, name: 'Bob', pl: 4242424242 },

@@ -30,7 +30,7 @@ requestBody:
 
         example:
           show_leaderboard: true
-          type: 'bob'
+          username: 'Cryptoking'
 
 responses:
   200:
