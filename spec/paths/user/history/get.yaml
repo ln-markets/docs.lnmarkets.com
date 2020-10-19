@@ -46,18 +46,18 @@ parameters:
       example: false
   - name: 'start'
     in: query
-    description: Start of the time interval.
+    description: Start of the time interval (UNIX UTC timestamp)
     required: false
     schema:
-      type: string
-      example: '2020-06-01T00:00:00Z'
+      type: integer
+      example: 1590969600000
   - name: 'end'
     in: query
-    description: End of the time interval.
+    description: End of the time interval (UNIX UTC timestamp)
     required: false
     schema:
-      type: string
-      example: '2012-12-21T00:00:00Z'
+      type: integer
+      example: 1603065600000
 
 responses:
   200:
