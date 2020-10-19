@@ -24,7 +24,7 @@ responses:
               'name':
                 type: string
                 description: |
-                  Username or 'anonymous' if the Leaderboard view is disabled
+                  Username or 'Anonymous' if the Leaderboard view is disabled
               'pl':
                 type: integer
                 description: Sum of every profits and losses of the user
