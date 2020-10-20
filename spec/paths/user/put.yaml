@@ -6,47 +6,35 @@ security:
   - cookieAuth: []
 
 deprecated: false
-summary: Update password
-description: |
-  Update the current password to the requested one.
+summary: Update user
+description: Modifies account parameters
 operationId: User_updateUser
 
 requestBody:
-  description: |
-    Payload containing user credentials.
   required: true
   content:
     application/json:
       schema:
         type: object
-        required:
-          - 'previousPassword'
-          - 'newPassword'
+        minProperties: 1
+        additionalProperties: false
         properties:
-          'previousPassword':
-            description: Old password
-            type: string
-            format: password
-            pattern: '^(?=\S)(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).\S{7,63}'
-            minLength: 8
-            maxLength: 64
+          'show_leaderboard':
+            description: Show the username in the leaderboard
+            type: boolean
 
-          'newPassword':
-            description: New password wanted by the user
+          'username':
+            description: Name showed on login and in the leaderboard
             type: string
-            format: password
-            pattern: '^(?=\S)(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).\S{7,63}'
-            minLength: 8
-            maxLength: 64
+            pattern: '^\S{6,32}$'
 
         example:
-          previousPassword: previousUnguessablePassword
-          newPassword: PleaseDontStealMySats
+          show_leaderboard: true
+          username: 'Cryptoking'
 
 responses:
   200:
-    description: |
-      Password successfuly updated.
+    description: The user was successfully updated
 
   400:
     $ref: '../../responses.yaml#/badParameters'

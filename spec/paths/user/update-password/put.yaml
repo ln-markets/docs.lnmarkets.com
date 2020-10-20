@@ -1,0 +1,55 @@
+tags:
+  - User
+
+security:
+  - jwtAuth: ['user']
+  - cookieAuth: []
+
+deprecated: false
+summary: Update password
+description: |
+  Update the current password to the requested one.
+operationId: User_updateUser
+
+requestBody:
+  description: |
+    Payload containing user credentials.
+  required: true
+  content:
+    application/json:
+      schema:
+        type: object
+        required:
+          - 'previousPassword'
+          - 'newPassword'
+        properties:
+          'previousPassword':
+            description: Old password
+            type: string
+            format: password
+            pattern: '^(?=\S)(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).\S{7,63}'
+            minLength: 8
+            maxLength: 64
+
+          'newPassword':
+            description: New password wanted by the user
+            type: string
+            format: password
+            pattern: '^(?=\S)(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).\S{7,63}'
+            minLength: 8
+            maxLength: 64
+
+        example:
+          previousPassword: previousUnguessablePassword
+          newPassword: PleaseDontStealMySats
+
+responses:
+  200:
+    description: |
+      Password successfuly updated.
+
+  400:
+    $ref: '../../../responses.yaml#/badParameters'
+
+  401:
+    $ref: '../../../responses.yaml#/unauthorized'
