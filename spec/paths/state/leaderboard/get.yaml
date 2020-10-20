@@ -18,10 +18,7 @@ responses:
           items:
             type: object
             properties:
-              'pos':
-                type: integer
-                description: User's position in the leaderboard
-              'name':
+              'username':
                 type: string
                 description: |
                   Username or 'Anonymous' if the Leaderboard view is disabled
@@ -30,14 +27,14 @@ responses:
                 description: Sum of every profits and losses of the user
 
         example: [
-          { pos: 1, name: 'Bob', pl: 4242424242 },
-          { pos: 2, name: 'Jean-Kevin', pl: 3491941 },
-          { pos: 3, name: 'Roger', pl: 24013441 },
-          { pos: 4, name: 'Laura', pl: 23126094 },
-          { pos: 5, name: 'Marcus', pl: 1414019 },
-          { pos: 6, name: 'Charles', pl: 242918 },
-          { pos: 7, name: 'Antoine', pl: 99999 },
-          { pos: 8, name: 'XXxRoBeRtLeBgDu24xXX', pl: 61491 },
-          { pos: 9, name: 'CRYPTOKING', pl: 10000 },
-          { pos: 10, name: 'HEY', pl: 3 }
+          { username: 'Bob', pl: 4242424242 },
+          { username: 'Jean-Kevin', pl: 3491941 },
+          { username: 'Roger', pl: 24013441 },
+          { username: 'Laura', pl: 23126094 },
+          { username: 'Marcus', pl: 1414019 },
+          { username: 'Charles', pl: 242918 },
+          { username: 'Antoine', pl: 99999 },
+          { username: 'XXxRoBeRtLeBgDu24xXX', pl: 61491 },
+          { username: 'CRYPTOKING', pl: 10000 },
+          { username: 'HEY', pl: 3 }
         ]

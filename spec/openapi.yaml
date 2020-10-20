@@ -94,6 +94,10 @@ paths:
     get:
       $ref: 'paths/state/node/get.yaml'
 
+  '/state/leaderboard':
+    get:
+      $ref: 'paths/state/leaderboard/get.yaml'
+
   '/user':
     get:
       $ref: 'paths/user/get.yaml'
@@ -134,10 +138,6 @@ paths:
   '/user/logout':
     post:
       $ref: 'paths/user/logout/post.yaml'
-
-  '/leaderboard':
-    get:
-      $ref: 'paths/leaderboard/get.yaml'
 
 components:
   securitySchemes:
