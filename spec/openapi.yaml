@@ -49,6 +49,10 @@ paths:
     post:
       $ref: 'paths/login/credentials/post.yaml'
 
+  '/login/credentials/reset':
+    put:
+      $ref: 'paths/login/credentials/reset/put.yaml'
+
   '/lnurl/a/c':
     get:
       $ref: 'paths/lnurl/a/c/get.yaml'
@@ -140,10 +144,6 @@ paths:
   '/user/logout':
     post:
       $ref: 'paths/user/logout/post.yaml'
-
-  '/user/reset-password':
-    put:
-      $ref: 'paths/user/reset-password/put.yaml'
 
 components:
   securitySchemes:
