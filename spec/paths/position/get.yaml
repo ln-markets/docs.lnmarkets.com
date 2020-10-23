@@ -10,7 +10,7 @@ summary: History
 description: |
   Retrieves either opened, closed or all positions.
 
-  **If no parameters is sent, the opened positions are fetched by default.**
+  **If no parameters are sent, all positions are fetched.**
 operationId: Position_getPositionList
 
 parameters:
