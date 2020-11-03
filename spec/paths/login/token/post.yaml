@@ -1,0 +1,57 @@
+tags:
+  - Login
+
+security: []
+
+deprecated: false
+summary: Login with a JWT
+description: |
+  Use a JWT to log on LN Markets, the token will revoked
+operationId: Login_loginCredentials
+
+requestBody:
+  required: true
+  content:
+    application/json:
+      schema:
+        type: object
+        additionalProperties: false
+        required:
+          - 'token'
+        properties:
+          'token':
+            type: string
+
+responses:
+  200:
+    description: Successfuly logged into the account.
+    content:
+      application/json:
+        schema:
+          type: object
+          required:
+            - 'username'
+            - 'balance'
+            - 'account_type'
+          properties:
+            'username':
+              description: User choosen username (May differe from login)
+              type: string
+            'balance':
+              description: User current balance
+              type: string
+            'account_type':
+              description: User account type, here credentials
+              type: string
+        example:
+          login: lnmarkets
+          account_type: credentials
+          balance: 1337
+
+    headers:
+      Set-Cookie:
+        schema:
+          type: string
+
+  400:
+    $ref: '../../../responses.yaml#/badParameters'

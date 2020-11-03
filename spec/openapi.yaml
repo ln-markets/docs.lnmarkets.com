@@ -49,6 +49,10 @@ paths:
     post:
       $ref: 'paths/login/credentials/post.yaml'
 
+  '/login/token':
+    post:
+      $ref: 'paths/login/token/post.yaml'
+
   '/login/credentials/reset':
     put:
       $ref: 'paths/login/credentials/reset/put.yaml'
