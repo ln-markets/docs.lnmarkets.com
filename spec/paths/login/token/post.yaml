@@ -6,7 +6,8 @@ security: []
 deprecated: false
 summary: Login with a JWT
 description: |
-  Use a JWT to log on LN Markets, the token will revoked
+  Use a JWT to log on LN Markets.
+  The token need to have the 'user' scope and the token will be revoked ater the sucessfull login
 operationId: Login_loginCredentials
 
 requestBody:
