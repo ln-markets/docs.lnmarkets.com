@@ -1,0 +1,61 @@
+tags:
+  - History
+
+security: []
+deprecated: false
+summary: Bid & offer history
+description: |
+  Retrieves at most 1000 entries between two given timestamps.
+operationId: History_bidOffer
+
+parameters:
+  - name: from
+    in: query
+    description: Starting timestamp.
+    schema:
+      type: integer
+      format: int64
+      example: 1605162757621
+
+  - name: to
+    in: query
+    description: Ending timestamp.
+    schema:
+      type: integer
+      format: int64
+      example: 1605162857621
+
+responses:
+  200:
+    description: Data history
+    content:
+      application/json:
+        schema:
+          type: array
+          items:
+            type: object
+            properties:
+              'time':
+                description: Timestamp at which the data was recorded
+                type: string
+
+              'bid':
+                description: Bid value at that time
+                type: number
+
+              'offer':
+                description: Offer value at that time
+                type: number
+          
+          example:
+            data:
+            - time: 'placeholder'
+              bid: 15853
+              offer: 15885
+
+  400:
+    $ref: '../../../responses.yaml#/badParameters'
+
+  401:
+    $ref: '../../../responses.yaml#/unauthorized'
+            
