@@ -56,7 +56,7 @@ responses:
               type: integer
 
           example:
-            invoice: lntb100u1p0jrfz0pp5q0ntrkf052dvep8w6vf0z77rek3fz8xm6c2yau4zhy7f4mzauqgsdzcf3hy6ctjddjhgueqg3jhqmmnd96zqgmxxquryvesvv6z6dehv43z6drpvycj6wfevs6j6dmyxcunxefcxccxxvn9cqzpgxqzpdsp5z40mxcrfqtsxf55u9ju3lvqdw36htsjh4xl2ujrzdff3953fg2yq9qy9qsqv7gfvp0tryme3e8r5xfrpg39j645302fkggps4h5j0aj708lzdgh2dq3pdz6lqazgvkt3wm7qq20vcff46vu5549m3v2d6h0uw3sjacqrkjqcv
+            paymentRequest: lntb100u1p0jrfz0pp5q0ntrkf052dvep8w6vf0z77rek3fz8xm6c2yau4zhy7f4mzauqgsdzcf3hy6ctjddjhgueqg3jhqmmnd96zqgmxxquryvesvv6z6dehv43z6drpvycj6wfevs6j6dmyxcunxefcxccxxvn9cqzpgxqzpdsp5z40mxcrfqtsxf55u9ju3lvqdw36htsjh4xl2ujrzdff3953fg2yq9qy9qsqv7gfvp0tryme3e8r5xfrpg39j645302fkggps4h5j0aj708lzdgh2dq3pdz6lqazgvkt3wm7qq20vcff46vu5549m3v2d6h0uw3sjacqrkjqcv
             expiry: 45
 
   400:
