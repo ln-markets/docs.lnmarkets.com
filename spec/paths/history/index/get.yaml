@@ -11,7 +11,7 @@ operationId: History_index
 parameters:
   - name: from
     in: query
-    description: Starting timestamp.
+    description: Starting timestamp (in ms).
     schema:
       type: integer
       format: int64
@@ -19,7 +19,7 @@ parameters:
 
   - name: to
     in: query
-    description: Ending timestamp.
+    description: Ending timestamp (in ms).
     schema:
       type: integer
       format: int64
@@ -36,7 +36,7 @@ responses:
             type: object
             properties:
               'time':
-                description: Timestamp at which the data was recorded
+                description: Timestamp at which the data was recorded (in µs)
                 type: string
 
               'index':
@@ -45,7 +45,7 @@ responses:
           
           example:
             data:
-            - time: 'placeholder'
+            - time: 1605633250615990
               index: 15853
 
   400:
