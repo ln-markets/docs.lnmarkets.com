@@ -34,6 +34,7 @@ requestBody:
             type: number
             multipleOf: 0.5
             minimum: 0
+            maximum: 10000000
 
         example:
           pid: b87eef8a-52ab-2fea-1adc-c41fba870b0f

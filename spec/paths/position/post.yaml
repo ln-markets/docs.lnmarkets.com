@@ -42,6 +42,7 @@ requestBody:
             type: integer
             format: int32
             minimum: 1
+            maximum: 1000000
 
           'leverage':
             description: Leverage of the order
@@ -49,13 +50,14 @@ requestBody:
             format: double
             multipleOf: 0.01
             minimum: 1
-            maximum: 50
+            maximum: 100
 
           'quantity':
             description: Quantity or margin should be filled
             format: double
             multipleOf: 0.5
             minimum: 1
+            maximum: 10000000
 
           'takeprofit':
             description: Takeprofit level
@@ -63,6 +65,7 @@ requestBody:
             format: double
             multipleOf: 0.5
             minimum: 1
+            maximum: 10000000
 
           'stoploss':
             description: Stoploss level
@@ -70,6 +73,7 @@ requestBody:
             format: double
             multipleOf: 0.5
             minimum: 1
+            maximum: 10000000
 
           'price':
             description: Required when using a limit order
@@ -77,6 +81,7 @@ requestBody:
             format: double
             multipleOf: 0.5
             minimum: 1
+            maximum: 10000000
 
         example:
           type: l
