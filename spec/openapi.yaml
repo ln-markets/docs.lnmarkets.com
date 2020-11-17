@@ -29,6 +29,10 @@ tags:
     description: |
       LN Markets state with data about our node and api availability
 
+  - name: History
+    description: |
+      LN Markets collected data over time
+
   - name: LNURL
     description: |
       Interaction with the lightning network using the [LNURL procotocol](https://github.com/btcontract/lnurl-rfc/)
@@ -39,6 +43,14 @@ security:
   - jwtAuth: []
 
 paths:
+  '/history/bid-offer':
+    get:
+      $ref: 'paths/history/bid-offer/get.yaml'
+
+  '/history/index':
+    get:
+      $ref: 'paths/history/index/get.yaml'
+
   '/login/credentials':
     get:
       $ref: 'paths/login/credentials/get.yaml'
