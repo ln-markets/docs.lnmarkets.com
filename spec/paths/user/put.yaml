@@ -20,21 +20,26 @@ requestBody:
         additionalProperties: false
         properties:
           'show_leaderboard':
-            description: Show the username in the leaderboard
+            description: Show the user PL in the leaderboard
+            type: boolean
+
+          'show_username':
+            description: Show the username on LN Marktes public data, if false show 'Anonymous' 
             type: boolean
 
           'username':
-            description: Name showed on login and in the leaderboard
+            description: Username displayed on LN Markets public data
             type: string
             pattern: '^\S{6,32}$'
 
         example:
+          show_username: false
           show_leaderboard: true
           username: 'Cryptoking'
 
 responses:
   200:
-    description: The user was successfully updated
+    $ref: '../../schemas/user.yaml'
 
   400:
     $ref: '../../responses.yaml#/badParameters'
