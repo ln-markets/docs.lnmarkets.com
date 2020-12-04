@@ -120,6 +120,10 @@ paths:
     get:
       $ref: 'paths/state/leaderboard/get.yaml'
 
+  '/state/announcements':
+    get:
+      $ref: 'paths/state/announcements/get.yaml'
+
   '/user':
     get:
       $ref: 'paths/user/get.yaml'
