@@ -95,6 +95,10 @@ paths:
     post:
       $ref: 'paths/position/cancel/post.yaml'
 
+  '/positions/cash-in':
+    post:
+      $ref: 'paths/position/cash-in/post.yaml'
+
   '/positions':
     post:
       $ref: 'paths/position/post.yaml'
