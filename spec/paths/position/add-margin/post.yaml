@@ -1,0 +1,154 @@
+tags:
+  - Positions
+
+security:
+  - jwtAuth: ['positions']
+  - cookieAuth: []
+
+deprecated: false
+summary: Add margin
+description: |
+  Add margin to one running position.
+operationId: Position_addmargin
+
+requestBody:
+  description: |
+    Payload with data relative to the process.
+  required: true
+  content:
+    application/json:
+      schema:
+        type: object
+        additionalProperties: false
+        required:
+        - 'amount'
+        - 'pid'
+        properties:
+          'amount':
+            description: Amount to add (in sats)
+            type: integer
+            format: int64
+            minimum: 1
+
+          'pid':
+            description: Position ID to which to add margin
+            type: string
+            pattern: '^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$'
+
+        example:
+          amount: 1000
+          pid: 99c470e1-2e03-4486-a37f-1255e08178b1
+
+responses:
+  200:
+    description: |
+      Margin successfully added and new position informations are sent back.
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            'pid':
+              description: UUID of the position
+              type: string
+
+            'id':
+              description: Position ID to be deprecated
+              type: string
+
+            'type':
+              description: Position type [l,m]
+              type: string
+
+            'side':
+              description: Side of the position [s,b]
+              type: string
+
+            'price':
+              description: Entry price of the position
+              type: string
+
+            'quantity':
+              description: Quantity of the position
+              type: string
+
+            'margin':
+              description: Margin used for the position creation
+              type: string
+
+            'leverage':
+              description: Leverage of the position
+              type: string
+
+            'liquidation':
+              description: Liquidation level when the position will be closed
+              type: string
+
+            'market_filled_ts':
+              description: When the order was filled
+              type: string
+              format: date-time
+              nullable: true
+
+            'market_wi':
+              description: Market working indicator [filled, running, closed, canceled]
+              type: string
+
+            'pl':
+              description: PL of the position
+              type: string
+
+            'margin_wi':
+              description: Margin working indicator [filled, running, closed, canceled]
+              type: string
+
+            'stoploss':
+              description: stoploss level
+              type: string
+              nullable: true
+
+            'stoploss_wi':
+              description: Stoploss working indicator [filled, running, closed, canceled]
+              type: string
+              nullable: true
+
+            'takeprofit':
+              description: Takeprofit level
+              type: string
+              nullable: true
+
+            'takeprofit_wi':
+              description: Takeprofit working indicator [filled, running, closed, canceled]
+              type: string
+              nullable: true
+
+            'creation_ts':
+              description: When the position was created
+              type: string
+              format: date-time
+
+          example:
+            pid: 249dc818-f8a5-4713-a3a3-8fe85f2e8969
+            id: 666
+            type: m
+            takeprofit_wi: running
+            takeprofit: 13337
+            stoploss_wi: running
+            stoploss: 1337
+            side: s
+            quantity: 42
+            price: 8888
+            pl: -13640
+            market_wi: filled
+            market_filled_ts: 020-09-15T10:50:40.332Z
+            margin_wi: running
+            margin: 424242
+            liquidation: 1000
+            leverage: 50
+            creation_ts: 020-09-15T10:50:40.332Z
+
+  400:
+    $ref: '../../../responses.yaml#/badParameters'
+
+  401:
+    $ref: '../../../responses.yaml#/unauthorized'
