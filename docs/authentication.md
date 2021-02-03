@@ -2,13 +2,12 @@
 
 One type of authentication is required, currently we are using a JSON Web Token ([JWT](https://jwt.io/))
 
-The JWT can be generated with various scopes such as:
-- user
-- positions
-- deposit
-- withdraw
+In order to generate your JWT, go to your Profile on [LN Markets](https://lnmarkets.com/) (click on the menu in the upper right corner) and select API Tokens. 
 
-The JWT can be valid for a given period of time (15m, 30m, 1h, 6h, 12h, 24h, ... , 30d) or indefinitely.
+You can now generate your token for various scopes: user, positions, deposit, withdraw. 
+
+Your JWT can be valid for a given period of time or indefinitely.
+
 The JWT must be provided within the header AUTHORIZATION like :
 
 `Authorization: Bearer <token>`
