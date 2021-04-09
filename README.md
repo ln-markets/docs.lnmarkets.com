@@ -1,4 +1,4 @@
-# LN Markets Docs
+# LN Markets API Docs
 
 ![Slate Branch](https://github.com/lnmarkets/docs/workflows/Slate/badge.svg?branch=master)
 
