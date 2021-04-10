@@ -4,9 +4,11 @@
 
 This branch contains the LN Markets documentation.
 
+This documentation is made with [Vue Press v2](https://github.com/vuepress/vuepress-next).
+
 ## Dev
 
-Install Node JS
+Documentation for docs editing can be found [here](https://vuepress2.netlify.app/).
 
 ```
 # Using OSX
@@ -24,4 +26,4 @@ yarn install
 yarn dev
 ```
 
-Open your browser and go to `https://localhost:8080`
+Open your browser and go to `http://localhost:8080`

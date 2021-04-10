@@ -2,9 +2,8 @@
   "name": "ln-markets-docs",
   "version": "1.0.0",
   "description": "LN Markets Documentation",
-  "repository": "https://github.com/lnmarkets/docs",
+  "repository": "https://github.com/lnmarkets/docs.lnmarkets.com/",
   "author": "Victor Afanassieff <victor@afanassieff.com>",
-  "license": "MIT",
   "scripts": {
     "dev": "vuepress dev src",
     "build": "vuepress build src"
