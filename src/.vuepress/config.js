@@ -102,26 +102,5 @@ module.exports = {
         link: 'https://lnmarkets.com',
       },
     ],
-    sidebar: [
-      {
-        text: 'About us',
-        link: '/about-us.md',
-      },
-      {
-        isGroup: true,
-        text: 'Application',
-        children: ['/app/README.md'],
-      },
-      {
-        isGroup: true,
-        text: 'Trading',
-        children: ['/trading/README.md'],
-      },
-      {
-        isGroup: true,
-        text: 'Lightning',
-        children: ['/lightning/README.md'],
-      },
-    ],
   },
 }
