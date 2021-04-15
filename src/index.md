@@ -9,7 +9,7 @@ actions:
   - text: Introduction
     link: /guide/
     type: secondary
-footer: Made by LN Markets with VuePress and ❤️
+footer: Made by LN Markets with ❤️
 ---
 
 <div class="features">

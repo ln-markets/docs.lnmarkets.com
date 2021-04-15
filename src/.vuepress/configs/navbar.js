@@ -1,15 +1,11 @@
 module.exports = [
   {
-    text: 'App',
-    link: '/app/',
+    text: 'FAQ',
+    link: '/faq/',
   },
   {
-    text: 'Trading',
-    link: '/trading/',
-  },
-  {
-    text: 'Ligthning',
-    link: '/lightning/',
+    text: 'Step-by-step',
+    link: '/step/',
   },
   {
     text: 'Community',
