@@ -40,7 +40,7 @@ You can deposit satoshis to your trading account before entering a position. Thi
 
 Maximum deposit is currently limited to 0.01 BTC or 1 million satoshis.
 
-Click on the button Deposit and choose the amount you want to deposit to your account: your can select a preset amount (250k sats, 500k sats, 750k sats, Max Amount) or enter it manually.
+Click on the button Deposit on the lower left hand corner and choose the amount you want to deposit to your account.
 
 Maximum amount is automatically computed to respect maximum deposit limits (1 million sats - margin available - margin used).
 
@@ -120,9 +120,9 @@ A manual closing event occurs by pushing the button close of a specific position
 
 You can withdraw part or your whole balance at any time with a Lightning invoice.
 
-Click on withdraw and select a pre-set amount (25%, 50%, 75%, 100%) or enter it manually.
+Click on the button Withdraw on the lower left hand corner and choose the amount you want to withdraw to your account.
 
-If you have a wallet with lnurl, you can just scan the QR code to receive the payment immediately. Else, you can just copy the invoice to your wallet.
+If you have a wallet with LNURL, you can just scan the QR code to receive the payment immediately. Else, you can just copy the invoice to your wallet.
 
 ## What are the overnight fees?
 

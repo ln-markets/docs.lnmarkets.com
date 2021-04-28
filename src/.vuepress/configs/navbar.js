@@ -1,11 +1,11 @@
 module.exports = [
   {
-    text: 'FAQ',
-    link: '/faq/',
+    text: 'Step-by-Step',
+    link: '/step/',
   },
   {
-    text: 'Step-by-step',
-    link: '/step/',
+    text: 'FAQ',
+    link: '/faq/',
   },
   {
     text: 'Community',
