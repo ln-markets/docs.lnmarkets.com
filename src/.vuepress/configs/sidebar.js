@@ -1,23 +1,16 @@
 module.exports = {
-  '/app/': [
+  '/faq/': [
     {
       isGroup: true,
-      text: 'App',
-      children: ['/app/README.md'],
+      text: ' ',
+      children: ['/faq/README.md','/faq/app.md', '/faq/trading.md', '/faq/lightning.md'],
     },
   ],
-  '/trading/': [
+  '/step/': [
     {
       isGroup: true,
-      text: 'Trading',
-      children: ['/trading/README.md', '/trading/trading.md'],
-    },
-  ],
-  '/lightning/': [
-    {
-      isGroup: true,
-      text: 'Lightning',
-      children: ['/lightning/README.md'],
+      text: ' ',
+      children: ['/step/README.md'],
     },
   ],
 }
