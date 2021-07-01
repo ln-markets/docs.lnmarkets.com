@@ -30,7 +30,7 @@ There are three methods for authentication:
 
 <img :src="$withBase('/assets/credentials.png')" alt="credentials">
 
-For account recovery, you have the option to enter an email address in your profile section.
+You have the option to enter an email address for account recovery.
 
 ## Fund your account
 
@@ -46,9 +46,9 @@ To confirm this deposit, you can scan the QR Code with your wallet, click on it 
 
 Your deposit is now confirmed and you can see it in your balance.
 
-<img :src="$withBase('/assets/deposit_conf.png')" alt="deposit_conf">
+<!--<img :src="$withBase('/assets/deposit_conf.png')" alt="deposit_conf">
 
-<img :src="$withBase('/assets/deposit_balance.png')" alt="deposit_balance">
+<img :src="$withBase('/assets/deposit_balance.png')" alt="deposit_balance">-->
 
 ## Open a trade
 
@@ -72,9 +72,9 @@ The margin is the amount in sats you want to use for this position. For a given 
 
 You can also add optional take profit and stop loss orders, expressed in BTC/USD.
 
-After confirming your oder, the position is open and you can see it in the Open blotter in the lower section:
+After confirming your oder, the position is open and you can see it in the Running blotter in the lower section:
 
-<img :src="$withBase('/assets/open_blotter.png')" alt="open_blotter">
+<img :src="$withBase('/assets/running_blotter.png')" alt="running_blotter">
 
 ## Go All In
 
@@ -82,11 +82,11 @@ For a given side (buy or sell), the All in button generates a market order which
 
 ## Edit a trade
 
-In the Open blotter, you can add a Stop Loss and a Take Profit.
+For each position, you can add a Stop Loss and a Take Profit.
 
 <img :src="$withBase('/assets/stop_loss.png')" alt="stop_loss">
 
-You can take the following Actions: remove margin (-) to cash-in P&L or increase margin (+) to decrease the probability of a liquidation event, and close the position.
+You can also take the following Actions: remove margin (-) to cash-in P&L, increase margin (+) to decrease the probability of a liquidation event and close the position.
 
 <img :src="$withBase('/assets/add_margin.png')" alt="add_margin">
 
