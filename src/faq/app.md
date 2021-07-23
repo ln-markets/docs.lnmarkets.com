@@ -153,11 +153,11 @@ Margin max (per account) | 1,000,000 sats
 
 ## How to use LN Markets API?
 
-The [LN Markets API reference](https://docs.lnmarkets.com/api) provides information on available endpoints and how to interact with them.
+The [LN Markets API reference](https://docs.lnmarkets.com/api/v1/) provides information on available endpoints and how to interact with them.
 
-The API endpoint for mainnet is: <https://api.lnmarkets.com>
+The API endpoint for mainnet is: <https://api.lnmarkets.com/v1>
 
-The API endpoint for testnet is: <https://api.testnet.lnmarkets.com>
+The API endpoint for testnet is: <https://api.testnet.lnmarkets.com/v1>
 
 For authentication, we are currently using JSON Web Token (JWT). The token can be generated with various scopes: user, positions, deposit, withdraw. It can be valid for a period of time or indefinitely.
 
