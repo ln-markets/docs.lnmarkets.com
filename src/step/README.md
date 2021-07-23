@@ -114,7 +114,7 @@ You can also see your history of deposits and withdrawals.
 
 ## Use LN Markets API
 
-The [LN Markets API reference](https://docs.lnmarkets.com/api) provides information on available endpoints and how to interact with them.
+The [LN Markets API reference](https://docs.lnmarkets.com/api/v1/) provides information on available endpoints and how to interact with them.
 
 Here are some step-by-step tutorials on how to use LN Markets API with:
 
