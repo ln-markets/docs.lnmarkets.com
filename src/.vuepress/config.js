@@ -12,6 +12,7 @@ module.exports = {
   themeConfig: {
     navbar,
     sidebar,
+    darkMode: true,
     logo: '/assets/logo.png',
     editLinks: false,
     themePlugins: {

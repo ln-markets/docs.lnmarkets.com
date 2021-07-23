@@ -14,7 +14,7 @@ footer: Made by LN Markets with ⚡
 
 <div class="features">
   <div class="feature">
-    <h1><a href="https://docs.lnmarkets.com/api/" target="_blank">API</a></h1>
+    <h1><a href="https://docs.lnmarkets.com/api/v1" target="_blank">API</a></h1>
   </div>
   <div class="feature">
     <h1><a href = "https://lnmarkets.substack.com/" target="_blank">Blog</a></h1>
