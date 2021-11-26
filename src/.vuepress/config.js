@@ -16,31 +16,31 @@ module.exports = {
       description: 'LN Markets Documentation',
     },
     '/es/': {
-      lang: 'Español',
+      lang: 'es-ES',
       title: 'LN Markets Docs',
       description: 'LN Markets Documentación',
     },
     '/fr/': {
-      lang: 'Français',
+      lang: 'fr-FR',
       title: 'LN Markets Docs',
       description: 'LN Markets Documentation',
     },
   },
   themeConfig: {
-    navbar,
-    sidebar,
     darkMode: true,
     logo: '/assets/logo.png',
     editLinks: false,
     locales: {
       '/': {
-        selectedLanguageName: 'en-US',
+        navbar: navbar.en,
+        sidebar: sidebar.en,
+        selectedLanguageName: 'English',
       },
       '/es/': {
-        selectedLanguageName: 'es-ES'
+        selectedLanguageName: 'Español'
       },
       '/fr/': {
-        selectedLanguageName: 'fr-FR'
+        selectedLanguageName: 'Français'
       },
     },
     themePlugins: {

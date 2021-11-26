@@ -1,5 +1,5 @@
 module.exports = {
-  navbar: require('./navbar'),
+  navbar: require('./navbar/index'),
   head: require('./head'),
-  sidebar: require('./sidebar'),
+  sidebar: require('./sidebar/index'),
 }
