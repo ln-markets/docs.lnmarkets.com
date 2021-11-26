@@ -11,7 +11,7 @@ module.exports = {
   head,
   locales: {
     '/': {
-      lang: 'English',
+      lang: 'en-US',
       title: 'LN Markets Docs',
       description: 'LN Markets Documentation',
     },
@@ -34,13 +34,13 @@ module.exports = {
     editLinks: false,
     locales: {
       '/': {
-        selectedLanguageName: 'English',
+        selectedLanguageName: 'en-US',
       },
       '/es/': {
-        selectedLanguageName: 'Español'
+        selectedLanguageName: 'es-ES'
       },
       '/fr/': {
-        selectedLanguageName: 'Français'
+        selectedLanguageName: 'fr-FR'
       },
     },
     themePlugins: {
