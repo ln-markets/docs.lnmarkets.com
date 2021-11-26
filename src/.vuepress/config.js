@@ -9,12 +9,40 @@ module.exports = {
   dest: 'dist',
   base: '/docs/',
   head,
+  locales: {
+    '/': {
+      lang: 'English',
+      title: 'LN Markets Docs',
+      description: 'LN Markets Documentation',
+    },
+    '/es/': {
+      lang: 'Español',
+      title: 'LN Markets Docs',
+      description: 'LN Markets Documentación',
+    },
+    '/fr/': {
+      lang: 'Français',
+      title: 'LN Markets Docs',
+      description: 'LN Markets Documentation',
+    },
+  },
   themeConfig: {
     navbar,
     sidebar,
     darkMode: true,
     logo: '/assets/logo.png',
     editLinks: false,
+    locales: {
+      '/': {
+        selectedLanguageName: 'English',
+      },
+      '/es/': {
+        selectedLanguageName: 'Español'
+      },
+      '/fr/': {
+        selectedLanguageName: 'Français'
+      },
+    },
     themePlugins: {
       git: process.env.NODE_ENV === 'production',
     },
