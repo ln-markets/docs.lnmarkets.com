@@ -19,12 +19,7 @@ module.exports = {
       lang: 'es-ES',
       title: 'LN Markets Docs',
       description: 'LN Markets Documentación',
-    },
-    '/fr/': {
-      lang: 'fr-FR',
-      title: 'LN Markets Docs',
-      description: 'LN Markets Documentation',
-    },
+    }
   },
   themeConfig: {
     darkMode: true,
@@ -37,11 +32,10 @@ module.exports = {
         selectedLanguageName: 'English',
       },
       '/es/': {
+        navbar: navbar.es,
+        sidebar: sidebar.es,
         selectedLanguageName: 'Español'
-      },
-      '/fr/': {
-        selectedLanguageName: 'Français'
-      },
+      }
     },
     themePlugins: {
       git: process.env.NODE_ENV === 'production',

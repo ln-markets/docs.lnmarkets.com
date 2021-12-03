@@ -12,5 +12,5 @@ module.exports = {
       text: ' ',
       children: ['/step/README.md'],
     },
-  ],
+  ]
 }
