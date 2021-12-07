@@ -116,17 +116,17 @@ Haga clic en retirar y seleccione una cantidad preestablecida (25%, 50%, 75%, 10
 
 Si tiene una billetera con lnurl, puede escanear el código QR para recibir el pago de inmediato. De lo contrario, puede simplemente copiar la factura en su billetera.
 
-## ¿Hay alguna tarifa ‘‘nocturna’’?
+## ¿Cuáles son las tarifas de financiación (funding fees)?
 
-Las posiciones de CFD mantenidas durante la noche están sujetas a un cargo de financiación durante la noche. Esto se debe a que cuando compra o vende un CFD, LN Markets efectivamente le presta BTC.
+Las posiciones de CFD están sujetas a un cargo de financiación. Esto se debe a que cuando compra o vende un CFD, LN Markets efectivamente le presta BTC.
 
-La tarifa nocturna se actualiza con frecuencia, de acuerdo con las condiciones del mercado y se aplica a las posiciones activas (las órdenes límite se vuelven activas una vez que se ejecutan).
+La tarifa de financiación se actualiza cada 8 horas, de acuerdo con las condiciones del mercado y se aplica a las posiciones activas (las órdenes límite se vuelven activas una vez que se ejecutan).
 
-La tarifa nocturna se aplica a la cantidad expresada en BTC, calculada y retirada de cada posición de margen a las 8:00 am UTC todos los días. Puede ver las tarifas nocturnas anteriores y las tarifas nocturnas siguientes en su página de negociación en Trading info.
+La tarifa de financiación se aplica a la cantidad expresada en BTC, calculada y retirada de cada posición de margen a las 4:00 am, 12:00 pm y 8:00 pm UTC. Puede ver las tarifas nocturnas anteriores y las tarifas nocturnas siguientes en su página de negociación en Trading info.
 
-Ejemplo de cálculo de tarifa nocturna: para una posición larga de Cantidad = 10, con tasa BTC/USD = $ 30.000, la tarifa nocturna es = (10/30.000) * 0,05% * 100.000.000 = 16 satoshis.
+Ejemplo de cálculo de tarifa nocturna: con una tasa de financiación (funding rate) de 0.01%, para una posición larga de Cantidad = 10, con tasa BTC/USD = $ 30.000, la tarifa de financiamento es = (10/30.000) * 0,01% * 100.000.000 = 3 satoshis.
 
-## Cuál es el costo de operar en LN Markets?
+## ¿Cuál es el costo de operar en LN Markets?
 
 Contrato | Puja-Oferta | Manutención de margen | Taza nocturna
 ------------ | ------------- | ------------ | -------------

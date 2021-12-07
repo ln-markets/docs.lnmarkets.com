@@ -124,15 +124,15 @@ Click on the button Withdraw on the lower left hand corner and choose the amount
 
 If you have a wallet with LNURL, you can just scan the QR code to receive the payment immediately. Else, you can just copy the invoice to your wallet.
 
-## What are the overnight fees?
+## What are the funding fees?
 
-CFD Positions held overnight are subject to an overnight fee. This is because when you buy or sell a CFD, LN Markets is effectively lending you BTC.
+CFD Positions are subject to a funding fee. This is because when you buy or sell a CFD, LN Markets is effectively lending you BTC.
 
-The overnight fee is updated frequently according to market conditions and applies to running positions (limit orders become running once they are executed).
+The funding fee is updated every 8 hours according to market conditions and applies to running positions (limit orders become running once they are executed).
 
-The overnight fee applies to the quantity expressed in BTC, computed and withdrawn from each margin position by 8:00 am UTC every day.
+The funding fee is computed with the quantity expressed in BTC and withdrawn from each margin position every 8 hours at 4:00 am, 12:00 pm and 8:00pm UTC.
 
-Example of overnight fee calculation: for a long position of Quantity = 10, with BTCUSD rate = $30,000, the overnight fee is = (10/30,000)*0.05%*100,000,000 = 16 satoshis.
+Example of funding fee calculation: for a funding rate of 0.01%, a long position of Quantity = 10, with BTCUSD rate = $30,000, the funding fee is = (10/30,000)*0.01%*100,000,000 = 3 satoshis.
 
 ## What is the cost of trading on LN Markets?
 

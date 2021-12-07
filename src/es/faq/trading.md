@@ -149,6 +149,6 @@ El historial de posiciones cerradas es un resumen de todas las posiciones cerrad
 
 Una vez que una posición está cerrada, puede retirar sus fondos haciendo clic en el botón Retirar para una posición específica:
     • Con los monederos que admiten [lnurl-withdraw](https://github.com/fiatjaf/awesome-lnurl#wallets), basta con escanear el código QR para recibir el pago al instante.
-    • Con [WebLN]((https://webln.dev/#/), la factura de reembolso de las pérdidas y ganancias y el margen se calculan automáticamente para que usted reciba el pago al instante.
+    • Con [WebLN](https://webln.dev/#/), la factura de reembolso de las pérdidas y ganancias y el margen se calculan automáticamente para que usted reciba el pago al instante.
     • Con otros monederos Lightning, puedes pegar una factura (por una cantidad igual a 0) y LN Markets pagará la cantidad total disponible para retirar.
 
