@@ -38,7 +38,7 @@ Click on the button Deposit on the lower left hand corner and choose the amount 
 
 <img :src="$withBase('/assets/deposit.png')" alt="deposit">
 
-Maximum amount is automatically computed to respect maximum deposit limits (1 million sats - margin available - margin used).
+Maximum amount is automatically computed to respect maximum deposit limits (2 million sats - margin available - margin used).
 
 To confirm this deposit, you can scan the QR Code with your wallet, click on it (for WebLN apps) or copy the invoice and paste it directly:
 
@@ -54,7 +54,7 @@ Your deposit is now confirmed and you can see it in your balance.
 
 LN Markets quotes a bid-offer (in the upper bar) and is direct counterparty to all trades.
 
-The first contract we list is a CFD (Contract for Difference) on BTCUSD price with leverage up to x50.
+The first contract we list is a CFD (Contract for Difference) on BTCUSD price with leverage up to x100.
 
 Opening a long position is at the Offer price and conversely, opening a short position is a the Bid price.
 

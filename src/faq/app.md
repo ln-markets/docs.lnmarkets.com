@@ -38,11 +38,11 @@ For account recovery, you have the option to enter an email address in your prof
 
 You can deposit satoshis to your trading account before entering a position. This deposit will be added to the margin available for entering positions in the future.
 
-Maximum deposit is currently limited to 0.01 BTC or 1 million satoshis.
+Maximum deposit is currently limited to 0.02 BTC or 2 million satoshis.
 
 Click on the button Deposit on the lower left hand corner and choose the amount you want to deposit to your account.
 
-Maximum amount is automatically computed to respect maximum deposit limits (1 million sats - margin available - margin used).
+Maximum amount is automatically computed to respect maximum deposit limits (2 million sats - margin available - margin used).
 
 ## What are the bid and offer prices?
 
@@ -80,11 +80,11 @@ For a given side (buy or sell), the All In button generates a market order which
 
 There is a maximum margin available for trading per node. 
 
-This limit is currently set to 0.01 BTC = 1,000,000 sats per account for Deposits (1 Mio sats - Margin Available - Margin Used) and Margin Used for open positions.
+This limit is currently set to 0.02 BTC = 1,000,000 sats per account for Deposits (2 Mio sats - Margin Available - Margin Used) and Margin Used for open positions.
 
 ## What is the maximum leverage on LN Markets?
 
-The maximum leverage you can take is currently set at x50.
+The maximum leverage you can take is currently set at x100.
 
 ## What is the price reference?
 
@@ -148,8 +148,8 @@ Price Ref | Bid Price (for long position) / Offer Price (for short position)
 P&L | Quantity * (1/Entry Price -1/Price Ref)
 Liquidation Level | (1 / Entry Price + Margin / Quantity)^-1
 Trigger Indicator | Price Ref
-Leverage Max | x50
-Margin max (per account) | 1,000,000 sats
+Leverage Max | x100
+Margin max (per account) | 2,000,000 sats
 
 ## How to use LN Markets API?
 

@@ -82,7 +82,7 @@ El apalancamiento en el comercio es una estrategia de inversión que permite gan
 
 El apalancamiento es un arma de doble filo. Con un apalancamiento de 1, se está expuesto a las variaciones del activo subyacente. Con un apalancamiento de 2, para una posición larga, cuando el activo subyacente aumenta en 1, sus ganancias y pérdidas aumentan en 2. Pero cuando el activo subyacente disminuye en 1, sus ganancias y pérdidas disminuyen en 2. Y viceversa para una posición corta.
 
-En LN Markets, el apalancamiento está limitado a x50.
+En LN Markets, el apalancamiento está limitado a x100.
 
 ## ¿Qué es la liquidación?
 
@@ -125,7 +125,7 @@ En LN Markets, el margen disponible es la cantidad que puede utilizar para entra
 ## ¿Qué margen se utiliza?
 
 En LN Markets, el margen utilizado es la cantidad utilizada en las posiciones abiertas actuales.
-El margen máximo utilizado está actualmente limitado a 0,01 BTC o 1 millón de satoshis.
+El margen máximo utilizado está actualmente limitado a 0,02 BTC o 2 millones de satoshis.
 
 ## ¿Qué es la cantidad abierta?
 

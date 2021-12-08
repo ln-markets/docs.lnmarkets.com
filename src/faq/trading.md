@@ -78,7 +78,7 @@ Leverage in trading is an investment strategy that allows to gain exposure to a 
 
 Leverage is a double-edged sword. With a leverage of 1, you are exposed to the variations of the underlying asset. With a leverage of 2, for a long position, when the underlying asset increases by 1, your P&L increases by 2. But when the underlying asset decreases by 1, your P&L decreases by 2. And vice versa for a short position.
 
-On LN Markets, leverage is limited to x50.
+On LN Markets, leverage is limited to x100.
 
 ## What is the liquidation?
 
@@ -124,7 +124,7 @@ On LN Markets, the margin available is the amount you can use to enter future tr
 
 On LN Markets, the margin used is the amount used in current open positions.
 
-Maximum margin used is currently limited to 0.01 BTC or 1 million satoshis.
+Maximum margin used is currently limited to 0.02 BTC or 2 million satoshis.
 
 ## What is the open quantity?
 

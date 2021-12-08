@@ -42,11 +42,11 @@ Puedes depositar satoshis en tu cuenta de operaciones antes de ingresar a una po
 
 Este depósito se agregará al margen disponible para ingresar posiciones en el futuro.
 
-El depósito máximo está actualmente limitado a 0.01 BTC o 1 millón de satoshis.
+El depósito máximo está actualmente limitado a 0.02 BTC o 2 millones de satoshis.
 
 Haga clic en el botón Depositar y elija la cantidad que desea depositar en su cuenta: puede seleccionar una cantidad preestablecida (250k sats, 500k sats, 750k sats o monto máximo) o ingresarla manualmente.
 
-La cantidad máxima se calcula automáticamente para respetar los límites máximos de depósito (1 millón de sats — margen disponible — margen utilizado).
+La cantidad máxima se calcula automáticamente para respetar los límites máximos de depósito (2 millones de sats — margen disponible — margen utilizado).
 
 ## ¿Cuáles son los precios de puja y oferta?
 
@@ -82,11 +82,11 @@ De lo contrario, se genera una factura Lightning para que pague el monto restant
 
 ## ¿Existe algún límite en LN Markets?
 
-Sí, hay un margen máximo disponible para operar por nodo. Este límite de saldo se ha establecido actualmente en 0.01 BTC = 1,000,000 sats por nodo y se revisará según la actividad.
+Sí, hay un margen máximo disponible para operar por nodo. Este límite de saldo se ha establecido actualmente en 0.02 BTC = 2,000,000 sats por nodo y se revisará según la actividad.
 
 ## ¿Existe un apalancamiento máximo en LN Markets?
 
-Sí, hay un apalancamiento máximo que puede tomar, actualmente está establecido en x50.
+Sí, hay un apalancamiento máximo que puede tomar, actualmente está establecido en x100.
 
 ## ¿Por qué mi posición ha sido liquidada?
 
@@ -140,8 +140,8 @@ Precio de referencia | Precio de puja (para posición largas/de compra) y Precio
 Pérdidas y ganancias (P&L) | Cantidad * (1/Precio de entrada -1/Precio de referencia
 Nivel de liquidación | (1 / Precio de entrada + Margen / Cantidad) ^-1
 Indicador de disparador | Precio de referencia
-Apalancamiento máximo | x50
-Margen máximo (por cuenta) | 1.000.000 sats
+Apalancamiento máximo | x100
+Margen máximo (por cuenta) | 2.000.000 sats
 
 ## ¿Cómo puedo utilizar la API de LN Markets?
 

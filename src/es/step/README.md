@@ -38,7 +38,7 @@ Haga clic en el botón Depositar [Deposit] en la esquina inferior izquierda y el
 
 <img :src="$withBase('/assets/deposit.png')" alt="deposit">
 
-El importe máximo se calcula automáticamente para respetar los límites máximos de depósito (1 millón de sats — margen disponible — margen utilizado).
+El importe máximo se calcula automáticamente para respetar los límites máximos de depósito (2 millones de sats — margen disponible — margen utilizado).
 
 Para confirmar este depósito, puede escanear el código QR con su monedero, hacer clic en él (para las aplicaciones WebLN) o copiar la factura [invoice] y pegarla directamente:
 
@@ -54,7 +54,7 @@ Su depósito está ahora confirmado y puede verlo en su saldo.
 
 LN Markets cotiza una oferta [bid] y una demanda [offer] (en la barra superior) y es la contraparte directa de todas las operaciones.
 
-El primer contrato que enumeramos es un CFD (Contrato por Diferencia) sobre el precio del BTC/USD con un apalancamiento de hasta x50.
+El primer contrato que enumeramos es un CFD (Contrato por Diferencia) sobre el precio del BTC/USD con un apalancamiento de hasta x100.
 
 La apertura de una posición larga es al precio de la demanda y, a la inversa, la apertura de una posición corta es al precio de oferta.
 
