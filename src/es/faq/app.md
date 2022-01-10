@@ -102,6 +102,16 @@ El precio de esta orden de venta es el precio de oferta, luego el precio de refe
 
 Esta regla se aplica al cálculo de ganancias y pérdidas (P & L), tomar ganancias (take profit), detener pérdidas (stop loss) y órdenes de liquidación.
 
+
+## ¿Cómo puedo añadir o restar márgen a las posiciones abiertas?
+
+En cualquier momento, puede añadir margen (+) a las posiciones abiertas, haciendo clic en la parte de "acciones" del registro de "Posiciones Abiertas".
+De este modo, reducirá el apalancamiento de la posición abierta y disminuirá la probabilidad de un evento de liquidación.
+
+Para las posiciones abiertas con "pérdidas y ganancias" (P&L) en positivo, también puede reducir el margen (-), haciendo clic en la parte de "acciones" del registro de "Posiciones Abiertas".
+
+De esta manera, aumentará el apalancamiento de la posición abierta, pero esto también aumentará su margen disponible para otras posiciones. También puede cobrar y retirar instantáneamente este "P&L" a su monedero.
+
 ## ¿Qué es una posición cerrada?
 
 Un evento cerrado ocurre cuando se ejecuta una orden de toma de ganancias, stop loss o liquidación. Cuando sucede, la posición de estado cambia de abierto a cerrado y se puede ver en la tabla de posiciones cerradas.

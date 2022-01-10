@@ -28,7 +28,7 @@ No email or private data is required to access LN Markets.
 There are three methods for authentication:
 - Log in with LNURL: instant login with any wallet which supports [lnurl-auth](https://github.com/fiatjaf/awesome-lnurl#wallets) like [Phoenix](https://phoenix.acinq.co/), [Breez](https://breez.technology/), etc. This is a seamless and efficient way to log in and trade on LN Markets: your wallet can sign a message with its Private Key. Hence, identification can be done just with your wallet’s Public Key and no other information is needed.
 
-- Log in with WebLN: [WebLN](https://webln.dev/#/) is a way of interacting with a user's Lightning node via the browser. [Joule](https://lightningjoule.com/) is for example a WebLN-enabled browser extension that uses your own node.
+- Log in with WebLN: [WebLN](https://webln.dev/#/) is a way of interacting with a user's Lightning node via the browser.
 
 - Log in with Credentials: you can create an account directly, entering your login and password. 
 
@@ -80,7 +80,7 @@ For a given side (buy or sell), the All In button generates a market order which
 
 There is a maximum margin available for trading per node. 
 
-This limit is currently set to 0.02 BTC = 1,000,000 sats per account for Deposits (2 Mio sats - Margin Available - Margin Used) and Margin Used for open positions.
+This limit is currently set to 0.02 BTC = 2,000,000 sats per account for Deposits (2M sats - Margin Available - Margin Used) and Margin Used for open positions.
 
 ## What is the maximum leverage on LN Markets?
 
@@ -104,11 +104,11 @@ We do not charge extra margin for liquidation and the liquidation level is the e
 
 ## How can I cross-margin positions?
 
-At any time, you can add (+) or reduce margin (-) to open positions, clicking on the Actions part of the Open Positions blotter.
+At any time, you can add margin (+)  to open positions, clicking on the Actions part of the Open Positions blotter.
+This way, you will reduce the leverage of the open position and decrease the probability of a liquidation event.
 
-Adding margin to an open position, you reduce its leverage and decrease the probability of a liquidation event.
-
-Removing margin from an existing position, you increase its leverage, but this will also increase your margin available for other positions and/or you can cash in and withdraw instantly this PL back to your wallet.
+For open positions with positive P&L, you can also reduce margin (-), clicking on the Actions part of the Open Positions blotter.
+This way, you will increase the leverage of the open position, but this will also increase your margin available for other positions. You can also cash in and withdraw instantly this PL back to your wallet.
 
 ## What events trigger the closing of a position?
 
