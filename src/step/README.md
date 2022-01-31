@@ -22,9 +22,7 @@ There are three methods for authentication:
 
 <img :src="$withBase('/assets/lnurl_auth.png')" alt="lnurl_auth">
 
-- Log in with WebLN: [WebLN](https://webln.dev/#/) is a way of interacting with a user's Lightning node via the browser. [Joule](https://lightningjoule.com/) is for example a WebLN-enabled browser extension that uses your own node.
-
-<img :src="$withBase('/assets/joule.png')" alt="joule">
+- Log in with WebLN: [WebLN](https://webln.dev/#/) is a way of interacting with a user's Lightning node via the browser. [Alby](https://getalby.com/) is for example a WebLN-enabled browser extension that uses your own node.
 
 - Log in with Credentials: you can create an account directly, entering your login and password.
 
@@ -114,10 +112,8 @@ You can also see your history of deposits and withdrawals.
 
 ## Use LN Markets API
 
-The [LN Markets API reference](https://docs.lnmarkets.com/api/v1/) provides information on available endpoints and how to interact with them.
+The [LN Markets API reference](https://docs.lnmarkets.com/api/v1/) provides information on all available endpoints.
 
-Here are some step-by-step tutorials on how to use LN Markets API with:
-
-- [Python](https://research.ito.am/ln-markets-api-python-tutorial/)
-- [Node.js](https://research.ito.am/ln-markets-api-nodejs-tutorial/)
-- [cURL](https://research.ito.am/ln-markets-api-curl-tutorial/)
+Here are two Python and JavaScript packages to easily interact with the API:
+- [Python package](https://pypi.org/project/ln-markets/)
+- [JavaScript package](https://www.npmjs.com/package/@ln-markets/api)

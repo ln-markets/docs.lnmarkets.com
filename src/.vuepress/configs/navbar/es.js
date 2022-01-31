@@ -19,6 +19,14 @@ module.exports = [
           link: 'https://www.t.me/lnmarkets',
         },
         {
+          text: 'Discord',
+          link: 'http://discord.gg/rndgWdPNd8',
+        },
+        {
+          text: 'YouTube',
+          link: 'https://www.youtube.com/channel/UCorFFyp52NoST6VUgXvMchw',
+        },
+        {
           text: 'Mail',
           link: 'mailto:hello@lnmarkets.com',
         },
