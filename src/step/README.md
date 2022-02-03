@@ -96,7 +96,7 @@ You can find all your closed positions in the Closed blotter in the lower sectio
 
 ## Withdraw funds to your wallet
 
-Click on the button Deposit on the lower left hand corner and choose the amount you want to deposit to your account.
+Click on the button Withdraw on the lower left hand corner and choose the amount you want to deposit to your account.
 
 <img :src="$withBase('/assets/withdraw.png')" alt="withdraw">
 
