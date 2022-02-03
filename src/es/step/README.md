@@ -96,7 +96,7 @@ Puede encontrar todas sus posiciones cerradas en el registro cerrado de la secci
 
 ## Retirar fondos a su monedero
 
-Haga clic en el botón Depositar en la esquina inferior izquierda y elija la cantidad que desea depositar en su cuenta.
+Haga clic en el botón Retirar en la esquina inferior izquierda y elija la cantidad que desea depositar en su cuenta.
 
 <img :src="$withBase('/assets/withdraw.png')" alt="withdraw">
 
