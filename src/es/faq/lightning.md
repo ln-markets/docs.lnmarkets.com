@@ -56,7 +56,7 @@ Un monedero con custodia es aquel en el que las claves privadas están en manos 
 
 En pocas palabras, elegir entre un monedero sin custodia y uno con custodia suele ser una cuestión de compromiso entre la seguridad (no tus llaves, no tus bitcoin) y la comodidad (los monederos concustodia pueden ofrecer una experiencia de usuario más sencilla).
 
-En nuestra opinión, los monederos sLightning como [Phoenix](https://phoenix.acinq.co/) o [Breez](https://breez.technology/) combinan una gran experiencia de usuario y el control de sus llaves.
+En nuestra opinión, los monederos Lightning como [Phoenix](https://phoenix.acinq.co/) o [Breez](https://breez.technology/) combinan una gran experiencia de usuario y el control de sus llaves.
 
 Existen múltiples tipos de carteras Lightning, las más utilizadas son:
 - Monederos de escritorio (en Windows, macOS, Linux, etc.)
