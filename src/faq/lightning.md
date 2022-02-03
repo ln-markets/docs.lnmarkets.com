@@ -60,7 +60,7 @@ A custodial wallet is one in which private keys are held by a third party, which
 
 In a nutshell, choosing between a non-custodial and a custodial wallet is often a question of trade-off between security (not your keys, not your bitcoins) and convenience (non-custodial wallets may provide a more simple user experience). 
 
-In our view, sLightning wallets such as [Phoenix](https://phoenix.acinq.co/), [Breez](https://breez.technology/) or [BLW](https://lightning-wallet.com/) combine great user experience and control over your keys.
+In our view, Lightning wallets such as [Phoenix](https://phoenix.acinq.co/), [Breez](https://breez.technology/) or [BLW](https://lightning-wallet.com/) combine great user experience and control over your keys.
 
 There are multiple types of Lightning wallets, the most used are:
 - Desktop wallets (on Windows, macOS, Linux, etc.)
