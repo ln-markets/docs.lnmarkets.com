@@ -48,7 +48,7 @@ All non-custodial Lightning wallets run their own Lightning node.
 
 A wallet is the most common user interface to the Bitcoin and Lightning networks, just like the web browser is the most common interface for the HTTP protocol.
 
-A Bitcoin wallet is an application or a program that that enables you to send and receive bitcoin units. A Lighting-enabled wallet is a Bitcoin wallet that enables you to interact with the Lightning Network.
+A Bitcoin wallet is an application or a program that enables you to send and receive bitcoin units. A Lighting-enabled wallet is a Bitcoin wallet that enables you to interact with the Lightning Network.
 
 Wallets manage public and private keys, track balances, and create and sign transactions.
 
