@@ -16,12 +16,12 @@ module.exports = {
       description: 'LN Markets Documentation',
     },
     '/es/': {
-      lang: 'Español',
+      lang: 'es-ES',
       title: 'LN Markets Docs',
       description: 'LN Markets Documentación',
     },
     '/fr/': {
-      lang: 'Français',
+      lang: 'fr-FR',
       title: 'LN Markets Docs',
       description: 'Docs LN Markets',
     }
