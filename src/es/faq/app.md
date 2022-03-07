@@ -66,10 +66,6 @@ El margen es la cantidad en sats que desea utilizar para esta posición. Para un
 
 También puede agregar órdenes opcionales de toma de ganancias y ‘‘detener pérdidas’’ (stop loss), expresadas en BTC/USD.
 
-## ¿Qué es el botón ‘‘Ir con todo’’?
-
-Para un lado determinado (comprar o vender), el botón ‘‘Ir con todo’’ genera una orden de mercado que maximiza el apalancamiento y el uso del margen disponible.
-
 ## ¿Cómo ingresar una posición en LN Markets?
 
 Para ingresar en una posición, debe pagar su margen.
@@ -79,6 +75,11 @@ Al hacer clic en el botón Enviar, aparece un resumen de la nueva posición y, s
 Este depósito se agregará al margen disponible para ingresar posiciones en el futuro.
 
 De lo contrario, se genera una factura Lightning para que pague el monto restante del margen. La nueva posición solo se confirma después del pago de la factura.
+
+## ¿Qué es el botón ‘‘Ir con todo’’?
+
+Para un lado determinado (comprar o vender), el botón ‘‘Ir con todo’’ genera una orden de mercado que maximiza el apalancamiento y el uso del margen disponible.
+
 
 ## ¿Existe algún límite en LN Markets?
 

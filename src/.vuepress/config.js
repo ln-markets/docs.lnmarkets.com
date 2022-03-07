@@ -16,9 +16,14 @@ module.exports = {
       description: 'LN Markets Documentation',
     },
     '/es/': {
-      lang: 'es-ES',
+      lang: 'Español',
       title: 'LN Markets Docs',
       description: 'LN Markets Documentación',
+    },
+    '/fr/': {
+      lang: 'Français',
+      title: 'LN Markets Docs',
+      description: 'Docs LN Markets',
     }
   },
   themeConfig: {
@@ -35,6 +40,11 @@ module.exports = {
         navbar: navbar.es,
         sidebar: sidebar.es,
         selectedLanguageName: 'Español'
+      },
+      '/fr/': {
+        navbar: navbar.fr,
+        sidebar: sidebar.fr,
+        selectedLanguageName: 'Français'
       }
     },
     themePlugins: {

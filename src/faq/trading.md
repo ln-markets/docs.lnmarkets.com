@@ -145,8 +145,3 @@ You may want to close a position by clicking on the button close for a specific 
 ## What is the closed positions blotter?
 
 The closed positions blotter is a recap of all previously closed positions.
-
-Once a position is closed, you can withdraw his / her funds by clicking on the button Withdraw for a specific position:
-- With wallets which support [lnurl-withdraw](https://github.com/fiatjaf/awesome-lnurl#wallets), you can just scan the QR code to receive instant payment.
-- With [WebLN](https://webln.dev/#/), the invoice for repayment of the P&L and the margin is automatically computed for you to receive instant payment.
-- With other Lightning wallets, you can paste an invoice (for an amount equal to 0) and LN Markets will pay the full amount available for withdraw.

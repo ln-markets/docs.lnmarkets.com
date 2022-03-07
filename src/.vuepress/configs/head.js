@@ -4,7 +4,7 @@ module.exports = [
     {
       rel: 'image/png',
       sizes: '32x32',
-      href: '/docs/favicon//favicon-32x32.png',
+      href: '/docs/favicon/favicon-32x32.png',
     },
   ],
   [
@@ -21,7 +21,7 @@ module.exports = [
       rel: 'icon',
       type: 'image/png',
       sizes: '16x16',
-      href: '/docs/favicon//favicon-16x16.png',
+      href: '/docs/favicon/favicon-16x16.png',
     },
   ],
   ['link', { rel: 'manifest', href: '/docs/favicon/site.webmanifest' }],
@@ -40,7 +40,7 @@ module.exports = [
       content: '/docs/favicon/browserconfig.xml',
     },
   ],
-  ['link', { rel: 'shortcut icon', href: '/docs/favicon//favicon.ico' }],
+  ['link', { rel: 'shortcut icon', href: '/docs/favicon/favicon.ico' }],
   ['meta', { name: 'theme-color', content: '#0a157a' }],
   ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
   ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
