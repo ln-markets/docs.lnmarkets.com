@@ -28,18 +28,19 @@ le seul pré-requis est un 'wallet' Lightning avec une route ou un canal vers le
 
 Transférer fractions de bitcoins vers un wallet Lightning peut se comparer à un transfert de fonds vers une banque dépositaire pour un investissement futur. Mais avec une différence de taille : dans le cas du réseau Lightning, vous avec le contrôle total sur vos fonds avant d'effectuer votre investissement.
 
-Il existe trois méthodes d'authentification :
+Il existe quatre méthodes de connexion :
 
--  Se connecter avec LNURL : connexion instantanée avec n'importe quel portefeuille (wallet) Lightinng qui supporte [lnurl-auth](https://github.com/fiatjaf/awesome-lnurl#wallets) comme [Phoenix](https://phoenix.acinq.co/), [Breez](https://breez.technology/), etc. Il s'agit d'une méthode transparente et efficace de connexion. En effet, votre portefeuille peut signer un message avec sa clé privée. Ainsi, l'identification peut se faire uniquement avec la clé publique de votre portefeuille et aucune autre information n'est nécessaire.
+-  Se connecter avec LNURL : connexion instantanée avec n'importe quel 'wallet' (portefeuillle numérique) Lightinng qui supporte [lnurl-auth](https://github.com/fiatjaf/awesome-lnurl#wallets) comme [Phoenix](https://phoenix.acinq.co/), [Breez](https://breez.technology/), etc. Il s'agit d'une méthode transparente et efficace de connexion. En effet, votre portefeuille peut signer un message avec sa clé privée. Ainsi, l'identification peut se faire uniquement avec la clé publique de votre portefeuille et aucune autre information n'est nécessaire.
 
 <img :src="$withBase('/assets/lnurl_auth.png')" alt="lnurl_auth">
 
-- Se connecter avec WebLN: [WebLN](https://webln.dev/#/) est un moyen d'interagir avec le nœud Lightning d'un utilisateur via le navigateur web. [Alby](https://getalby.com/) est par exemple une extension de navigateur compatible avec WebLN, qui utilise votre propre nœud.
-
 - Se connecter avec des 'Credentials' (identifiants) : vous pouvez créer un compte directement, en entrant votre 'login' et votre mot de passe.
+
+<img :src="$withBase('/assets/credentials.png')" alt="credentials">
 
 Vous avez également la possibilité d'entrer une adresse électronique pour la récupération du compte.
 
+- Se connecter avec [Alby](https://getalby.com/) and [Joule](https://lightningjoule.com/): ce sont des extensions Bitcoin/Lightning pour navigateur web  qui se connectent à différentes interfaces pour une intégration et une inteaction directe avec ces réseaux.
 
 ## Comment puis je déposer des fonds sur LN Markets ?
 

@@ -29,10 +29,20 @@ El único requisito previo es financiar una billetera Lightning con una ruta o u
 
 Financiar una billetera Lightning se puede comparar con una transferencia de fondos a un banco custodial para una inversión futura. Pero con una diferencia importante: aquí uno mantiene la propiedad total sobre sus fondos en el canal Lightning antes de la inversión.
 
-Hay dos métodos de autenticación:
-- Directamente con una billetera Lightning que admita lnurl-auth como Phoenix (lista completa [aquí](https://github.com/fiatjaf/awesome-lnurl#wallets) ) o WebLN (obtenga más información [aquí](https://webln.dev/#/)): una forma fluida y eficiente de iniciar sesión y operar en LN Markets. Su billetera puede firmar un mensaje con su clave privada. Por lo tanto, la identificación se puede realizar solo con la clave pública de su billetera. No se necesita ninguna otra información.
+Existen cuatro métodos de inicio de sesión:
 
-Creación de cuenta (billetera móvil o de escritorio): Puede definir su nombre de usuario y contraseña. Puede también definir tu email en caso de pérdida de su nombre de usuario y/o contraseña.
+- Iniciar sesión con LNURL: inicio de sesión instantáneo con cualquier monedero que soporte [lnurl-auth](https://github.com/fiatjaf/awesome-lnurl#wallets) como [Phoenix](https://phoenix.acinq.co/), [Breez](https://breez.technology/), etc. Se trata de una forma sencilla y eficaz de iniciar sesión y operar en LN Markets: su monedero puede firmar un mensaje con su llave privada. Por lo tanto, la identificación se puede hacer sólo con la llave pública de su monedero y no se necesita ninguna otra información.
+
+<img :src="$withBase('/assets/lnurl_auth.png')" alt="lnurl_auth">
+
+- Iniciar sesión con credenciales: puede crear una cuenta directamente, introduciendo su nombre de usuario y contraseña.
+
+<img :src="$withBase('/assets/credentials.png')" alt="credentials">
+
+Tiene la opción de introducir una dirección de correo electrónico para recuperar su cuenta.
+
+- Iniciar sesión con  [Alby](https://getalby.com/) y [Joule](https://lightningjoule.com/): son extensiones de browser web Bitcoin/Lightning  que se conectan a diferentes interfaces de billetera y brindan una profunda integración de Lightning a la web.
+
 
 ## ¿Cómo puedo depositar fondos en LN Markets?
 

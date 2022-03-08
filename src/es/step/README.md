@@ -12,23 +12,23 @@ LN Markets no ofrece ninguna garantía, utilícelo bajo su propia responsabilida
 
 ## Inicio de sesión
 
-En [LN Markets](https://lnmarkets.com/), haga clic en Inicio de sesión [Login] en la esquina superior derecha:
+En [LN Markets](https://lnmarkets.com/), haga clic en Inicio de sesión [Sign In] en la esquina superior derecha:
 
 <img :src="$withBase('/assets/login.png')" alt="login">
 
-Existen tres métodos de autentificación:
+Existen cuatro métodos de inicio de sesión:
 
-- Inicio de sesión con LNURL: inicio de sesión instantáneo con cualquier monedero que soporte [lnurl-auth](https://github.com/fiatjaf/awesome-lnurl#wallets) como [Phoenix](https://phoenix.acinq.co/), [Breez](https://breez.technology/), etc. Se trata de una forma sencilla y eficaz de iniciar sesión y operar en LN Markets: su monedero puede firmar un mensaje con su llave privada. Por lo tanto, la identificación se puede hacer sólo con la llave pública de su monedero y no se necesita ninguna otra información.
+- Iniciar sesión con LNURL: inicio de sesión instantáneo con cualquier monedero que soporte [lnurl-auth](https://github.com/fiatjaf/awesome-lnurl#wallets) como [Phoenix](https://phoenix.acinq.co/), [Breez](https://breez.technology/), etc. Se trata de una forma sencilla y eficaz de iniciar sesión y operar en LN Markets: su monedero puede firmar un mensaje con su llave privada. Por lo tanto, la identificación se puede hacer sólo con la llave pública de su monedero y no se necesita ninguna otra información.
 
 <img :src="$withBase('/assets/lnurl_auth.png')" alt="lnurl_auth">
-
-- Iniciar sesión con WebLN: [WebLN](https://webln.dev/#/) es una forma de interactuar con el nodo Lightning de un usuario a través del navegador. [Alby](https://getalby.com/) es un ejemplo de extensión del navegador habilitada para WebLN que utiliza su propio nodo.
 
 - Iniciar sesión con credenciales: puede crear una cuenta directamente, introduciendo su nombre de usuario y contraseña.
 
 <img :src="$withBase('/assets/credentials.png')" alt="credentials">
 
 Tiene la opción de introducir una dirección de correo electrónico para recuperar su cuenta.
+
+- Iniciar sesión con  [Alby](https://getalby.com/) y [Joule](https://lightningjoule.com/): son extensiones de browser web Bitcoin/Lightning  que se conectan a diferentes interfaces de billetera y brindan una profunda integración de Lightning a la web.
 
 ## Deposite fondos en su cuenta
 
@@ -38,11 +38,11 @@ Haga clic en el botón Depositar [Deposit] en la esquina inferior izquierda y el
 
 El importe máximo se calcula automáticamente para respetar los límites máximos de depósito (2 millones de sats — margen disponible — margen utilizado).
 
-Para confirmar este depósito, puede escanear el código QR con su monedero, hacer clic en él (para las aplicaciones WebLN) o copiar la factura [invoice] y pegarla directamente:
-
-<img :src="$withBase('/assets/depositqr.png')" alt="depositqr">
+Para confirmar este depósito, puede escanear el código QR con su monedero, hacer clic en él (para las aplicaciones WebLN) o copiar la factura [invoice] y pegarla directamente.
 
 Su depósito está ahora confirmado y puede verlo en su saldo.
+
+<!-- <img :src="$withBase('/assets/depositqr.png')" alt="depositqr"> -->
 
 <!--<img :src="$withBase('/assets/deposit_conf.png')" alt="deposit_conf">
 

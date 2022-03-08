@@ -21,18 +21,24 @@ Some user-friendly Lightning wallets include [Phoenix](https://phoenix.acinq.co/
 If you run a Lightning Network node, you can open a direct channel to [LN Market's node](https://lnmarkets.com/node).
 
 
-## How to login to LN Markets?
+## How to connect to LN Markets?
 
 No email or private data is required to access LN Markets.
 
-There are three methods for authentication:
-- Log in with LNURL: instant login with any wallet which supports [lnurl-auth](https://github.com/fiatjaf/awesome-lnurl#wallets) like [Phoenix](https://phoenix.acinq.co/), [Breez](https://breez.technology/), etc. This is a seamless and efficient way to log in and trade on LN Markets: your wallet can sign a message with its Private Key. Hence, identification can be done just with your wallet’s Public Key and no other information is needed.
+There are four methods to connect to LN Markets:
 
-- Log in with WebLN: [WebLN](https://webln.dev/#/) is a way of interacting with a user's Lightning node via the browser.
+- Sign in with LNURL: instant with any wallet which supports [lnurl-auth](https://github.com/fiatjaf/awesome-lnurl#wallets) like [Phoenix](https://phoenix.acinq.co/), [Breez](https://breez.technology/), etc. This is a seamless and efficient way to log in and trade on LN Markets: your wallet can sign a message with its Private Key. Hence, identification can be done just with your wallet’s Public Key and no other information is needed.
 
-- Log in with Credentials: you can create an account directly, entering your login and password. 
+<img :src="$withBase('/assets/lnurl_auth.png')" alt="lnurl_auth">
 
-For account recovery, you have the option to enter an email address in your profile section.
+- Sign in with Credentials: you can create an account directly, entering your login and password.
+
+<img :src="$withBase('/assets/credentials.png')" alt="credentials">
+
+You have the option to enter an email address for account recovery.
+
+- Sign in with [Alby](https://getalby.com/) and [Joule](https://lightningjoule.com/): they are Bitcoin Lightning Browser extensions that connects to different wallet interfaces and brings deep lightning integration to the web.
+
 
 ## How can I deposit funds on LN Markets?
 

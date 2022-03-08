@@ -10,25 +10,25 @@ Veuillez l'utiliser avec précaution, de préférence sur le [Testnet](https://t
 
 LN Markets n'est assorti d'aucune garantie, utilisez-le à vos propres risques.
 
-## Login (s’identifier)
+## Connexion à LN Markets
 
-Sur [LN Markets](https://lnmarkets.com/), cliquez sur [Login] dans le coin supérieur droit :
+Sur [LN Markets](https://lnmarkets.com/), cliquez sur 'Sign In' dans le coin supérieur droit :
 
 <img :src="$withBase('/assets/login.png')" alt="login">
 
-Il existe trois méthodes d'authentification :
+Il existe quatre méthodes de connexion :
 
--  Se connecter avec LNURL : connexion instantanée avec n'importe quel portefeuille (wallet) Lightinng qui supporte [lnurl-auth](https://github.com/fiatjaf/awesome-lnurl#wallets) comme [Phoenix](https://phoenix.acinq.co/), [Breez](https://breez.technology/), etc. Il s'agit d'une méthode transparente et efficace de connexion. En effet, votre portefeuille peut signer un message avec sa clé privée. Ainsi, l'identification peut se faire uniquement avec la clé publique de votre portefeuille et aucune autre information n'est nécessaire.
+-  Se connecter avec LNURL : connexion instantanée avec n'importe quel 'wallet' (portefeuillle numérique) Lightinng qui supporte [lnurl-auth](https://github.com/fiatjaf/awesome-lnurl#wallets) comme [Phoenix](https://phoenix.acinq.co/), [Breez](https://breez.technology/), etc. Il s'agit d'une méthode transparente et efficace de connexion. En effet, votre portefeuille peut signer un message avec sa clé privée. Ainsi, l'identification peut se faire uniquement avec la clé publique de votre portefeuille et aucune autre information n'est nécessaire.
 
 <img :src="$withBase('/assets/lnurl_auth.png')" alt="lnurl_auth">
-
-- Se connecter avec WebLN: [WebLN](https://webln.dev/#/) est un moyen d'interagir avec le nœud Lightning d'un utilisateur via le navigateur web. [Alby](https://getalby.com/) est par exemple une extension de navigateur compatible avec WebLN, qui utilise votre propre nœud.
 
 - Se connecter avec des 'Credentials' (identifiants) : vous pouvez créer un compte directement, en entrant votre 'login' et votre mot de passe.
 
 <img :src="$withBase('/assets/credentials.png')" alt="credentials">
 
 Vous avez également la possibilité d'entrer une adresse électronique pour la récupération du compte.
+
+- Se connecter avec [Alby](https://getalby.com/) and [Joule](https://lightningjoule.com/): ce sont des extensions Bitcoin/Lightning pour navigateur web  qui se connectent à différentes interfaces pour une intégration et une inteaction directe avec ces réseaux.
 
 ## Créditer votre compte
 
@@ -38,11 +38,11 @@ Cliquez sur le bouton 'Deposit' (Dépôt) dans le coin inférieur gauche et choi
 
 Le montant maximal est automatiquement calculé pour respecter les limites de dépôt maximales (2 millions de sats - marge disponible - marge utilisée).
 
-Pour confirmer ce dépôt, vous pouvez scanner le QR code avec votre portefeuille. Cliquez dessus (pour les applications WebLN) ou copiez la facture ('invoice') directement :
-
-<img :src="$withBase('/assets/depositqr.png')" alt="depositqr">
+Pour confirmer ce dépôt, vous pouvez scanner le QR code avec votre portefeuille. Cliquez dessus (pour les applications WebLN) ou copiez la facture ('invoice') directement.
 
 Votre dépôt est maintenant confirmé et vous pouvez le voir dans votre compte.
+
+<!-- <img :src="$withBase('/assets/depositqr.png')" alt="depositqr"> -->
 
 <!--<img :src="$withBase('/assets/deposit_conf.png')" alt="deposit_conf">
 
@@ -104,7 +104,7 @@ Si vous avez un portefeuille avec [LNURL](https://github.com/fiatjaf/awesome-lnu
 
 ## Modifier votre profil
 
-Cliquez sur la section 'Profile' sous votre nom d'utilisateur pour modifier votre nom d'utilisateur, mettre à jour votre mot de passe et générer vos clés API ('API keys') :
+Cliquez sur la section 'Profile' en haut à droite pour modifier votre nom d'utilisateur, mettre à jour votre mot de passe et générer vos clés API ('API keys') :
 
 <img :src="$withBase('/assets/profile.png')" alt="profile">
 

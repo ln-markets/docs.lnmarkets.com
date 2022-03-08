@@ -10,25 +10,25 @@ Please use with care, preferably on [Testnet](https://testnet.lnmarkets.com/) or
 
 LN Markets comes with no guarantees, use at your own risk.
 
-## Login
+## Connection to LN Markets
 
-On [LN Markets](https://lnmarkets.com/), click on Login in the upper right hand corner:
+On [LN Markets](https://lnmarkets.com/), click on Sign In in the upper right hand corner:
 
 <img :src="$withBase('/assets/login.png')" alt="login">
 
-There are three methods for authentication:
+There are four methods to connect to LN Markets:
 
-- Log in with LNURL: instant login with any wallet which supports [lnurl-auth](https://github.com/fiatjaf/awesome-lnurl#wallets) like [Phoenix](https://phoenix.acinq.co/), [Breez](https://breez.technology/), etc. This is a seamless and efficient way to log in and trade on LN Markets: your wallet can sign a message with its Private Key. Hence, identification can be done just with your wallet’s Public Key and no other information is needed.
+- Sign in with LNURL: instant with any wallet which supports [lnurl-auth](https://github.com/fiatjaf/awesome-lnurl#wallets) like [Phoenix](https://phoenix.acinq.co/), [Breez](https://breez.technology/), etc. This is a seamless and efficient way to log in and trade on LN Markets: your wallet can sign a message with its Private Key. Hence, identification can be done just with your wallet’s Public Key and no other information is needed.
 
 <img :src="$withBase('/assets/lnurl_auth.png')" alt="lnurl_auth">
 
-- Log in with WebLN: [WebLN](https://webln.dev/#/) is a way of interacting with a user's Lightning node via the browser. [Alby](https://getalby.com/) is for example a WebLN-enabled browser extension that uses your own node.
-
-- Log in with Credentials: you can create an account directly, entering your login and password.
+- Sign in with Credentials: you can create an account directly, entering your login and password.
 
 <img :src="$withBase('/assets/credentials.png')" alt="credentials">
 
 You have the option to enter an email address for account recovery.
+
+- Sign in with [Alby](https://getalby.com/) and [Joule](https://lightningjoule.com/): they are Bitcoin Lightning Browser extensions that connects to different wallet interfaces and brings deep lightning integration to the web.
 
 ## Fund your account
 
@@ -38,11 +38,11 @@ Click on the button Deposit on the lower left hand corner and choose the amount 
 
 Maximum amount is automatically computed to respect maximum deposit limits (2 million sats - margin available - margin used).
 
-To confirm this deposit, you can scan the QR Code with your wallet, click on it (for WebLN apps) or copy the invoice and paste it directly:
-
-<img :src="$withBase('/assets/depositqr.png')" alt="depositqr">
+To confirm this deposit, you can scan the QR Code with your wallet, click on it (for WebLN apps) or copy the invoice and paste it to your wallet.
 
 Your deposit is now confirmed and you can see it in your balance.
+
+<!-- <img :src="$withBase('/assets/depositqr.png')" alt="depositqr"> -->
 
 <!--<img :src="$withBase('/assets/deposit_conf.png')" alt="deposit_conf">
 
@@ -102,9 +102,9 @@ Click on the button Withdraw on the lower left hand corner and choose the amount
 
 If you have a wallet with [LNURL](https://github.com/fiatjaf/awesome-lnurl#wallets), you can just scan the QR code to receive the payment immediately. Else, you can just copy the invoice to your wallet.
 
-## Edit your profile
+## Edit your account
 
-Click on your Profile section under your Login name to edit your username, your leaderboard settings, update your password and generate your API keys tokens:
+Click on your Profile section en la esquina superior derecha to edit your username, your leaderboard settings, update your password and generate your API keys tokens:
 
 <img :src="$withBase('/assets/profile.png')" alt="profile">
 
