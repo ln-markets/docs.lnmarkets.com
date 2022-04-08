@@ -1,4 +1,4 @@
-# Trading
+# Trading Futures
 
 ## Qu’est-ce qu’un CFD ?
 

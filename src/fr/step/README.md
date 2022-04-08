@@ -48,11 +48,11 @@ Votre dépôt est maintenant confirmé et vous pouvez le voir dans votre compte.
 
 <img :src="$withBase('/assets/deposit_balance.png')" alt="deposit_balance">-->
 
-## Ouvrir une position
+## Trading Futures
 
 LN Markets indique une fourchette 'bid-offer' (fourchette achat-vente, dans la barre supérieure) et est la contrepartie directe de toutes les opérations.
 
-Le premier contrat que nous listons est un CFD (Contract for Difference) sur le prix BTCUSD avec un effet de levier allant jusqu'à x100.
+Dans l'onglet Futures, le premier contrat que nous listons est un CFD (Contract for Difference) sur le prix BTCUSD avec un effet de levier allant jusqu'à x100.
 
 L'ouverture d'une position acheteuse ou longue se fait au prix de l'offre ('Offer') et inversement, l'ouverture d'une position vendeuse ou courte se fait au prix de l’enchère ('Bid').
 
@@ -74,11 +74,11 @@ Après avoir confirmé votre ordre, la position est ouvert et vous pouvez le voi
 
 <img :src="$withBase('/assets/running_blotter.png')" alt="running_blotter">
 
-## All In
+### All In
 
 Pour un côté donné (achat ou vente), le bouton 'All In' génère un ordre au marché qui maximise l'effet de levier et l'utilisation de la marge disponible.
 
-## Modifier une opération
+### Modifier une opération
 
 Pour chaque position, vous pouvez ajouter un 'Stop Loss' (arrêt des pertes) et un 'Take Profit' (prise de profit).
 
@@ -93,6 +93,28 @@ Vous pouvez fermer chaque position individuellement ou cliquer sur le bouton "Fe
 <img :src="$withBase('/assets/close_all.png')" alt="close_all">
 
 Vous pouvez trouver toutes vos positions fermées dans la table 'closed'.
+
+## Trading Options
+
+LN Markets indique une fourchette 'bid-offer' (fourchette achat-vente, dans la barre supérieure) et est la contrepartie directe de toutes les opérations.
+
+Dans l'onglet Options, vous pouvez traiter deux types d'options sur le prix forward BTCUSD: des calls (options d'achat) et des puts (options de vente).
+
+<img :src="$withBase('/assets/options_trading.png')" alt="options_trading">
+
+Nous voulons démystifier le trading d'options et le rendre accessible à tous. C'est pourquoi nous avons fait les choix suivants :
+- Vous ne pouvez être qu'acheteur d'options. Si vous souhaitez être long, achetez des calls, si vous souhaitez être short, achetez des puts. 
+- Ce sont des options de maturité 24 heures : elles expirent 1 jour après l'ouverture de la position.
+- Il y a deux prix d'exercice ('strikes') pour les calls (deux prochains milliers à la hausse) et pour les puts (deux prochains milliers à la baisse).
+- Comme pour les Futures, il faut payer une marge ('margin') pour acheter l'option (elle correspond à la prime de l'option, la 'premium').
+- Pour le règlement de l'option à échéance, vous pouvez choisir soit un règlement en cash du PL de l'option (Cash settlement) soit un règlement physique ('Physical settlement'): vous obtenez livraison d'un Futures ouvert avec le 'strike' de l'option comme niveau de liquidation.
+
+<img :src="$withBase('/assets/options_conf.png')" alt="options_conf">
+
+Après avoir confirmé votre ordre, la position est ouverte et vous pouvez la voir dans la table des opérations 'running' (en cours) dans la section inférieure :
+
+<img :src="$withBase('/assets/running_blotter_options.png')" alt="running_blotter_options">
+
 
 ## Retirer des fonds vers votre portefeuille
 

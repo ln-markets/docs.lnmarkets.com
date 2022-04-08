@@ -1,4 +1,4 @@
-# Trading
+# Trading de Opciones
 
 ## ¿Qué es un CFD?
 
