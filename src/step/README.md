@@ -48,11 +48,11 @@ Your deposit is now confirmed and you can see it in your balance.
 
 <img :src="$withBase('/assets/deposit_balance.png')" alt="deposit_balance">-->
 
-## Open a trade
+## Trade Futures
 
-LN Markets quotes a bid-offer (in the upper bar) and is direct counterparty to all trades.
+We quote a bid-offer (in the upper bar) and we are direct counterparty to all trades.
 
-The first contract we list is a CFD (Contract for Difference) on BTCUSD price with leverage up to x100.
+In the Futures section, the first contract we list is a CFD (Contract for Difference) on BTCUSD price with leverage up to x100.
 
 Opening a long position is at the Offer price and conversely, opening a short position is a the Bid price.
 
@@ -70,15 +70,15 @@ The margin is the amount in sats you want to use for this position. For a given 
 
 You can also add optional take profit and stop loss orders, expressed in BTC/USD.
 
-After confirming your oder, the position is open and you can see it in the Running blotter in the lower section:
+After confirming your order, the position is open and you can see it in the Running blotter in the lower section:
 
 <img :src="$withBase('/assets/running_blotter.png')" alt="running_blotter">
 
-## Go All In
+### Go All In
 
 For a given side (buy or sell), the All in button generates a market order which maximizes the leverage and use of margin available.
 
-## Edit a trade
+### Edit a trade
 
 For each position, you can add a Stop Loss and a Take Profit.
 
@@ -93,6 +93,27 @@ And you can close each position imdividually or click on the Close All button.
 <img :src="$withBase('/assets/close_all.png')" alt="close_all">
 
 You can find all your closed positions in the Closed blotter in the lower section.
+
+## Trade Options
+
+We quote a bid-offer (in the upper bar) and we are direct counterparty to all trades.
+
+In the Options section, you can trade two types of Options on BTCUSD forward price: calls (options to buy) and puts (options to sell).
+
+<img :src="$withBase('/assets/options_trading.png')" alt="options_trading">
+
+We want to demystify options trading and make them accessible to all. That’s why we have made the following choices:
+- You can only buy options. If you’re a bull, buy calls, if you’re a bear, buy puts.
+- They are 24-hour options: they expire 1 day after opening the position.
+- There are two strikes for calls (two next thousands up) and for puts (two next thousands down).
+- As with futures you have to pay a margin to open the option contract (which corresponds to the option premium).
+- For the delivery at expiry, you can choose cash delivery (PL of the option) or physical delivery: you get a futures contract running for the given strike.
+
+<img :src="$withBase('/assets/options_conf.png')" alt="options_conf">
+
+After confirming your order, the position is open and you can see it in the Running blotter in the lower section:
+
+<img :src="$withBase('/assets/running_blotter_options.png')" alt="running_blotter_options">
 
 ## Withdraw funds to your wallet
 
