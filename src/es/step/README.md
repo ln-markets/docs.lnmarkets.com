@@ -48,7 +48,7 @@ Su depósito está ahora confirmado y puede verlo en su saldo.
 
 <img :src="$withBase('/assets/deposit_balance.png')" alt="deposit_balance">-->
 
-## Abrir una operación
+## Operar Futuros
 
 LN Markets cotiza una oferta [bid] y una demanda [offer] (en la barra superior) y es la contraparte directa de todas las operaciones.
 
@@ -74,11 +74,11 @@ Después de confirmar su orden, la posición queda abierta y puede verla en la s
 
 <img :src="$withBase('/assets/running_blotter.png')" alt="running_blotter">
 
-## Ir con todo
+### Ir con todo
 
 Para un lado determinado (compra o venta), el botón All in (ir con todo) genera una orden de mercado que maximiza el apalancamiento y el uso del margen disponible.
 
-## Editar una operación
+### Editar una operación
 
 Para cada posición, puede añadir un Stop Loss [parar pérdidas] y un Take Profit [tomar ganancias].
 
@@ -93,6 +93,29 @@ Y puede cerrar cada posición individualmente o hacer clic en el botón Cerrar t
 <img :src="$withBase('/assets/close_all.png')" alt="close_all">
 
 Puede encontrar todas sus posiciones cerradas en el registro cerrado de la sección inferior.
+
+
+## Operar Opciones
+
+LN Markets cotiza una oferta [bid] y una demanda [offer] (en la barra superior) y es la contraparte directa de todas las operaciones.
+
+En la sección de Opciones, puede negociar dos tipos de Opciones sobre el precio a plazo del BTCUSD: calls (opciones de compra) y puts (opciones de venta).
+
+<img :src="$withBase('/assets/options_trading.png')" alt="options_trading">
+
+Queremos desmitificar las operaciones de opciones y hacerlas accesibles para todos. Por eso hemos tomado las siguientes decisiones:
+- Sólo puedes comprar opciones. Si eres alcista, compra opciones de calls, si eres bajista, compra opciones de puts.
+- Son opciones de 24 horas: expiran un día después de abrir la posición.
+- Hay dos strikes para las opciones de compra (los dos siguientes miles hacia arriba) y para las opciones de venta (los dos siguientes miles hacia abajo).
+- Al igual que con los futuros, tiene que pagar un margen para abrir el contrato de opciones (que corresponde a la prima de la opción).
+- Para la entrega al vencimiento, puede elegir entre la entrega en efectivo (PL de la opción) o la entrega física: obtiene un contrato de futuros para el strike determinado.
+
+<img :src="$withBase('/assets/options_conf.png')" alt="options_conf">
+
+Después de confirmar su orden, la posición está abierta y puede verla en el historial de posiciones en la parte inferior:
+
+<img :src="$withBase('/assets/running_blotter_options.png')" alt="running_blotter_options">
+
 
 ## Retirar fondos a su monedero
 
