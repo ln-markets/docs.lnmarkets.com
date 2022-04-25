@@ -6,6 +6,8 @@ An option is a financial contract which offers the buyer the opportunity to buy 
 
 The price of an option is called the premium. It is usually computed with the Black-Scholes model, which only requires two market parameters (Forward price at expiry of the underlying asset and Volatility) to price this premium correctly.
 
+On LN Markets, we call this premium margin by analogy with Futures.
+
 ## Why trading options?
 
 Trading options can be very useful in a choppy market. Indeed, a future position can be liquidated quite quickly in a volatile market even if the initial position revealed to be correct in the long term: it is path dependent. However, a buyer of an option does not care about the path followed by the market, the only thing that matters is the level of the underlying at the time of expiry!
@@ -53,10 +55,25 @@ After buying an option, you can see it in the Running section of the deal blotte
 
 In the risk section, on the lower left hand side of the screen, you can see in the PL section your global PL (sum of the PL of your options) and your global Delta (sum of the Deltas of your options).
 
+
+## What is the option payoff at expiry?
+
+At expiry of the option, you can either be “In-The-Money”, if the option strike price is favorable compared to the market price of the underlying, or “Out-of-The-Money”, if the option strike price is not favorable compared to the market price of the underlying.
+
+For example:
+You bought an option for a quantity = 1 USD. You paid a margin of 30 sats.
+- You're long a call option with strike = 42,000. If at maturity the underlying of the option = 43,000, you're in-the-money and your payoff is = (1/42000-1/43000) = 55 sats (and 55 * 100  = 5,500 sats for a quantity of 100 USD, etc).
+Your PL is then equal to your payoff minus the margin paid: 55 sats - 30 sats = 25 sats.
+- You're long a call option with strike = 42,000. If at maturity the underlying of the option = 41,000, you're out-of-the-money and your payoff is equal to zero.
+Your PL is then equal to your payoff minus the margin paid: 0 sats - 30 sats = - 30 sats.
+- You're long a put option with strike = 42,000. If at maturity the underlying of the option = 41,000, you're in-the-money and your payoff is = (1/41000-1/42000) = 55 sats (and 55 * 100  = 5,500 sats for a quantity of 100 USD, etc).
+Your PL is then equal to your payoff minus the margin paid: 55 sats - 30 sats = 25 sats.
+- You're long a put option with strike = 42,000. If at maturity the underlying of the option = 43,000, you're out-of-the-money and your payoff is equal to zero.
+Your PL is then equal to your payoff minus the margin paid: 0 sats - 30 sats = - 30 sats.
+
 ## What happens at the option expiry?
 
-At expiry of an option with Cash settlement , if you are “In-The-Money”, you receive a PL + the initial margin paid for the option. This sum is added to your Margin Available.
+At expiry of an option with Cash settlement, if you are “In-The-Money” (if its strike price is favorable compared to the market price of the underlying at expiry), you receive the PL + the initial margin paid for the option. This sum is added to your Margin Available. 
 
 At expiry of an option with Physical settlement, if you are “In-The-Money”, you get a futures contract running with liquidation price equal to the option strike, margin equal to the initial margin paid for the option, and PL of the future contract equal to the PL of the option at expiry.
-
 
