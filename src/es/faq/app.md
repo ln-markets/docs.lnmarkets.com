@@ -52,11 +52,7 @@ Puedes depositar satoshis en tu cuenta de operaciones antes de ingresar a una po
 
 Este depósito se agregará al margen disponible para ingresar posiciones en el futuro.
 
-El depósito máximo está actualmente limitado a 0.02 BTC o 2 millones de satoshis.
-
-Haga clic en el botón Depositar y elija la cantidad que desea depositar en su cuenta: puede seleccionar una cantidad preestablecida (250k sats, 500k sats, 750k sats o monto máximo) o ingresarla manualmente.
-
-La cantidad máxima se calcula automáticamente para respetar los límites máximos de depósito (2 millones de sats — margen disponible — margen utilizado).
+Haga clic en el botón Depositar y puede depositar con una transacción Lightning o con una transacción normal de Bitcoin [On Chain].
 
 ## ¿Cuáles son los precios de puja y oferta?
 

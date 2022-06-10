@@ -32,21 +32,19 @@ Vous avez également la possibilité d'entrer une adresse électronique pour la 
 
 ## Créditer votre compte
 
-Cliquez sur le bouton 'Deposit' (Dépôt) dans le coin inférieur gauche et choisissez le montant que vous souhaitez déposer sur votre compte.
+Cliquez sur le bouton 'Deposit' (Dépôt) dans le coin inférieur gauche.
+
+Vous pouvez faire un 'Deposit' avec une transaction Lightning ou avec une transaction Bitcoin classique 'On Chain'.
+
+Pour une transaction Lightning, vous pouvez scanner le QR code avec votre portefeuille ou copier la facture ('invoice') directement.
 
 <img :src="$withBase('/assets/deposit.png')" alt="deposit">
 
-Le montant maximal est automatiquement calculé pour respecter les limites de dépôt maximales (2 millions de sats - marge disponible - marge utilisée).
+Pour une transaction Bitcoin, vous pouvez scanner le QR code avec votre portefeuille ou copier la facture ('invoice') directement.
 
-Pour confirmer ce dépôt, vous pouvez scanner le QR code avec votre portefeuille. Cliquez dessus (pour les applications WebLN) ou copiez la facture ('invoice') directement.
+<img :src="$withBase('/assets/deposit_onchain.png')" alt="deposit_onchain">
 
 Votre dépôt est maintenant confirmé et vous pouvez le voir dans votre compte.
-
-<!-- <img :src="$withBase('/assets/depositqr.png')" alt="depositqr"> -->
-
-<!--<img :src="$withBase('/assets/deposit_conf.png')" alt="deposit_conf">
-
-<img :src="$withBase('/assets/deposit_balance.png')" alt="deposit_balance">-->
 
 ## Trading Futures
 
@@ -104,8 +102,8 @@ Dans l'onglet Options, vous pouvez traiter deux types d'options sur le prix forw
 
 Nous voulons démystifier le trading d'options et le rendre accessible à tous. C'est pourquoi nous avons fait les choix suivants :
 - Vous ne pouvez être qu'acheteur d'options. Si vous souhaitez être long, achetez des calls, si vous souhaitez être short, achetez des puts. 
-- Ce sont des options de maturité 24 heures : elles expirent 1 jour après l'ouverture de la position.
-- Il y a deux prix d'exercice ('strikes') pour les calls (deux prochains milliers à la hausse) et pour les puts (deux prochains milliers à la baisse).
+- Ce sont des options de maturité 24 heures : elles expirent 1 jour après l'ouverture de la position (vous pouvez les fermer à tout moment avant).
+- Il y a 3 prix d'exercice ('strikes') pour les calls (le prochain millier à la baisse et les deux prochains milliers à la hausse) et pour les puts (le prochain millier à la hausse et les deux prochains milliers à la baisse).
 - Comme pour les Futures, il faut payer une marge ('margin') pour acheter l'option (elle correspond à la prime de l'option, la 'premium').
 - Pour le règlement de l'option à échéance, vous pouvez choisir soit un règlement en cash du PL de l'option (Cash settlement) soit un règlement physique ('Physical settlement'): vous obtenez livraison d'un Futures ouvert avec le 'strike' de l'option comme niveau de liquidation.
 

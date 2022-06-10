@@ -32,21 +32,19 @@ Tiene la opción de introducir una dirección de correo electrónico para recupe
 
 ## Deposite fondos en su cuenta
 
-Haga clic en el botón Depositar [Deposit] en la esquina inferior izquierda y elija la cantidad que desea depositar en su cuenta.
+Haga clic en el botón Depositar [Deposit] en la esquina inferior izquierda.
+
+Puede depositar con una transacción Lightning o con una transacción normal de Bitcoin [On Chain].
+
+Con una transacción Lightning, puede escanear el código QR con su monedero o copiar la factura [invoice] y pegarla directamente.
 
 <img :src="$withBase('/assets/deposit.png')" alt="deposit">
 
-El importe máximo se calcula automáticamente para respetar los límites máximos de depósito (2 millones de sats — margen disponible — margen utilizado).
+Con una transacción Bitcoin, puede escanear el código QR con su monedero o copiar la factura y pegarla directamente.
 
-Para confirmar este depósito, puede escanear el código QR con su monedero, hacer clic en él (para las aplicaciones WebLN) o copiar la factura [invoice] y pegarla directamente.
+<img :src="$withBase('/assets/deposit_onchain.png')" alt="deposit_onchain">
 
 Su depósito está ahora confirmado y puede verlo en su saldo.
-
-<!-- <img :src="$withBase('/assets/depositqr.png')" alt="depositqr"> -->
-
-<!--<img :src="$withBase('/assets/deposit_conf.png')" alt="deposit_conf">
-
-<img :src="$withBase('/assets/deposit_balance.png')" alt="deposit_balance">-->
 
 ## Operar Futuros
 
@@ -105,8 +103,8 @@ En la sección de Opciones, puede negociar dos tipos de Opciones sobre el precio
 
 Queremos desmitificar las operaciones de opciones y hacerlas accesibles para todos. Por eso hemos tomado las siguientes decisiones:
 - Sólo puedes comprar opciones. Si eres alcista, compra opciones de calls, si eres bajista, compra opciones de puts.
-- Son opciones de 24 horas: expiran un día después de abrir la posición.
-- Hay dos strikes para las opciones de compra (los dos siguientes miles hacia arriba) y para las opciones de venta (los dos siguientes miles hacia abajo).
+- Son opciones de 24 horas: expiran un día después de abrir la posición (puede cerrarlos en cualquier momento antes de que expiren).
+- Hay 3 strikes para las opciones de compra (el siguiente mil hacia abajo y los dos siguientes miles hacia arriba) y para las opciones de venta (el siguiente mil hacia arriba y los dos siguientes miles hacia abajo).
 - Al igual que con los futuros, tiene que pagar un margen para abrir el contrato de opciones (que corresponde a la prima de la opción).
 - Para la entrega al vencimiento, puede elegir entre la entrega en efectivo (PL de la opción) o la entrega física: obtiene un contrato de futuros para el strike determinado.
 

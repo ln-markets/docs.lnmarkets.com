@@ -44,11 +44,9 @@ You have the option to enter an email address for account recovery.
 
 You can deposit satoshis to your trading account before entering a position. This deposit will be added to the margin available for entering positions in the future.
 
-Maximum deposit is currently limited to 0.02 BTC or 2 million satoshis.
-
 Click on the button Deposit on the lower left hand corner and choose the amount you want to deposit to your account.
 
-Maximum amount is automatically computed to respect maximum deposit limits (2 million sats - margin available - margin used).
+You can either deposit funds with a Lightning transaction or with a regular Bitcoin transaction On Chain.
 
 ## What are the bid and offer prices?
 
@@ -86,7 +84,7 @@ For a given side (buy or sell), the All In button generates a market order which
 
 There is a maximum margin available for trading per node. 
 
-This limit is currently set to 0.02 BTC = 2,000,000 sats per account for Deposits (2M sats - Margin Available - Margin Used) and Margin Used for open positions.
+This limit is currently set to 0.02 BTC = 2,000,000 sats per account for Margin Used for open positions.
 
 ## What is the maximum leverage on LN Markets?
 

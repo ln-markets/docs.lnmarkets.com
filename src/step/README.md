@@ -32,21 +32,21 @@ You have the option to enter an email address for account recovery.
 
 ## Fund your account
 
-Click on the button Deposit on the lower left hand corner and choose the amount you want to deposit to your account.
+Click on the button Deposit on the lower left hand corner.
+
+You can either deposit with a Lightning transaction or with a regular Bitcoin transaction
+
+For a Lightning transaction, you can scan the QR Code with your wallet or copy the invoice and paste it to your wallet.
 
 <img :src="$withBase('/assets/deposit.png')" alt="deposit">
 
-Maximum amount is automatically computed to respect maximum deposit limits (2 million sats - margin available - margin used).
+For an on-chain transaction, you can scan the QR Code with your wallet or copy and paste it to your wallet.
 
-To confirm this deposit, you can scan the QR Code with your wallet, click on it (for WebLN apps) or copy the invoice and paste it to your wallet.
+<img :src="$withBase('/assets/deposit_onchain.png')" alt="deposit_onchain">
 
 Your deposit is now confirmed and you can see it in your balance.
 
 <!-- <img :src="$withBase('/assets/depositqr.png')" alt="depositqr"> -->
-
-<!--<img :src="$withBase('/assets/deposit_conf.png')" alt="deposit_conf">
-
-<img :src="$withBase('/assets/deposit_balance.png')" alt="deposit_balance">-->
 
 ## Trade Futures
 
@@ -104,8 +104,8 @@ In the Options section, you can trade two types of Options on BTCUSD forward pri
 
 We want to demystify options trading and make them accessible to all. That’s why we have made the following choices:
 - You can only buy options. If you’re a bull, buy calls, if you’re a bear, buy puts.
-- They are 24-hour options: they expire 1 day after opening the position.
-- There are two strikes for calls (two next thousands up) and for puts (two next thousands down).
+- They are 24-hour options: they expire 1 day after opening the position (you can close them at any time before expiry).
+- There are 3 strikes for calls (next thousand down and 2 next thousands up) and for puts (next thousand up and two next thousands down).
 - As with futures you have to pay a margin to open the option contract (which corresponds to the option premium).
 - For the delivery at expiry, you can choose cash delivery (PL of the option) or physical delivery: you get a futures contract running for the given strike.
 

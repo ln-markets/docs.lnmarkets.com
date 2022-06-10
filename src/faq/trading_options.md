@@ -16,13 +16,13 @@ Trading options can be very useful in a choppy market. Indeed, a future position
 
 When we designed our options trading offering, we paid attention to making it simple and accessible to all. That’s why, for our first iteration, we have made several choices:
 - You can only buy options, not sell them. You can buy two types of options: calls and puts. Buying a call option gives the right to enter in a long position and buying a put option gives the right to enter in a short position.
-- They are all 24-hour options: they expire 1 day after opening the position.
+- They are all 24-hour options: they expire 1 day after opening the position (you can close them at any time before expiry).
 - The underlying of the option is the LNM perpetual future. The forward is the price of this future discounted at the time of expiry. Note that the forward is very close not to say equal to the price of the future because the expiry is only 24h.
 - We quote Bitcoin options with BTC as domestic currency, like is the case for inverse futures. Which means that the forward price parameter is expressed as USD/BTC. However, we display it as BTC/USD for simplicity reasons.
-- The Strike price parameter (price at which the option can be exercised) is expressed as USD/BTC, since BTC is the domestic currency. However, we display it as BTC/USD for simplicity reasons. We list two strikes for calls (two next thousands up) and two strikes for puts (two next thousands down).
+- The Strike price parameter (price at which the option can be exercised) is expressed as USD/BTC, since BTC is the domestic currency. However, we display it as BTC/USD for simplicity reasons. We list 3 strikes 3 strikes for calls (next thousand down and 2 next thousands up) and for puts (next thousand up and two next thousands down).
 For example, if bid price = 45,684.5 and offer price = 45,749.86:
-    for call: Strike 1 = K1 = 46,000; Strike 2 =  K2 = 47,000
-    for put: Strike 1 = K1 = 45,000; Strike 2 =  K2 = 44,000
+    for call: Strike 1 = K1 = 45,000; Strike 2 =  K2 = 46,000; Strike 3 =  K3 = 47,000
+    for put: Strike 1 = K1 = 46,000; Strike 2 =  K2 = 45,000; Strike 3 =  K3 = 44,000 
 - For the settlement at expiry, you can choose between Cash delivery and Physical delivery. 
 With Cash delivery, you receive the PL of the option at the expiry = Max(Xt - K, 0), where Xt is the value of the underlying at the exact time of expiry. In other words, if the option is “In-The-Money” at expiry (if its strike price is favorable compared to the market price of the underlying at expiry), you receive the PL of the option.
 With Physical delivery, if the option is “In-The-Money” at expiry, you receive delivery of a futures contract running for the given strike. This futures contract can be managed in the Futures section.

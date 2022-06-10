@@ -46,11 +46,9 @@ Vous avez également la possibilité d'entrer une adresse électronique pour la 
 
 Vous pouvez envoyer des satoshis sur votre compte de trading avant d’entrer dans une position. Ce dépôt va être ajouté à la marge disponible pour rentrer dans des positions dans le futur.
 
-Le dépôt maximal est actuellement limité à 0.02 BTC ou 2 millions de satoshis.
-
 Cliquez sur le bouton 'Deposit' dans le coin inférieur gauche et choisissez le montant que vous souhaitez déposer sur votre compte.
 
-Le montant maximal est calculé automatiquement pour respecter les limites de dépôt maximal (2 millions de sats – marge disponible – marge utilisée).
+Vous pouvez faire un 'Deposit' avec une transaction Lightning ou avec une transaction Bitcoin classique 'On Chain'.
 
 ## Qu’est-ce que la fourchette 'bid-offer' ?
 
@@ -84,7 +82,7 @@ Pour un sens donné (achat ou vente), le bouton 'All In' génère un ordre au ma
 
 Il y a une marge maximum par nœud.
 
-Cette limite est actuellement fixée à 0.02 BTC = 2,000,000 sats par compte pour les dépôts (2M sats – marge disponible – marge utilisée) et pour la marge utilisée pour les positions ouvertes.
+Cette limite est actuellement fixée à 0.02 BTC = 2,000,000 sats pour la marge utilisée pour les positions ouvertes.
 
 ## Quel est l’effet de levier maximum sur LN Markets ?
 

@@ -16,14 +16,15 @@ Cuando diseñamos nuestra oferta de operaciones de opciones, prestamos atención
 
 - Sólo puedes comprar opciones, no venderlas. Puedes comprar dos tipos de opciones: de call (compra) y de put (venta). La compra de una opción de call da derecho a entrar en una posición alcista (larga/long) y la compra de una opción de put (venta/short) da derecho a entrar en una posición bajista. Si eres un bull (toro/alcista), compra calls, si eres un bear (oso/bajista), compra puts.
 
-- Todas son opciones de 24 horas: expiran 1 día después de la apertura de la posición.
+- Todas son opciones de 24 horas: expiran 1 día después de la apertura de la posición (puede cerrarlos en cualquier momento antes de que expiren).
 
 - El subyacente de la opción es el precio a plazo del BTCUSD, es decir, el precio del BTCUSD descontado en el momento del vencimiento de la opción. Para el precio de referencia del BTCUSD, utilizamos el precio index (índice) de BTCUSD en LN Markets.
 Cotizamos las opciones de Bitcoin con BTC como moneda doméstica, como es el caso de los futuros inversos. Lo que significa que el parámetro del precio a plazo se expresa como USD/BTC. Sin embargo, lo mostramos como BTC/USD por simplicidad.
 La cantidad es el importe nocional de las opciones que desea negociar. Se expresa en USD.
 
 - El strike o el parámetro del precio a ejercer (precio al que se puede ejercer la opción) se expresa como USD/BTC, ya que el BTC es la moneda doméstica. Sin embargo, lo mostramos como BTC/USD por razones de simplicidad.
-Enumeramos dos strikes para las opciones de call (los dos siguientes miles hacia arriba) y dos strikes para las opciones de put (los dos siguientes miles hacia abajo). Por ejemplo, si el precio de call = 45.684,5 y el de put = 45.749,86; para el call: Strike 1 = K1 = 46.000; Strike 2 = K2 = 47.000; para la opción de put: Strike 1 = K1 = 45.000; Strike 2 = K2 = 44.000.
+Enumeramos 3 strikes para las opciones de compra (el siguiente mil hacia abajo y los dos siguientes miles hacia arriba) y para las opciones de venta (el siguiente mil hacia arriba y los dos siguientes miles hacia abajo).
+Por ejemplo, si el precio de call = 45.684,5 y el de put = 45.749,86; para el call: Strike 1 = K1 = 45,000; Strike 2 =  K2 = 46,000; Strike 3 =  K3 = 47,000 y para la opción de put: Strike 1 = K1 = 46,000; Strike 2 =  K2 = 45,000; Strike 3 =  K3 = 44,000.
 
 - Para la liquidación al vencimiento, puede elegir entre la entrega en efectivo y la entrega física. 
 Con la entrega en efectivo, usted recibe el PL de la opción al vencimiento = Max(Xt - K, 0), donde Xt es el valor del subyacente en el momento exacto del vencimiento. En otras palabras, si la opción está "In-The-Money" al vencimiento (si su precio a ejercer es favorable comparado con el precio de mercado del subyacente al vencimiento), usted recibe el PL de la opción. 
