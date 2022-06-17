@@ -101,9 +101,9 @@ Dans l'onglet Options, vous pouvez traiter deux types d'options sur le prix forw
 <img :src="$withBase('/assets/options_trading.png')" alt="options_trading">
 
 Nous voulons démystifier le trading d'options et le rendre accessible à tous. C'est pourquoi nous avons fait les choix suivants :
-- Vous ne pouvez être qu'acheteur d'options. Si vous souhaitez être long, achetez des calls, si vous souhaitez être short, achetez des puts. 
+- Vous ne pouvez être qu'acheteur d'options. Si vous souhaitez être long, achetez des calls. Si vous souhaitez être short, achetez des puts. Si vous vous attendez à de la volatilité mais n'êtes pas sur de la direction, achetez un straddle. 
 - Ce sont des options de maturité 24 heures : elles expirent 1 jour après l'ouverture de la position (vous pouvez les fermer à tout moment avant).
-- Il y a 3 prix d'exercice ('strikes') pour les calls (le prochain millier à la baisse et les deux prochains milliers à la hausse) et pour les puts (le prochain millier à la hausse et les deux prochains milliers à la baisse).
+- Il y a 3 prix d'exercice ('strikes') pour les calls (le prochain millier à la baisse et les deux prochains milliers à la hausse) et pour les puts (le prochain millier à la hausse et les deux prochains milliers à la baisse), et deux pour les straddles (les strikes communs aux calls et aux puts).
 - Comme pour les Futures, il faut payer une marge ('margin') pour acheter l'option (elle correspond à la prime de l'option, la 'premium').
 - Pour le règlement de l'option à échéance, vous pouvez choisir soit un règlement en cash du PL de l'option (Cash settlement) soit un règlement physique ('Physical settlement'): vous obtenez livraison d'un Futures ouvert avec le 'strike' de l'option comme niveau de liquidation.
 

@@ -187,3 +187,8 @@ Si una dirección IP arroja demasiados errores, podría prohibirse durante un ci
 ## ¿Existe alguna restricción geográfica para utilizar LN Markets?
 
 Sí, un bloqueo de dirección IP para residentes de Estado Unidos (EE.UU.) es implementado en [LN Markets](https://lnmarkets.com/).
+
+## ¿Qué es la trollbox?
+
+La Trollbox es la sala de chat de LN Markets que se encuentra en la página principal. Es un lugar de reunión para personas apasionadas por Bitcoin, Lightning y LN Markets.
+Para mantener esta comunidad productiva e inclusiva para todos, hemos establecido algunos estándares comunitarios que pedimos a todos los participantes que cumplan.

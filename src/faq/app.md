@@ -182,3 +182,8 @@ If an IP address throws too many errors, it could be banned for a certain period
 ## Are there any geographical restictions to use LN Markets?
 
 Yes, an IP address blocking for US residents is effective on [LN Markets](https://lnmarkets.com/).
+
+## What is the trollbox?
+
+The Trollbox is the LN Markets chat-room that lives on the main page. It is a gathering place for people with a passion for Bitcoin, Lightning and LN Markets. 
+In order to keep this community productive and inclusive for all, we have set some community standards that we ask all participants to adhere to.

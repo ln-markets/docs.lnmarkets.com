@@ -98,14 +98,14 @@ You can find all your closed positions in the Closed blotter in the lower sectio
 
 We quote a bid-offer (in the upper bar) and we are direct counterparty to all trades.
 
-In the Options section, you can trade two types of Options on BTCUSD forward price: calls (options to buy) and puts (options to sell).
+In the Options section, you can trade two types of Options on BTCUSD forward price: calls (options to buy), puts (options to sell) and straddles (combination of a call and a put for the same strike).
 
 <img :src="$withBase('/assets/options_trading.png')" alt="options_trading">
 
 We want to demystify options trading and make them accessible to all. That’s why we have made the following choices:
-- You can only buy options. If you’re a bull, buy calls, if you’re a bear, buy puts.
+- You can only buy options. If you’re a bull, buy calls. If you’re a bear, buy puts. If you expect volatility but are not sure of the direction, buy straddles.
 - They are 24-hour options: they expire 1 day after opening the position (you can close them at any time before expiry).
-- There are 3 strikes for calls (next thousand down and 2 next thousands up) and for puts (next thousand up and two next thousands down).
+- There are 3 strikes for calls (next thousand down and 2 next thousands up) and for puts (next thousand up and two next thousands down), and two strikes for straddles (the two common to calls and puts).
 - As with futures you have to pay a margin to open the option contract (which corresponds to the option premium).
 - For the delivery at expiry, you can choose cash delivery (PL of the option) or physical delivery: you get a futures contract running for the given strike.
 

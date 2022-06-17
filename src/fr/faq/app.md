@@ -180,3 +180,8 @@ Si une adresse IP lance trop d’erreurs, elle pourrait être bannie pour une ce
 ## Y a-t-il des réstrictions géographiques pour utiliser LN Markets ?
 
 Oui, un bloqueur d’adresses IP pour les résidents américains est en place sur [LN Markets](https://lnmarkets.com/).
+
+## Qu'est-ce que la trollbox ?
+
+La Trollbox est la chat room de LN Markets qui se trouve sur la page principale. C'est un lieu de rassemblement pour les passionnés de Bitcoin, Lightning et de LN Markets.
+Afin de maintenir cette communauté productive et inclusive pour tous, nous avons établi des règles auxquelles nous demandons à tous les participants de se conformer.

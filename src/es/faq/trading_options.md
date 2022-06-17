@@ -14,7 +14,7 @@ Operar con opciones puede ser muy útil en un mercado agitado. En efecto, una po
 
 Cuando diseñamos nuestra oferta de operaciones de opciones, prestamos atención a que fuese sencilla y accesible para todos. Por eso, para nuestra primera iteración, hemos tomado varias decisiones que detallamos a continuación:
 
-- Sólo puedes comprar opciones, no venderlas. Puedes comprar dos tipos de opciones: de call (compra) y de put (venta). La compra de una opción de call da derecho a entrar en una posición alcista (larga/long) y la compra de una opción de put (venta/short) da derecho a entrar en una posición bajista. Si eres un bull (toro/alcista), compra calls, si eres un bear (oso/bajista), compra puts.
+- Sólo puedes comprar opciones, no venderlas. Puedes comprar dos tipos de opciones: de call (compra) y de put (venta). La compra de una opción de call da derecho a entrar en una posición alcista (larga/long) y la compra de una opción de put (venta/short) da derecho a entrar en una posición bajista. Si eres un bull (toro/alcista), compra calls, si eres un bear (oso/bajista), compra puts. Si espera volatilidad pero no está seguro de la dirección, también puede comprar un straddle, una combinación de call y put para el mismo ejercicio.
 
 - Todas son opciones de 24 horas: expiran 1 día después de la apertura de la posición (puede cerrarlos en cualquier momento antes de que expiren).
 
@@ -23,8 +23,8 @@ Cotizamos las opciones de Bitcoin con BTC como moneda doméstica, como es el cas
 La cantidad es el importe nocional de las opciones que desea negociar. Se expresa en USD.
 
 - El strike o el parámetro del precio a ejercer (precio al que se puede ejercer la opción) se expresa como USD/BTC, ya que el BTC es la moneda doméstica. Sin embargo, lo mostramos como BTC/USD por razones de simplicidad.
-Enumeramos 3 strikes para las opciones de compra (el siguiente mil hacia abajo y los dos siguientes miles hacia arriba) y para las opciones de venta (el siguiente mil hacia arriba y los dos siguientes miles hacia abajo).
-Por ejemplo, si el precio de call = 45.684,5 y el de put = 45.749,86; para el call: Strike 1 = K1 = 45,000; Strike 2 =  K2 = 46,000; Strike 3 =  K3 = 47,000 y para la opción de put: Strike 1 = K1 = 46,000; Strike 2 =  K2 = 45,000; Strike 3 =  K3 = 44,000.
+Enumeramos 3 strikes para las opciones de compra (el siguiente mil hacia abajo y los dos siguientes miles hacia arriba) y para las opciones de venta (el siguiente mil hacia arriba y los dos siguientes miles hacia abajo), y 2 strikes para las straddles (los dos comunes a call y put).
+Por ejemplo, si el precio de call = 45.684,5 y el de put = 45.749,86; para el call: Strike 1 = K1 = 45,000; Strike 2 =  K2 = 46,000; Strike 3 =  K3 = 47,000 y para la opción de put: Strike 1 = K1 = 46,000; Strike 2 =  K2 = 45,000; Strike 3 =  K3 = 44,000. Para la straddle: Strike 1 = K1 = 45,000; Strike 2 = K2 = 46,000.
 
 - Para la liquidación al vencimiento, puede elegir entre la entrega en efectivo y la entrega física. 
 Con la entrega en efectivo, usted recibe el PL de la opción al vencimiento = Max(Xt - K, 0), donde Xt es el valor del subyacente en el momento exacto del vencimiento. En otras palabras, si la opción está "In-The-Money" al vencimiento (si su precio a ejercer es favorable comparado con el precio de mercado del subyacente al vencimiento), usted recibe el PL de la opción. 

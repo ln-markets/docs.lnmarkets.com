@@ -102,9 +102,9 @@ En la sección de Opciones, puede negociar dos tipos de Opciones sobre el precio
 <img :src="$withBase('/assets/options_trading.png')" alt="options_trading">
 
 Queremos desmitificar las operaciones de opciones y hacerlas accesibles para todos. Por eso hemos tomado las siguientes decisiones:
-- Sólo puedes comprar opciones. Si eres alcista, compra opciones de calls, si eres bajista, compra opciones de puts.
+- Sólo puedes comprar opciones. Si eres alcista, compra opciones de calls. Si eres bajista, compra opciones de puts. Si espera volatilidad pero no está seguro de la dirección, compre straddles.
 - Son opciones de 24 horas: expiran un día después de abrir la posición (puede cerrarlos en cualquier momento antes de que expiren).
-- Hay 3 strikes para las opciones de compra (el siguiente mil hacia abajo y los dos siguientes miles hacia arriba) y para las opciones de venta (el siguiente mil hacia arriba y los dos siguientes miles hacia abajo).
+- Hay 3 strikes para las opciones de compra (el siguiente mil hacia abajo y los dos siguientes miles hacia arriba) y para las opciones de venta (el siguiente mil hacia arriba y los dos siguientes miles hacia abajo), y 2 strikes para las straddles (los dos comunes a call y put).
 - Al igual que con los futuros, tiene que pagar un margen para abrir el contrato de opciones (que corresponde a la prima de la opción).
 - Para la entrega al vencimiento, puede elegir entre la entrega en efectivo (PL de la opción) o la entrega física: obtiene un contrato de futuros para el strike determinado.
 
