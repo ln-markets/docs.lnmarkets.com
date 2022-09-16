@@ -124,7 +124,7 @@ On LN Markets, the margin available is the amount you can use to enter future tr
 
 On LN Markets, the margin used is the amount used in current open positions.
 
-Maximum margin used is currently limited to 0.02 BTC or 2 million satoshis.
+Maximum margin used is currently limited to 0.1 BTC or 10 million satoshis.
 
 ## What is the open quantity?
 

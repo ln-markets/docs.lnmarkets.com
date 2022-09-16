@@ -89,7 +89,7 @@ Para un lado determinado (comprar o vender), el botón ‘‘Ir con todo’’ g
 
 ## ¿Existe algún límite en LN Markets?
 
-Sí, hay un margen máximo disponible para operar por nodo. Este límite de saldo se ha establecido actualmente en 0.02 BTC = 2,000,000 sats por nodo y se revisará según la actividad.
+Sí, hay un margen máximo disponible para operar por nodo. Este límite de saldo se ha establecido actualmente en 0.1 BTC = 10,000,000 sats por nodo y se revisará según la actividad.
 
 ## ¿Existe un apalancamiento máximo en LN Markets?
 

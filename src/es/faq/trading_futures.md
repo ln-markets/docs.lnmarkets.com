@@ -125,7 +125,7 @@ En LN Markets, el margen disponible es la cantidad que puede utilizar para entra
 ## ¿Qué margen se utiliza?
 
 En LN Markets, el margen utilizado es la cantidad utilizada en las posiciones abiertas actuales.
-El margen máximo utilizado está actualmente limitado a 0,02 BTC o 2 millones de satoshis.
+El margen máximo utilizado está actualmente limitado a 0.01 BTC o 10 millones de satoshis.
 
 ## ¿Qué es la cantidad abierta?
 

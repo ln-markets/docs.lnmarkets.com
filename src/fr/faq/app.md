@@ -82,7 +82,7 @@ Pour un sens donné (achat ou vente), le bouton 'All In' génère un ordre au ma
 
 Il y a une marge maximum par nœud.
 
-Cette limite est actuellement fixée à 0.02 BTC = 2,000,000 sats pour la marge utilisée pour les positions ouvertes.
+Cette limite est actuellement fixée à 0.1 BTC = 10,000,000 sats pour la marge utilisée pour les positions ouvertes.
 
 ## Quel est l’effet de levier maximum sur LN Markets ?
 

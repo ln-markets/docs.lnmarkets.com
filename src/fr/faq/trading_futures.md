@@ -133,7 +133,7 @@ Sur LN Markets, la marge disponible est le montant que vous pouvez utiliser pour
 
 Sur LN Markets, la marge utilisée est le montant utilisé dans les positions actuellement ouvertes.
 
-La marge utilisée maximale est actuellement limitée à 0.02 BTC ou 2 millions de satoshis.
+La marge utilisée maximale est actuellement limitée à 0.1 BTC ou 10 millions de satoshis.
 
 ## Qu’est-ce que la quantité ouverte ?
 

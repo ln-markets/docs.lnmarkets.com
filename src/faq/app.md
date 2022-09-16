@@ -84,7 +84,7 @@ For a given side (buy or sell), the All In button generates a market order which
 
 There is a maximum margin available for trading per node. 
 
-This limit is currently set to 0.02 BTC = 2,000,000 sats per account for Margin Used for open positions.
+This limit is currently set to 0.1 BTC = 10,000,000 sats per account for Margin Used for open positions.
 
 ## What is the maximum leverage on LN Markets?
 
