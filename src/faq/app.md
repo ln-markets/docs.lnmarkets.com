@@ -153,7 +153,7 @@ P&L | Quantity * (1/Entry Price -1/Price Ref)
 Liquidation Level | (1 / Entry Price + Margin / Quantity)^-1
 Trigger Indicator | Price Ref
 Leverage Max | x100
-Margin max (per account) | 2,000,000 sats
+Margin max (per account) | 10,000,000 sats
 
 ## How to use LN Markets API?
 

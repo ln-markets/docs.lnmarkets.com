@@ -158,7 +158,7 @@ Pérdidas y ganancias (P&L) | Cantidad * (1/Precio de entrada -1/Precio de refer
 Nivel de liquidación | (1 / Precio de entrada + Margen / Cantidad) ^-1
 Indicador de disparador | Precio de referencia
 Apalancamiento máximo | x100
-Margen máximo (por cuenta) | 2.000.000 sats
+Margen máximo (por cuenta) | 10.000.000 sats
 
 ## ¿Cómo puedo utilizar la API de LN Markets?
 

@@ -151,7 +151,7 @@ Profit & Loss (P&L) | Quantity * (1/Entry Price -1/Price Ref)
 Niveau de liquidation | (1 / Entry Price + Margin / Quantity)^-1
 Déclencheur d'événements | Prix de Référence
 Levier Max | x100
-Marge Max (par compte) | 2.000.000 sats
+Marge Max (par compte) | 10.000.000 sats
 
 ## Comment utiliser l'API de LN Markets?
 
