@@ -12,7 +12,7 @@ LN Markets comes with no guarantees, use at your own risk.
 
 ## Connection to LN Markets
 
-On [LN Markets](https://lnmarkets.com/), click on Sign In in the upper right hand corner:
+On [LN Markets](https://lnmarkets.com/), click on Register in the upper right hand corner:
 
 <img :src="$withBase('/assets/login.png')" alt="login">
 
@@ -115,6 +115,17 @@ After confirming your order, the position is open and you can see it in the Runn
 
 <img :src="$withBase('/assets/running_blotter_options.png')" alt="running_blotter_options">
 
+## Swap
+
+Click on Swap to easily convert your BTC balance to a synthetic USD balance and vice-versa. This enables you to better manage your risk.
+
+<img :src="$withBase('/assets/swap.png')" alt="swap">
+
+When you swap your BTC balance for a synthetic USD balance, what happens under the hood is that you short a BTCUSD futures with a leverage equal to 1.
+
+We don't apply carry fees for this service.
+
+
 ## Withdraw funds to your wallet
 
 Click on the button Withdraw on the lower left hand corner and choose the amount you want to deposit to your account.
@@ -125,7 +136,7 @@ If you have a wallet with [LNURL](https://github.com/fiatjaf/awesome-lnurl#walle
 
 ## Edit your account
 
-Click on your Profile section en la esquina superior derecha to edit your username, your leaderboard settings, update your password and generate your API keys tokens:
+Click on your Profile section on thhe top right-hand corner to edit your username, your leaderboard settings, update your password and generate your API keys tokens:
 
 <img :src="$withBase('/assets/profile.png')" alt="profile">
 

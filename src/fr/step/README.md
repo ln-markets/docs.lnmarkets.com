@@ -114,6 +114,17 @@ Après avoir confirmé votre ordre, la position est ouverte et vous pouvez la vo
 <img :src="$withBase('/assets/running_blotter_options.png')" alt="running_blotter_options">
 
 
+## Swap
+
+Cliquez sur Swap pour convertir facilement votre balance BTC en une balance synthétique USD, et vice-versa. Cela vous permet de mieux gérer votre risque.
+
+<img :src="$withBase('/assets/swap.png')" alt="swap">
+
+Quand vous convertissez votre balance BTC en une balance synthétique USD, cela correspond à une vente de contrat futures avec un levier égal à 1.
+
+Nous ne facturons pas de frais de financement (‘funding fee’) pour ce service.
+
+
 ## Retirer des fonds vers votre portefeuille
 
 Cliquez sur le bouton 'withdraw' dans le coin inférieur gauche et choisissez le montant que vous souhaitez retirer sur votre compte.

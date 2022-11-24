@@ -115,6 +115,17 @@ Después de confirmar su orden, la posición está abierta y puede verla en el h
 <img :src="$withBase('/assets/running_blotter_options.png')" alt="running_blotter_options">
 
 
+## Swap
+
+Haga clic en ‘Swap’ para convertir fácilmente su saldo de BTC en un saldo de USD sintético y viceversa. Esto le permite administrar mejor su riesgo.
+
+<img :src="$withBase('/assets/swap.png')" alt="swap">
+
+Cuando intercambia su saldo de BTC por un saldo de USD sintético, lo que sucede bajo el capó es una venta de contratos futuros de BTCUSD con un apalancamiento igual a 1.
+
+No aplicamos tarifas de financiación (‘funding fee’) para este servicio.
+
+
 ## Retirar fondos a su monedero
 
 Haga clic en el botón Retirar en la esquina inferior izquierda y elija la cantidad que desea depositar en su cuenta.
