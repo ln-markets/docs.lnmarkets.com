@@ -16,9 +16,9 @@ On [LN Markets](https://lnmarkets.com/), click on Register in the upper right ha
 
 <img :src="$withBase('/assets/login.png')" alt="login">
 
-There are four methods to connect to LN Markets:
+There are various methods to connect to LN Markets:
 
-- Sign in with LNURL: instant with any wallet which supports [lnurl-auth](https://github.com/fiatjaf/awesome-lnurl#wallets) like [Phoenix](https://phoenix.acinq.co/), [Breez](https://breez.technology/), etc. This is a seamless and efficient way to log in and trade on LN Markets: your wallet can sign a message with its Private Key. Hence, identification can be done just with your wallet’s Public Key and no other information is needed.
+- Sign in with Lightning wallet: instant with any wallet which supports [lnurl-auth](https://github.com/fiatjaf/awesome-lnurl#wallets) like [Phoenix](https://phoenix.acinq.co/), [Breez](https://breez.technology/), etc. This is a seamless and efficient way to log in and trade on LN Markets: your wallet can sign a message with its Private Key. Hence, identification can be done just with your wallet’s Public Key and no other information is needed.
 
 <img :src="$withBase('/assets/lnurl_auth.png')" alt="lnurl_auth">
 
@@ -29,6 +29,8 @@ There are four methods to connect to LN Markets:
 You have the option to enter an email address for account recovery.
 
 - Sign in with [Alby](https://getalby.com/) and [Joule](https://lightningjoule.com/): they are Bitcoin Lightning Browser extensions that connects to different wallet interfaces and brings deep lightning integration to the web.
+
+- Sign in with [Ligthning Node Connect](https://github.com/lightninglabs/lightning-node-connect): a protocol to safely and easily connect your node to a web or mobile application like LN Markets.
 
 ## Fund your account
 
@@ -132,7 +134,7 @@ Click on the button Withdraw on the lower left hand corner and choose the amount
 
 <img :src="$withBase('/assets/withdraw.png')" alt="withdraw">
 
-If you have a wallet with [LNURL](https://github.com/fiatjaf/awesome-lnurl#wallets), you can just scan the QR code to receive the payment immediately. Else, you can just copy the invoice to your wallet.
+If you have a Lightning wallet with [LNURL](https://github.com/fiatjaf/awesome-lnurl#wallets), you can just scan the QR code to receive the payment immediately. Else, you can just copy the invoice to your wallet.
 
 ## Edit your account
 

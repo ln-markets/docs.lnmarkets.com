@@ -25,7 +25,7 @@ If you run a Lightning Network node, you can open a direct channel to [LN Market
 
 No email or private data is required to access LN Markets.
 
-There are four methods to connect to LN Markets:
+There are various methods to connect to LN Markets:
 
 - Sign in with LNURL: instant with any wallet which supports [lnurl-auth](https://github.com/fiatjaf/awesome-lnurl#wallets) like [Phoenix](https://phoenix.acinq.co/), [Breez](https://breez.technology/), etc. This is a seamless and efficient way to log in and trade on LN Markets: your wallet can sign a message with its Private Key. Hence, identification can be done just with your wallet’s Public Key and no other information is needed.
 
@@ -39,6 +39,7 @@ You have the option to enter an email address for account recovery.
 
 - Sign in with [Alby](https://getalby.com/) and [Joule](https://lightningjoule.com/): they are Bitcoin Lightning Browser extensions that connects to different wallet interfaces and brings deep lightning integration to the web.
 
+- Sign in with [Ligthning Node Connect](https://github.com/lightninglabs/lightning-node-connect): a protocol to safely and easily connect your node to a web or mobile application like LN Markets.
 
 ## How can I deposit funds on LN Markets?
 

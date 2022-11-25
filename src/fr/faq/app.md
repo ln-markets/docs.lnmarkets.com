@@ -28,7 +28,7 @@ le seul pré-requis est un 'wallet' Lightning avec une route ou un canal vers le
 
 Transférer fractions de bitcoins vers un wallet Lightning peut se comparer à un transfert de fonds vers une banque dépositaire pour un investissement futur. Mais avec une différence de taille : dans le cas du réseau Lightning, vous avec le contrôle total sur vos fonds avant d'effectuer votre investissement.
 
-Il existe quatre méthodes de connexion :
+Il existe plusieurs méthodes de connexion :
 
 -  Se connecter avec LNURL : connexion instantanée avec n'importe quel 'wallet' (portefeuillle numérique) Lightinng qui supporte [lnurl-auth](https://github.com/fiatjaf/awesome-lnurl#wallets) comme [Phoenix](https://phoenix.acinq.co/), [Breez](https://breez.technology/), etc. Il s'agit d'une méthode transparente et efficace de connexion. En effet, votre portefeuille peut signer un message avec sa clé privée. Ainsi, l'identification peut se faire uniquement avec la clé publique de votre portefeuille et aucune autre information n'est nécessaire.
 
@@ -41,6 +41,8 @@ Il existe quatre méthodes de connexion :
 Vous avez également la possibilité d'entrer une adresse électronique pour la récupération du compte.
 
 - Se connecter avec [Alby](https://getalby.com/) and [Joule](https://lightningjoule.com/): ce sont des extensions Bitcoin/Lightning pour navigateur web  qui se connectent à différentes interfaces pour une intégration et une inteaction directe avec ces réseaux.
+
+- Se connecter avec [Ligthning Node Connect](https://github.com/lightninglabs/lightning-node-connect): un protocole pour connecter facilement et en toute sécurité votre nœud à une application web ou mobile comme LN Markets.
 
 ## Comment puis je déposer des fonds sur LN Markets ?
 

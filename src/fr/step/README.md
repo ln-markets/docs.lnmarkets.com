@@ -12,23 +12,25 @@ LN Markets n'est assorti d'aucune garantie, utilisez-le à vos propres risques.
 
 ## Connexion à LN Markets
 
-Sur [LN Markets](https://lnmarkets.com/), cliquez sur 'Sign In' dans le coin supérieur droit :
+Sur [LN Markets](https://lnmarkets.com/), cliquez sur 'S'inscrire' dans le coin supérieur droit :
 
 <img :src="$withBase('/assets/login.png')" alt="login">
 
-Il existe quatre méthodes de connexion :
+Plusieurs méthodes de connexion sont possibles :
 
--  Se connecter avec LNURL : connexion instantanée avec n'importe quel 'wallet' (portefeuillle numérique) Lightinng qui supporte [lnurl-auth](https://github.com/fiatjaf/awesome-lnurl#wallets) comme [Phoenix](https://phoenix.acinq.co/), [Breez](https://breez.technology/), etc. Il s'agit d'une méthode transparente et efficace de connexion. En effet, votre portefeuille peut signer un message avec sa clé privée. Ainsi, l'identification peut se faire uniquement avec la clé publique de votre portefeuille et aucune autre information n'est nécessaire.
+-  Se connecter avec wallet Lightning : connexion instantanée avec n'importe quel 'wallet' (portefeuillle numérique) Lightinng qui supporte [lnurl-auth](https://github.com/fiatjaf/awesome-lnurl#wallets) comme [Phoenix](https://phoenix.acinq.co/), [Breez](https://breez.technology/), etc. Il s'agit d'une méthode transparente et efficace de connexion. En effet, votre portefeuille peut signer un message avec sa clé privée. Ainsi, l'identification peut se faire uniquement avec la clé publique de votre portefeuille et aucune autre information n'est nécessaire.
 
 <img :src="$withBase('/assets/lnurl_auth.png')" alt="lnurl_auth">
 
-- Se connecter avec des 'Credentials' (identifiants) : vous pouvez créer un compte directement, en entrant votre 'login' et votre mot de passe.
+- Se connecter avec des identifiants ('Credentials') : vous pouvez créer un compte directement, en entrant votre 'login' et votre mot de passe.
 
 <img :src="$withBase('/assets/credentials.png')" alt="credentials">
 
 Vous avez également la possibilité d'entrer une adresse électronique pour la récupération du compte.
 
 - Se connecter avec [Alby](https://getalby.com/) and [Joule](https://lightningjoule.com/): ce sont des extensions Bitcoin/Lightning pour navigateur web  qui se connectent à différentes interfaces pour une intégration et une inteaction directe avec ces réseaux.
+
+- Se connecter avec [Ligthning Node Connect](https://github.com/lightninglabs/lightning-node-connect): un protocole pour connecter facilement et en toute sécurité votre nœud à une application web ou mobile comme LN Markets.
 
 ## Créditer votre compte
 
@@ -131,7 +133,7 @@ Cliquez sur le bouton 'withdraw' dans le coin inférieur gauche et choisissez le
 
 <img :src="$withBase('/assets/withdraw.png')" alt="withdraw">
 
-Si vous avez un portefeuille avec [LNURL](https://github.com/fiatjaf/awesome-lnurl#wallets), vous pouvez simplement scanner le QR code pour recevoir le paiement immédiatement. Sinon, vous pouvez simplement copier la facture ('invoice') sur votre portefeuille.
+Si vous avez un portefeuille Lightning avec [LNURL](https://github.com/fiatjaf/awesome-lnurl#wallets), vous pouvez simplement scanner le QR code pour recevoir le paiement immédiatement. Sinon, vous pouvez simplement copier la facture ('invoice') sur votre portefeuille.
 
 ## Modifier votre profil
 

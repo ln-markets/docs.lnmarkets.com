@@ -12,11 +12,11 @@ LN Markets no ofrece ninguna garantía, utilícelo bajo su propia responsabilida
 
 ## Inicio de sesión
 
-En [LN Markets](https://lnmarkets.com/), haga clic en Inicio de sesión [Sign In] en la esquina superior derecha:
+En [LN Markets](https://lnmarkets.com/), haga clic en Registrarse [Register] en la esquina superior derecha:
 
 <img :src="$withBase('/assets/login.png')" alt="login">
 
-Existen cuatro métodos de inicio de sesión:
+Existen varios métodos de inicio de sesión:
 
 - Iniciar sesión con LNURL: inicio de sesión instantáneo con cualquier monedero que soporte [lnurl-auth](https://github.com/fiatjaf/awesome-lnurl#wallets) como [Phoenix](https://phoenix.acinq.co/), [Breez](https://breez.technology/), etc. Se trata de una forma sencilla y eficaz de iniciar sesión y operar en LN Markets: su monedero puede firmar un mensaje con su llave privada. Por lo tanto, la identificación se puede hacer sólo con la llave pública de su monedero y no se necesita ninguna otra información.
 
@@ -29,6 +29,8 @@ Existen cuatro métodos de inicio de sesión:
 Tiene la opción de introducir una dirección de correo electrónico para recuperar su cuenta.
 
 - Iniciar sesión con  [Alby](https://getalby.com/) y [Joule](https://lightningjoule.com/): son extensiones de browser web Bitcoin/Lightning  que se conectan a diferentes interfaces de billetera y brindan una profunda integración de Lightning a la web.
+
+- Iniciar sesión con[Ligthning Node Connect](https://github.com/lightninglabs/lightning-node-connect): un protocolo para conectar su nodo de manera fácil y segura a una aplicación web o móvil como LN Markets.
 
 ## Deposite fondos en su cuenta
 
@@ -132,7 +134,7 @@ Haga clic en el botón Retirar en la esquina inferior izquierda y elija la canti
 
 <img :src="$withBase('/assets/withdraw.png')" alt="withdraw">
 
-Si tiene un monedero con [LNURL](https://github.com/fiatjaf/awesome-lnurl#wallets), puede simplemente escanear el código QR para recibir el pago inmediatamente. Si no, puede copiar la factura en su cartera.
+Si tiene un monedero Lightning con [LNURL](https://github.com/fiatjaf/awesome-lnurl#wallets), puede simplemente escanear el código QR para recibir el pago inmediatamente. Si no, puede copiar la factura en su cartera.
 
 ## Editar su perfil
 

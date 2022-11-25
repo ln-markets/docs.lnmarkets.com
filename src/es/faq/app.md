@@ -29,7 +29,7 @@ El único requisito previo es financiar una billetera Lightning con una ruta o u
 
 Financiar una billetera Lightning se puede comparar con una transferencia de fondos a un banco custodial para una inversión futura. Pero con una diferencia importante: aquí uno mantiene la propiedad total sobre sus fondos en el canal Lightning antes de la inversión.
 
-Existen cuatro métodos de inicio de sesión:
+Existen varios métodos de inicio de sesión:
 
 - Iniciar sesión con LNURL: inicio de sesión instantáneo con cualquier monedero que soporte [lnurl-auth](https://github.com/fiatjaf/awesome-lnurl#wallets) como [Phoenix](https://phoenix.acinq.co/), [Breez](https://breez.technology/), etc. Se trata de una forma sencilla y eficaz de iniciar sesión y operar en LN Markets: su monedero puede firmar un mensaje con su llave privada. Por lo tanto, la identificación se puede hacer sólo con la llave pública de su monedero y no se necesita ninguna otra información.
 
@@ -43,6 +43,7 @@ Tiene la opción de introducir una dirección de correo electrónico para recupe
 
 - Iniciar sesión con  [Alby](https://getalby.com/) y [Joule](https://lightningjoule.com/): son extensiones de browser web Bitcoin/Lightning  que se conectan a diferentes interfaces de billetera y brindan una profunda integración de Lightning a la web.
 
+- Iniciar sesión con[Ligthning Node Connect](https://github.com/lightninglabs/lightning-node-connect): un protocolo para conectar su nodo de manera fácil y segura a una aplicación web o móvil como LN Markets.
 
 ## ¿Cómo puedo depositar fondos en LN Markets?
 
