@@ -18,6 +18,10 @@ Solo necesita una billetera Lightning con algunas fracciones de unidades de bitc
 
 De hecho, Bitcoin es altamente divisible: la unidad más pequeña de Bitcoin es un satoshi y 1 bitcoin = 100.000.000 satoshis. De hecho, satoshis o sats es la unidad de referencia en la red Lightning y en LN Markets.
 
+Algunas billeteras Lightning fáciles de usar incluyen [Phoenix](https://phoenix.acinq.co/), [Breez](https://breez.technology/), [Blue Wallet](https://bluewallet.io/ ), [BLW](https://lightning-wallet.com/), etc.
+
+Si ejecuta un nodo de Lightning Network, puede abrir un canal directo al [nodo de LN Market](https://lnmarkets.com/lightning).
+
 Consulte la sección: [¿Cómo obtener una billetera Lightning?](./lightning.md#¿Cómo-obtener-una-billetera-Lightning?) y [¿Cómo obtener bitcoin en mi billetera Lightning?](./lightning.md#¿Cómo-obtener-bitcoin-en-mi-billetera-Lightning?) para poder utilizar LN Markets por primera vez. 
 
 

@@ -18,7 +18,7 @@ You just need a Lightning Network wallet loaded with some fractions of bitcoins.
 
 Some user-friendly Lightning wallets include [Phoenix](https://phoenix.acinq.co/), [Breez](https://breez.technology/), [Blue Wallet](https://bluewallet.io/), [BLW](https://lightning-wallet.com/), etc.
 
-If you run a Lightning Network node, you can open a direct channel to [LN Market's node](https://lnmarkets.com/node).
+If you run a Lightning Network node, you can open a direct channel to [LN Market's node](https://lnmarkets.com/lightning).
 
 
 ## How to connect to LN Markets?

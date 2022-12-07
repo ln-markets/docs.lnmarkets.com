@@ -18,13 +18,13 @@ Vous avez simplement besoin d’un 'Wallet' (portefeuille) compatible avec le r�
 
 [Phoenix](https://phoenix.acinq.co/), [Breez](https://breez.technology/), [Blue Wallet](https://bluewallet.io/) (liste non-exhaustive), sont des exemples de 'wallets' simples d’utilisation.
 
-Si vous gérez un nœud du réseau Lightning Network, vous pouvez également ouvrir un canal direct avec le [nœud de LN Markets](https://lnmarkets.com/node).
+Si vous gérez un nœud du réseau Lightning Network, vous pouvez également ouvrir un canal direct avec le [nœud de LN Markets](https://lnmarkets.com/lightning).
 
 ## Comment se connecter à LN Markets ?
 
 Pas besoin de communiquer un email ou des données personnelles !
 
-le seul pré-requis est un 'wallet' Lightning avec une route ou un canal vers le [nœud de LN Markets](https://lnmarkets.com/node).
+le seul pré-requis est un 'wallet' Lightning avec une route ou un canal vers le [nœud de LN Markets](https://lnmarkets.com/lightning).
 
 Transférer fractions de bitcoins vers un wallet Lightning peut se comparer à un transfert de fonds vers une banque dépositaire pour un investissement futur. Mais avec une différence de taille : dans le cas du réseau Lightning, vous avec le contrôle total sur vos fonds avant d'effectuer votre investissement.
 
