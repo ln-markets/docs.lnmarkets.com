@@ -10,6 +10,7 @@ module.exports = {
           '/es/faq/trading_options.md',
           '/es/faq/swap.md',
           '/es/faq/lightning.md',
+          '/es/faq/ledger.md',
         ],
       }
     ],
