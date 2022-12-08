@@ -3,7 +3,7 @@ module.exports = {
       {
         isGroup: true,
         text: ' ',
-        children: ['/fr/faq/README.md','/fr/faq/app.md', '/fr/faq/trading_futures.md', '/fr/faq/trading_options.md', '/faq/swap.md', '/fr/faq/lightning.md'],
+        children: ['/fr/faq/README.md','/fr/faq/app.md', '/fr/faq/trading_futures.md', '/fr/faq/trading_options.md', '/fr/faq/swap.md', '/fr/faq/lightning.md'],
       }
     ],
     '/fr/step/': [
