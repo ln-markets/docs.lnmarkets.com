@@ -184,7 +184,14 @@ If an IP address throws too many errors, it could be banned for a certain period
 
 Yes, an IP address blocking for US residents is effective on [LN Markets](https://lnmarkets.com/).
 
-## What is the trollbox?
+## What is the Trollbox?
 
 The Trollbox is the LN Markets chat-room that lives on the main page. It is a gathering place for people with a passion for Bitcoin, Lightning and LN Markets. 
 In order to keep this community productive and inclusive for all, we have set some community standards that we ask all participants to adhere to.
+
+You can use special commands in the Trollbox to share your positions with the community:
+- /help show all commands available
+- /futures shares info on the last futures trade you made
+- /options shares info on the last option trade you made
+- /futures (pid) shares info on futures trades for a specific position id (get the position id or pid clicking on the position number in the trade blotter)
+- /options (pid) shares info on options trades for a specific position id (get the position id or pid clicking on the position number in the trade blotter)

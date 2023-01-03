@@ -193,7 +193,14 @@ Si una dirección IP arroja demasiados errores, podría prohibirse durante un ci
 
 Sí, un bloqueo de dirección IP para residentes de Estado Unidos (EE.UU.) es implementado en [LN Markets](https://lnmarkets.com/).
 
-## ¿Qué es la trollbox?
+## ¿Qué es la Trollbox?
 
 La Trollbox es la sala de chat de LN Markets que se encuentra en la página principal. Es un lugar de reunión para personas apasionadas por Bitcoin, Lightning y LN Markets.
 Para mantener esta comunidad productiva e inclusiva para todos, hemos establecido algunos estándares comunitarios que pedimos a todos los participantes que cumplan.
+
+Puedes usar comandos especiales en Trollbox para compartir tus posiciones con la comunidad:
+- /help muestra todos los comandos disponibles
+- /futures comparte información sobre la última operación de futuros que realizó
+- /options comparte información sobre la última operación de opciones que realizó
+- /futures (pid) comparte información sobre operaciones de futuros para una identificación de posición específica (obtenga la identificación de posición o pid haciendo clic en el número de posición en el trade blotter)
+- /options (pid) comparte información sobre operaciones de opciones para una identificación de posición específica (obtenga la identificación de la posición o el pid haciendo clic en el número de posición en el trade blotter)
