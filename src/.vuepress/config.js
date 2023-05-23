@@ -7,7 +7,7 @@ module.exports = {
   description: 'LN Markets Documentation',
   bundler: '@vuepress/webpack',
   dest: 'dist',
-  base: '/docs/',
+  base: '/',
   head,
   locales: {
     '/': {
