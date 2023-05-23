@@ -1,18 +1,30 @@
 # LN Markets Documentation
 
-![Api V1](https://github.com/lnmarkets/docs.lnmarkets.com/actions/workflows/build.yml/badge.svg?branch=api-v1)
-![Docs](https://github.com/lnmarkets/docs.lnmarkets.com/actions/workflows/build.yml/badge.svg?branch=docs)
-
-This repo contains the LN Markets documentation.
+This branch contains the LN Markets documentation.
 
 ## Docs
 
 If you want to translate or fix a typo you can fork the repo or open an issue using the `docs` branch
 
-## API
+## Dev
 
-The current api documentation is in the `api-v1` branch
+This documentation is made with [Vue Press v2](https://github.com/vuepress/vuepress-next).
+Documentation for docs editing can be found [here](https://vuepress2.netlify.app/).
 
-If you find a typo or an error, please open a pull request.
+```
+# Using OSX
 
-If you want a feature, please open an issue.
+brew install node
+
+# Using Ubuntu
+curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+npm install --global yarn
+
+yarn install
+
+yarn dev
+```
+
+Open your browser and go to `http://localhost:8080`
