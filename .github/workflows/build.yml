@@ -1,12 +1,13 @@
-name: Github Pages
+name: Build and push to S3
 
 on:
   push:
-    branches: [docs]
+    branches:
+      - master
 
 jobs:
-  gh-pages:
-    name: Github Pages
+  push:
+    name: Build and push to S3
     runs-on: ubuntu-latest
 
     steps:
@@ -31,9 +32,14 @@ jobs:
       - name: Run yarn build
         run: yarn build
 
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.1
+      - name: Upload dist to S3
+        uses: jakejarvis/s3-sync-action@v0.5.1
         with:
-          branch: gh-pages
-          folder: dist
-          target-folder: docs
+          args: --acl public-read --follow-symlinks --delete
+        env:
+          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}
+          SOURCE_DIR: './dist'
+          DEST_DIR: '/docs'
