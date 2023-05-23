@@ -1,0 +1,27 @@
+{
+  "name": "ln-markets-docs",
+  "version": "1.0.0",
+  "description": "LN Markets Documentation",
+  "repository": "https://github.com/lnmarkets/docs.lnmarkets.com/",
+  "author": "Victor Afanassieff <victor@afanassieff.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-brands-svg-icons": "^5.15.3",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/vue-fontawesome": "^3.0.0-3"
+  },
+  "devDependencies": {
+    "vuepress": "2.0.0-beta.22"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "arrowParens": "always"
+  }
+}
