@@ -1,6 +1,7 @@
 name: Build and push to S3
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
