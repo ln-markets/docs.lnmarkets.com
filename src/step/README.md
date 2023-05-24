@@ -50,31 +50,41 @@ Your deposit is now confirmed and you can see it in your balance.
 
 <!-- <img :src="$withBase('/assets/depositqr.png')" alt="depositqr"> -->
 
-## Trade Futures
+## Futures Trading
 
-We quote a bid-offer (in the upper bar) and we are direct counterparty to all trades.
+The Futures price (in the upper bar) is the reference BTCUSD price. 
 
-In the Futures section, the first contract we list is a CFD (Contract for Difference) on BTCUSD price with leverage up to x100.
+The first contract we list is a CFD (Contract for Difference) on BTCUSD price with leverage up to x100.
 
-Opening a long position is at the Offer price and conversely, opening a short position is a the Bid price.
+LN Markets is the direct counterparty to all trades
 
 <img :src="$withBase('/assets/trade.png')" alt="trade">
 
 To enter a position, you first have to define a side (buy or sell) and the order type: market order or limit order.
 
-Then, you can define your position with a parameter, either the quantity or the margin.
+A market order is a buy or sell order to be executed immediately.
 
-This deposit will be added to the margin available for entering positions in the future.
+A limit order is an order to buy or sell at a specific price. A buy limit order can only be executed at the limit price or lower. A sell limit order can only be executed at the limit price or higher. A limit order is not guaranteed to execute and you can cancel this order at any time before it is executed.
 
-The quantity is the number of contracts you want to trade (1 contract = 1 USD). For a given quantity and leverage, margin and liquidation are automatically computed.
+Then, you can define your position with a parameter, either the quantity or the initial margin.
 
-The margin is the amount in sats you want to use for this position. For a given margin and leverage, quantity and liquidation are automatically computed.
+The quantity is the number of contracts you want to trade (1 contract = 1 USD). For a given quantity and leverage, initial margin and liquidation price are automatically computed.
 
-You can also add optional take profit and stop loss orders, expressed in BTC/USD.
+The initial margin is the amount in sats to deposit in collateral to open a position.
 
-After confirming your order, the position is open and you can see it in the Running blotter in the lower section:
+The initial margin is equal to a margin plus a maintenance margin, which is the minimum amount to keep your position open (it includes opening and closing fees).
+
+You can also add optional take profit and stop loss orders, to specify the exact BTC/USD prices at which to close out a running position for a profit or to limit losses.
+
+Finally, in order to open your position, you have to pay a trading fee to open a position, which is deducted from the maintenance margin. This trading fee depends on the tier fee in which you belong. 
+
+You can see all your trades in the Open / Running / Closed blotters in the lower section:
 
 <img :src="$withBase('/assets/running_blotter.png')" alt="running_blotter">
+
+If the Futures price falls below the liquidation level for long positions, or rises above the liquidation level for short positions, your position is liquidated.   
+
+You can close your position at any time, and you will receive P&L plus margin plus maintenance margin minus closing fee. 
 
 ### Go All In
 
@@ -96,7 +106,7 @@ And you can close each position imdividually or click on the Close All button.
 
 You can find all your closed positions in the Closed blotter in the lower section.
 
-## Trade Options
+## Options Trading
 
 We quote a bid-offer (in the upper bar) and we are direct counterparty to all trades.
 
@@ -138,7 +148,7 @@ If you have a Lightning wallet with [LNURL](https://github.com/fiatjaf/awesome-l
 
 ## Edit your account
 
-Click on your Profile section on thhe top right-hand corner to edit your username, your leaderboard settings, update your password and generate your API keys tokens:
+Click on your Profile section on the top right-hand corner to check your dashboard, your wallet, edit your settings, and generate your API keys:
 
 <img :src="$withBase('/assets/profile.png')" alt="profile">
 
@@ -146,7 +156,7 @@ You can also see your history of deposits and withdrawals.
 
 ## Use LN Markets API
 
-The [LN Markets API reference](https://docs.lnmarkets.com/api/v1/) provides information on all available endpoints.
+The [LN Markets API reference](https://docs.lnmarkets.com/api/v2/) provides information on all available endpoints.
 
 Here are two Python and JavaScript packages to easily interact with the API:
 - [Python package](https://pypi.org/project/ln-markets/)

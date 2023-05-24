@@ -50,29 +50,35 @@ Su depósito está ahora confirmado y puede verlo en su saldo.
 
 ## Operar Futuros
 
-LN Markets cotiza una oferta [bid] y una demanda [offer] (en la barra superior) y es la contraparte directa de todas las operaciones.
+El precio de los Futuros (en la barra superior) es el precio BTCUSD de referencia.
 
 El primer contrato que enumeramos es un CFD (Contrato por Diferencia) sobre el precio del BTC/USD con un apalancamiento de hasta x100.
-
-La apertura de una posición larga es al precio de la demanda y, a la inversa, la apertura de una posición corta es al precio de oferta.
 
 <img :src="$withBase('/assets/trade.png')" alt="trade">
 
 Para introducir una posición, primero tiene que definir un lado (compra o venta) y el tipo de orden: orden de mercado u orden limitada.
 
-A continuación, puede definir su posición con un parámetro, ya sea la cantidad o el margen.
-
-Este depósito se añadirá al margen disponible para entrar en posiciones en el futuro.
+A continuación, puede definir su posición con un parámetro, ya sea la cantidad o el margen inicial.
 
 La cantidad es el número de contratos que desea negociar (1 contrato = 1 USD). Para una cantidad y un apalancamiento determinados, el margen y la liquidación se calculan automáticamente.
 
-El margen es la cantidad en sats que desea utilizar para esta posición. Para una cantidad y un apalancamiento determinados, la cantidad y la liquidación se calculan automáticamente.
+El margen inicial es la cantidad en sats que hay que depositar en garantía para abrir una posición.
 
-También puede añadir órdenes opcionales de take profit (tomar ganancias) y stop loss (parar pérdidas), expresadas en BTC/USD.
+El margen inicial es igual a un margen más un margen de mantenimiento, que es la cantidad mínima para mantener su posición abierta (incluye las comisiones de apertura y cierre).
+
+También puede añadir órdenes opcionales de take profit y stop loss, para especificar los precios exactos de BTC/USD a los que cerrar una posición en curso para obtener beneficios o limitar las pérdidas.
+
+Por último, para abrir su posición, tiene que pagar una comisión de trading por abrir una posición, que se deduce del margen de mantenimiento. Esta comisión de negociación depende de la comisión de nivel de comisiones en el que te encuentres en dicho momento. 
 
 Después de confirmar su orden, la posición queda abierta y puede verla en la sección inferior de la hoja de operaciones:
 
 <img :src="$withBase('/assets/running_blotter.png')" alt="running_blotter">
+
+Después de confirmar su orden, la posición queda abierta y usted puede verla en el tablero de Posiciones en marcha en la sección inferior.
+
+Si el precio de los Futuros cae por debajo del nivel de liquidación para las posiciones largas, o sube por encima del nivel de liquidación para las posiciones cortas, su posición se liquida.   
+
+Puede cerrar su posición en cualquier momento, y recibirá P&L más margen más margen de mantenimiento menos comisión de cierre.
 
 ### Ir con todo
 
@@ -138,7 +144,7 @@ Si tiene un monedero Lightning con [LNURL](https://github.com/fiatjaf/awesome-ln
 
 ## Editar su perfil
 
-Haz clic en la sección de su perfil bajo su nombre de usuario para editarlo, como también la configuración de su tabla de clasificación, actualizar su contraseña y generar sus tokens [claves] API:
+Haz clic en la sección de su Perfil en la esquina superior derecha para revisar su tablero, su billetera, editar su configuración y generar sus claves API:
 
 <img :src="$withBase('/assets/profile.png')" alt="profile">
 
@@ -146,7 +152,7 @@ También puede ver su historial de depósitos y retiros.
 
 ## Utilizar la API de LN Markets
 
-La [referencia de la API de LN Markets](https://docs.lnmarkets.com/api/v1/) proporciona información sobre todos los extremos disponibles.
+La [referencia de la API de LN Markets](https://docs.lnmarkets.com/api/v2/) proporciona información sobre todos los extremos disponibles.
 
 Aquí hay dos paquetes de Python y JavaScript para interactuar fácilmente con la API:
 - [Paquete Python](https://pypi.org/project/ln-markets/)

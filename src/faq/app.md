@@ -49,9 +49,9 @@ Click on the button Deposit on the lower left hand corner and choose the amount 
 
 You can either deposit funds with a Lightning transaction or with a regular Bitcoin transaction On Chain.
 
-## What are the bid and offer prices?
+## What is the Futures price?
 
-LN Markets provides a bid price and an offer price for a defined quantity of contracts (1 contract = 1 USD).
+The Futures price is the reference BTC/USD price.
 
 ## What are the parameters of a position?
 
@@ -61,21 +61,17 @@ Then, you can define your position with a parameter, either the quantity or the 
 
 The quantity is the number of contracts you want to trade (1 contract = 1 USD). For a given quantity and leverage, margin and liquidation are automatically computed.
 
-
-The margin is the deposit in sats required as collateral to open a position. For a given margin and leverage, quantity and liquidation are automatically computed.
+The initial margin is the deposit in sats required as collateral to open a position. For a given initial margin and leverage, quantity and liquidation are automatically computed.
 
 You can also add optional take profit and stop loss orders, expressed in BTC/USD.
 
 ## How can I open a trading position?
 
-To enter in a position, you must pay for your margin.
+To enter in a position, you must pay for your initial margin. When clicking on the button Submit, a summary of the new position pops up for confirmation.
 
-When clicking on the button Submit, a summary of the new position pops up for confirmation. 
-
-If you had deposited enough funds to cover the margin payment, your position is immediately opened.
+If you have deposited enough funds to cover the initial margin payment, your position is immediately opened.
 
 Else, you need to deposit more funds to your account.
-
 
 ## What is the All In button?
 
@@ -91,21 +87,47 @@ This limit is currently set to 0.1 BTC = 10,000,000 sats per account for Margin 
 
 The maximum leverage you can take is currently set at x100.
 
-## What is the price reference?
+## What is the margin?
 
-The price reference of a position is the price at which the position can be bought back at any time. 
+When buyers and sellers want to enter a Bitcoin derivatives position, to make sure they honor their contractual obligations, exchanges and trading platforms require them to deposit and maintain an account funded with Bitcoin as collateral: this is called the margin.
 
-For instance, for a long position to be unwind, one needs to sell the contract. Price for this sell order is the bid price, then price reference for this position is the bid price. 
+For a given margin and leverage, quantity and liquidation are automatically computed (margin = quantity / (price * leverage)).
+On LN Markets, each margin is dedicated to a specific position. Hence, a trader can have different positions with a specific margin policy for each one.
 
-Conversely, for a short position to be unwind, one needs to buy the contract. Price for this buy order is the offer price, then the price reference for this position is the offer price.
+Margin is expressed in sats (1 BTC = 100,000,000 satoshis or sats).
 
-This rule applies to P&L computation, take profit, stop loss and liquidation orders.
+## What is the initial margin?
 
-## What is a liquidation event?
+The initial margin is the amount in sats to deposit in collateral to open a position. 
 
-In case your margin can not cover the P&L, your position has to be liquidated with a liquidation order.
+The initial margin is equal to a margin plus a maintenance margin, which is the minimum amount to keep your position open (it includes opening and closing fees).
 
-We do not charge extra margin for liquidation and the liquidation level is the exact level where the margin is equal to zero.
+## What is the maintenance margin?
+
+The maintenance margin represents the lowest required balance to keep your position or order active. It encompasses a reserve to cover the costs associated with opening and closing the position. 
+
+When an order is executed (whether it's an opening or closing order), the fees are subtracted from the maintenance margin. For market orders, this deduction occurs immediately upon placing the order, as the execution is instantaneous.
+
+## What are the trading fees?
+
+Your trading fee depends on the Tier in which you belong. The higher your trading volume, the lower your trading fees. Check your Profile to know your Tier.
+
+## How are computed fees?
+
+Initially, Total fee paid = 0 and maintenance margin = opening fee reserved + closing fee reserved, with opening fee reserved = quantity / entry price * Tier1 fee and closing fee reserved = quantity / initial liquidation price * Tier1 fee. 
+
+At the time of trading, Total fee paid = opening fee and maintenance margin = opening fee reserved + closing fee reserved - opening fee. Opening fee reserved and opening fee can be different in case of change of Tier fee.
+
+When closing a position, Total fee paid = opening fee + closing fee and opening fee reserved + closing fee reserved - opening fee - closing fee.
+And users will receive P&L + margin + maintenance margin.
+
+## What is the liquidation?
+
+Liquidation is the forced closure of a running position. It occurs If the Futures price falls below the liquidation level for long positions, or rises above the liquidation level for short positions.
+
+## What is the margin ratio?
+
+When the margin ratio reaches 100% your position is liquidated. Margin ratio = maintenance margin / (initial margin + P&L - Fee).
 
 ## How can I cross-margin positions?
 
@@ -141,9 +163,16 @@ Example of funding fee calculation: for a funding rate of 0.01%, a long position
 
 ## What is the cost of trading on LN Markets?
 
-Contract | Bid-Offer | Maintenance Margin | Overnight Fee
------------- | ------------- | ------------ | -------------
-CFD BTCUSD | 20bp | 0bp | See LN Markets
+Your trading fee depends on the Tier fee in which you belong. The more volume you make, the lower your trading fee will be.
+
+Tier | Monthly Trading Volume | Trading Fee
+------------ | ------------- | ------------
+Tier 1 | < $250,000 | 0.1%
+Tier 2 | < $1,000,000 | 0.08%
+Tier 3 | < $2,500,000 | 0.07%
+Tier 4 | < $5,000,000 | 0.06%
+
+The Monthly Trading Volume is computed every hour on the closed positions. Running positions are not included in the computation.
 
 ## What is the contract specification of the CFD BTCUSD listed on LN Markets?
 
@@ -151,18 +180,17 @@ BTCUSD Source | XBTUSD Index (BitMEX)
 ------------ | -------------
 Price Ref | Bid Price (for long position) / Offer Price (for short position)
 P&L | Quantity * (1/Entry Price -1/Price Ref)
-Liquidation Level | (1 / Entry Price + Margin / Quantity)^-1
-Trigger Indicator | Price Ref
+Liquidation Level | (1 / Entry Price + Initial Margin / Quantity)^-1
 Leverage Max | x100
 Margin max (per account) | 10,000,000 sats
 
 ## How to use LN Markets API?
 
-The [LN Markets API reference](https://docs.lnmarkets.com/api/v1/) provides information on all available endpoints.
+The [LN Markets API reference](https://docs.lnmarkets.com/api/v2/) provides information on all available endpoints.
 
-The API endpoint for mainnet is: <https://api.lnmarkets.com/v1>
+The API endpoint for mainnet is: <https://api.lnmarkets.com/v2>
 
-The API endpoint for testnet is: <https://api.testnet.lnmarkets.com/v1>
+The API endpoint for testnet is: <https://api.testnet.lnmarkets.com/v2>
 
 Here are two Python and JavaScript packages to easily interact with the API:
 - [Python package](https://pypi.org/project/ln-markets/)

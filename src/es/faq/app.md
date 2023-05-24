@@ -59,9 +59,8 @@ Este depósito se agregará al margen disponible para ingresar posiciones en el 
 
 Haga clic en el botón Depositar y puede depositar con una transacción Lightning o con una transacción normal de Bitcoin [On Chain].
 
-## ¿Cuáles son los precios de puja y oferta?
-
-LN Markets proporciona un precio de oferta y un precio de oferta para una cantidad definida del contrato. Dentro de este diferencial se incluye el costo de cobertura y el margen de LN Markets.
+¿Cuál es el precio de los Futuros?
+El precio de los Futuros es el precio de referencia BTC/USD.
 
 ## ¿Cómo puedo definir una posición?
 
@@ -73,17 +72,15 @@ Este depósito se agregará al margen disponible para ingresar posiciones en el 
 
 La cantidad es la cantidad de contratos que desea negociar (1 contrato = 1 USD). Para una determinada cantidad y apalancamiento, el margen y la liquidación se calculan automáticamente.
 
-El margen es la cantidad en sats que desea utilizar para esta posición. Para un margen y un apalancamiento determinados, la cantidad y la liquidación se calculan automáticamente.
+El margen inicial es el depósito en sats exigido como garantía para abrir una posición. Para un margen inicial y un apalancamiento dados, la cantidad y la liquidación se calculan automáticamente.
 
 También puede agregar órdenes opcionales de toma de ganancias y ‘‘detener pérdidas’’ (stop loss), expresadas en BTC/USD.
 
 ## ¿Cómo ingresar una posición en LN Markets?
 
-Para ingresar en una posición, debe pagar su margen.
+Para abrir una posición, debe pagar el margen inicial. Al pulsar el botón para confirmar, aparece un resumen de la nueva posición para su confirmación.
 
-Al hacer clic en el botón Enviar, aparece un resumen de la nueva posición y, si ya ha depositado fondos suficientes para cubrir el pago del margen en su cuenta de operaciones, su posición está confirmada.
-
-Este depósito se agregará al margen disponible para ingresar posiciones en el futuro.
+Si ha depositado fondos suficientes para cubrir el pago del margen inicial, su posición se abre inmediatamente.
 
 De lo contrario, se genera una factura Lightning para que pague el monto restante del margen. La nueva posición solo se confirma después del pago de la factura.
 
@@ -100,20 +97,49 @@ Sí, hay un margen máximo disponible para operar por nodo. Este límite de sald
 
 Sí, hay un apalancamiento máximo que puede tomar, actualmente está establecido en x100.
 
-## ¿Por qué mi posición ha sido liquidada?
+## ¿Qué es margen?
 
-En caso de que su margen no pueda cubrir las pérdidas y ganancias, la posición debe liquidarse con una orden de liquidación.
+Cuando los compradores y vendedores quieren entrar en una posición de derivados de Bitcoin, para asegurarse de que cumplen con sus obligaciones contractuales, las bolsas y plataformas de trading les exigen que depositen y mantengan una cuenta financiada con Bitcoin como garantía: esto se llama margen.
 
-No cobramos margen extra por liquidación y el nivel de liquidación es el nivel exacto donde el margen es igual a cero.
+Para un margen y apalancamiento dados, la cantidad y la liquidación se calculan automáticamente (margen = cantidad / (precio * apalancamiento)).
 
-## ¿Cuál es la referencia de precio?
+En LN Markets, cada margen se dedica a una posición específica. Por lo tanto, un operador puede tener diferentes posiciones con una política de margen específica para cada una.
 
-El precio de referencia de una posición es el precio al que se puede volver a comprar la posición en cualquier momento. Por ejemplo, para que una posición larga/compra se deshaga, es necesario vender el contrato.
+El margen se expresa en sats (1 BTC = 100.000.000 satoshis o sats).
 
-El precio de esta orden de venta es el precio de oferta, luego el precio de referencia para esta posición es el precio de oferta. Por el contrario, para que una posición corta se deshaga, es necesario comprar el contrato. El precio de esta orden de compra es el precio de oferta, luego la referencia de precio para esta posición es el precio de oferta.
+## ¿Qué es margen inicial?
 
-Esta regla se aplica al cálculo de ganancias y pérdidas (P & L), tomar ganancias (take profit), detener pérdidas (stop loss) y órdenes de liquidación.
+El margen inicial es la cantidad en sats que hay que depositar en garantía para abrir una posición. 
 
+El margen inicial es igual a un margen más un margen de mantenimiento, que es la cantidad mínima para mantener su posición abierta (incluye las comisiones de apertura y cierre).
+
+## ¿Qué es margen de mantenimiento?
+
+El margen de mantenimiento representa el saldo mínimo necesario para mantener activa su posición u orden. Engloba una reserva para cubrir los costes asociados a la apertura y cierre de la posición.
+
+Cuando se ejecuta una orden (ya sea de apertura o de cierre), las comisiones se restan del margen de mantenimiento. En el caso de las órdenes ‘’a mercado’’, esta deducción se produce inmediatamente después de colocar la orden, ya que la ejecución es instantánea.
+
+## ¿Qué son comisiones de trading?
+
+Su comisión de trading depende del nivel de comisión en la que se encuentre el usuario. Cuanto más volumen haga un usuario, más baja será su comisión de negociación. Consulta tu perfil para conocer tu nivel.
+
+## ¿Cómo se calculan las comisiones?
+
+Inicialmente, (Comisión total pagada) = 0 y (margen de mantenimiento) = comisión de apertura reservada + comisión de cierre reservada, con comisión de apertura reservada = cantidad / precio de entrada * comisión de nivel 1 y comisión de cierre reservada = cantidad / precio de liquidación inicial * comisión de nivel 1.
+
+En el momento de la operación, Comisión total pagada = comisión de apertura y margen de mantenimiento = comisión de apertura reservada + comisión de cierre reservada - comisión de apertura. La comisión de apertura reservada y la comisión de apertura pueden ser diferentes en caso de cambio de las comisiones dependiendo del nivel.
+
+Al cerrar una posición, la comisión total pagada = comisión de apertura + comisión de cierre y margen de mantenimiento = comisión de apertura reservada + comisión de cierre reservada - comisión de apertura - comisión de cierre.
+
+Los usuarios recibirán P&L + margen + margen de mantenimiento.
+
+## ¿Qué es liquidación?
+
+La liquidación es el cierre forzoso de una posición corriente. Se produce si el precio de los Futuros cae por debajo del nivel de liquidación para las posiciones largas, o sube por encima del nivel de liquidación para las posiciones cortas.
+
+## ¿Qué es coeficiente de margen?
+
+Cuando el coeficiente de margen alcanza el 100%, su posición se liquida. Coeficiente de margen = margen de mantenimiento / (margen inicial + P&L - comisión).
 
 ## ¿Cómo puedo añadir o restar márgen a las posiciones abiertas?
 
@@ -150,9 +176,14 @@ Ejemplo de cálculo de tarifa nocturna: con una tasa de financiación (funding r
 
 ## ¿Cuál es el costo de operar en LN Markets?
 
-Contrato | Puja-Oferta | Manutención de margen | Taza nocturna
------------- | ------------- | ------------ | -------------
-Contrato por diferencia BTC/USD | 20bp | 0bp | ver info de la operación
+Su comisión (tasa) de trading depende del nivel de comisión a la que pertenezca. Cuanto mayor sea su volumen, menor será su tasa de trading.
+
+Tier | Volumen mensual de trading | Tasa de trading
+------------ | ------------- | ------------
+Tier 1 | < $250.000 | 0.1%
+Tier 2 | < $1.000.000 | 0.08%
+Tier 3 | < $2.500.000 | 0.07%
+Tier 4 | < $5.000.000 | 0.06%
 
 ## ¿Cuáles son las especificaciones de contrato de los productos enumerados en LN Markets?
 
@@ -160,18 +191,18 @@ Fuente BTCUSD | XBTUSD Index (BitMEX)
 ------------ | -------------
 Precio de referencia | Precio de puja (para posición largas/de compra) y Precio de oferta (para posiciones cortas/de venta)
 Pérdidas y ganancias (P&L) | Cantidad * (1/Precio de entrada -1/Precio de referencia
-Nivel de liquidación | (1 / Precio de entrada + Margen / Cantidad) ^-1
+Nivel de liquidación | (1 / Precio de entrada + Margen Inicial / Cantidad) ^-1
 Indicador de disparador | Precio de referencia
 Apalancamiento máximo | x100
 Margen máximo (por cuenta) | 10.000.000 sats
 
 ## ¿Cómo puedo utilizar la API de LN Markets?
 
-La [referencia de la API de LN Markets](https://docs.lnmarkets.com/api/v1/) proporciona información sobre todos los extremos disponibles.
+La [referencia de la API de LN Markets](https://docs.lnmarkets.com/api/v2/) proporciona información sobre todos los extremos disponibles.
 
-El punto final de la API para mainnet es: <https://api.lnmarkets.com/v1>
+El punto final de la API para mainnet es: <https://api.lnmarkets.com/v2>
 
-El punto final de la API para testnet es: <https://api.testnet.lnmarkets.com/v1>
+El punto final de la API para testnet es: <https://api.testnet.lnmarkets.com/v2>
 
 Aquí hay dos paquetes de Python y JavaScript para interactuar fácilmente con la API:
 - [Paquete Python](https://pypi.org/project/ln-markets/)

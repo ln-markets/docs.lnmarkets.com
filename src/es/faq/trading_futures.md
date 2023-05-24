@@ -22,17 +22,9 @@ Una orden de venta es una orden para vender una cantidad determinada de un produ
 
 Después de introducir una orden de venta, decimos que está en una posición corta.
 
-## ¿Qué es el precio de puja (bid)?
+## ¿Qué es el precio de los Futuros?
 
-El precio de oferta es el precio al que se puede vender.
-
-En LN Markets, es el precio al que se puede tomar una posición corta en un determinado producto.
-
-## ¿Qué es el precio de oferta (offer)?
-
-El precio de oferta es el precio al que se puede comprar.
-
-En LN Markets, es el precio al que se puede tomar una posición larga en un producto determinado.
+El precio de los Futuros es el precio de referencia BTC/USD.
 
 ## ¿Qué es el precio índice?
 
@@ -46,35 +38,11 @@ El precio de entrada de una posición es el precio al que se abre una posición.
 
 El precio de salida de una posición es el precio al que se cierra.
 
-## ¿Cuál es el precio de referencia?
-
-El precio de referencia de una posición es el precio al que se puede recomprar la posición en cualquier momento. Por ejemplo, para deshacer una posición larga, hay que vender el contrato.
-
-El precio de esta orden de venta es el precio de oferta, luego la referencia de precio de esta posición es el precio de oferta. Por el contrario, para deshacer una posición corta, hay que comprar el contrato. El precio para esta orden de compra es el precio de oferta, entonces la referencia de precio para esta posición es el precio de oferta.
-Esta regla se aplica al cálculo de las pérdidas y ganancias, a las órdenes de recogida de beneficios y a las órdenes de liquidación.
-
-Ejemplo de posición larga: Abrimos una orden de mercado larga a un Precio = 38541,5. Unos minutos después, la oferta y la demanda son: 38427,5–38504,5. Como se trata de una posición larga, nuestra referencia de precio es: 38427.5. 
-
-Ejemplo de posición corta: Abrimos una orden de mercado corta a un Precio = 38419,0. Unos minutos más tarde, la oferta y la demanda son: 38396,5–38473,5. Como se trata de una posición corta, nuestra referencia de precio es: 38473.5.
-
 ## ¿Cuál es la cantidad?
 
 La cantidad es el número de contratos que desea operar.
 
 En LN Markets, cada contrato vale 1 USD, el margen y las ganancias y pérdidas se expresan en sats (1 BTC = 100.000.000 satoshis o sats).
-
-## ¿Cuál es el margen?
-
-Cuando los compradores y vendedores quieren entrar en una posición de derivados de Bitcoin, para asegurarse de que cumplen con sus obligaciones contractuales, las bolsas y las plataformas de negociación les exigen que depositen y mantengan una cuenta financiada con Bitcoin como garantía: esto se llama el margen.
-
-En LN Markets, cada margen se dedica a una posición específica. Por lo tanto, un operador puede tener diferentes posiciones con una política de márgenes específica para cada una.
-
-Hay 3 maneras de definir el Margen:
-- Fijarlo directamente
-- Calcularlo utilizando el apalancamiento
-- Calcularlo utilizando el precio de liquidación
-
-El margen se expresa en sats (1 BTC = 100.000.000 satoshis o sats).
 
 ## ¿Qué es el apalancamiento?
 
@@ -84,11 +52,49 @@ El apalancamiento es un arma de doble filo. Con un apalancamiento de 1, se está
 
 En LN Markets, el apalancamiento está limitado a x100.
 
-## ¿Qué es la liquidación?
+## ¿Qué es margen?
 
-La liquidación es el cierre forzoso de sus posiciones abiertas.
+Cuando los compradores y vendedores quieren entrar en una posición de derivados de Bitcoin, para asegurarse de que cumplen con sus obligaciones contractuales, las bolsas y plataformas de trading les exigen que depositen y mantengan una cuenta financiada con Bitcoin como garantía: esto se llama margen.
 
-En LN Markets, si el margen no puede cubrir las pérdidas y ganancias, la posición tiene que liquidarse con una orden de liquidación.
+Para un margen y apalancamiento dados, la cantidad y la liquidación se calculan automáticamente (margen = cantidad / (precio * apalancamiento)).
+
+En LN Markets, cada margen se dedica a una posición específica. Por lo tanto, un operador puede tener diferentes posiciones con una política de margen específica para cada una.
+
+El margen se expresa en sats (1 BTC = 100.000.000 satoshis o sats).
+
+## ¿Qué es margen inicial?
+
+El margen inicial es la cantidad en sats que hay que depositar en garantía para abrir una posición. 
+
+El margen inicial es igual a un margen más un margen de mantenimiento, que es la cantidad mínima para mantener su posición abierta (incluye las comisiones de apertura y cierre).
+
+## ¿Qué es margen de mantenimiento?
+
+El margen de mantenimiento representa el saldo mínimo necesario para mantener activa su posición u orden. Engloba una reserva para cubrir los costes asociados a la apertura y cierre de la posición.
+
+Cuando se ejecuta una orden (ya sea de apertura o de cierre), las comisiones se restan del margen de mantenimiento. En el caso de las órdenes ‘’a mercado’’, esta deducción se produce inmediatamente después de colocar la orden, ya que la ejecución es instantánea.
+
+## ¿Qué son comisiones de trading?
+
+Su comisión de trading depende del nivel de comisión en la que se encuentre el usuario. Cuanto más volumen haga un usuario, más baja será su comisión de negociación. Consulta tu perfil para conocer tu nivel.
+
+## ¿Cómo se calculan las comisiones?
+
+Inicialmente, (Comisión total pagada) = 0 y (margen de mantenimiento) = comisión de apertura reservada + comisión de cierre reservada, con comisión de apertura reservada = cantidad / precio de entrada * comisión de nivel 1 y comisión de cierre reservada = cantidad / precio de liquidación inicial * comisión de nivel 1.
+
+En el momento de la operación, Comisión total pagada = comisión de apertura y margen de mantenimiento = comisión de apertura reservada + comisión de cierre reservada - comisión de apertura. La comisión de apertura reservada y la comisión de apertura pueden ser diferentes en caso de cambio de las comisiones dependiendo del nivel.
+
+Al cerrar una posición, la comisión total pagada = comisión de apertura + comisión de cierre y margen de mantenimiento = comisión de apertura reservada + comisión de cierre reservada - comisión de apertura - comisión de cierre.
+
+Los usuarios recibirán P&L + margen + margen de mantenimiento.
+
+## ¿Qué es liquidación?
+
+La liquidación es el cierre forzoso de una posición corriente. Se produce si el precio de los Futuros cae por debajo del nivel de liquidación para las posiciones largas, o sube por encima del nivel de liquidación para las posiciones cortas.
+
+## ¿Qué es coeficiente de margen?
+
+Cuando el coeficiente de margen alcanza el 100%, su posición se liquida. Coeficiente de margen = margen de mantenimiento / (margen inicial + P&L - comisión).
 
 ## ¿Qué es una orden de mercado?
 

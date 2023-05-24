@@ -10,29 +10,19 @@ The side of a position is long for a buy order and short for a sell order.
 
 On LN Markets, you can find the global side of all open positions in the Risk blotter.
 
-## What is a buy order?
+## What are buy & sell orders?
 
 A buy order is an order to purchase a specified quantity of a financial product. A buy order is executed at the offer price. After entering a buy order, we say that you are in a long position.
 
-## What is a sell order?
-
 A sell order is an order to sell a specified quantity of a financial product. A sell order is executed at the bid price. After entering a sell order, we say that you are in a short position.
 
-## What is the bid price?
+## What is the Futures price?
 
-The bid price is the price at which you can sell.
+The Futures price is the reference BTC/USD price.
 
-On LN Markets, it is the price at which you can take a short position on a given product.
+## What is the Index price?
 
-## What is the offer price?
-
-The offer price is the price at which you can buy.
-
-On LN Markets, it is the price at which you can take a long position on a given product.
-
-## What is the index price?
-
-The index price is a weighted average of the last price of the underlying asset’s market consensus price for each constituent exchange.
+The Index price is a weighted average of the last price of the underlying asset’s market consensus price for each constituent exchange.
 
 ## What is the entry price?
 
@@ -42,49 +32,64 @@ The entry price of a position is the price at which a position is opened.
 
 The exit price of a position is the price at which it is closed.
 
-## What is the price reference?
-
-The price reference of a position is the price at which the position can be bought back at any time. For instance, for a long position to be unwind, one needs to sell the contract.
-
-Price for this sell order is the bid price, then price reference for this position is the bid price. Conversely, for a short position to be unwind, one needs to buy the contract. Price for this buy order is the offer price, then the price reference for this position is the offer price.
-
-This rule applies to P&L computation, take profit and liquidation orders.
-
-Long position example: We open a long market order at a Price = 38541.5. A few minutes later, Bid-Offer is: 38427.5 - 38504.5. Since it is a long position, our price reference is: 38427.5. Short position example: We open a short market order at a Price = 38419.0. A few minutes later, Bid-Offer is: 38396.5 - 38473.5. Since it is a short position, our price reference is: 38473.5.
-
 ## What is the quantity?
 
 The quantity is the number of contracts you want to trade.
 
 On LN Markets, each contract is worth 1 USD, margin and P&L are expressed in sats (1 BTC = 100,000,000 satoshis or sats).
 
-## What is the margin?
-
-When buyers and sellers want to enter a Bitcoin derivatives position, to make sure they honor their contractual obligations, exchanges and trading platforms require them to deposit and maintain an account funded with Bitcoin as collateral: this is called the margin.
-
-On LN Markets, each margin is dedicated to a specific position. Hence, a trader can have different positions with a specific margin policy for each one.
-
-There are 3 ways to define the Margin:
-- Set it directly
-- Calculate it using the leverage
-- Calculate it using the liquidation price
-
-Margin is expressed in sats (1 BTC = 100,000,000 satoshis or sats).
-
-
 ## What is the leverage?
 
-Leverage in trading is an investment strategy that allows to gain exposure to a financial asset with a smaller upfront capital, known as margin.
+Leverage in trading is an investment strategy that allows one to gain exposure to a financial asset with a smaller upfront capital, known as margin.
 
 Leverage is a double-edged sword. With a leverage of 1, you are exposed to the variations of the underlying asset. With a leverage of 2, for a long position, when the underlying asset increases by 1, your P&L increases by 2. But when the underlying asset decreases by 1, your P&L decreases by 2. And vice versa for a short position.
 
 On LN Markets, leverage is limited to x100.
 
+## What is the margin?
+
+When buyers and sellers want to enter a Bitcoin derivatives position, to make sure they honor their contractual obligations, exchanges and trading platforms require them to deposit and maintain an account funded with Bitcoin as collateral: this is called the margin.
+
+For a given margin and leverage, quantity and liquidation are automatically computed (margin = quantity / (price * leverage)).
+
+On LN Markets, each margin is dedicated to a specific position. Hence, a trader can have different positions with a specific margin policy for each one.
+
+Margin is expressed in sats (1 BTC = 100,000,000 satoshis or sats).
+
+## What is the initial margin?
+
+The initial margin is the amount in sats to deposit in collateral to open a position. 
+
+The initial margin is equal to a margin plus a maintenance margin, which is the minimum amount to keep your position open (it includes opening and closing fees).
+
+## What is the maintenance margin?
+
+The maintenance margin represents the lowest required balance to keep your position or order active. It encompasses a reserve to cover the costs associated with opening and closing the position. 
+
+When an order is executed (whether it's an opening or closing order), the fees are subtracted from the maintenance margin. For market orders, this deduction occurs immediately upon placing the order, as the execution is instantaneous.
+
+## What are the trading fees?
+
+Your trading fee depends on the Tier in which you belong. The higher your trading volume, the lower your trading fees. Check your Profile to know your Tier.
+
+## How are computed fees?
+
+
+Initially, Total fee paid = 0 and maintenance margin = opening fee reserved + closing fee reserved, with opening fee reserved = quantity / entry price * Tier1 fee and closing fee reserved = quantity / initial liquidation price * Tier 1 fee. 
+
+At the time of trading, Total fee paid = opening fee and maintenance margin = opening fee reserved + closing fee reserved - opening fee. Opening fee reserved and opening fee can be different in case of change of Tier fee.
+
+When closing a position, Total fee paid = opening fee + closing fee and maintenance margin = opening fee reserved + closing fee reserved - opening fee - closing fee.
+
+And users will receive P&L + margin + maintenance margin.
+
 ## What is the liquidation?
 
-Liquidation is the forced closure of your open positions.
+Liquidation is the forced closure of a running position. It occurs If the Futures price falls below the liquidation level for long positions, or rises above the liquidation level for short positions
 
-On LN Markets, if the margin can not cover the P&L, the position has to liquidated with a liquidation order.
+## What is the margin ratio?
+
+When the margin ratio reaches 100% your position is liquidated. Margin ratio = maintenance margin / (initial margin + P&L - Fee).
 
 ## What is a market order?
 

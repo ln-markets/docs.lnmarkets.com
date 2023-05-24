@@ -20,6 +20,6 @@ footer: Made by LN Markets with ⚡
     <h1><a href = "https://lnmarkets.substack.com/" target="_blank">Blog</a></h1>
   </div>
   <div class="feature">
-    <h1><a href = "https://dashboards.lnmarkets.com" target="_blank">Dashboard</a></h1>
+    <h1><a href = "https://blog.lnmarkets.com/" target="_blank">Newsletter</a></h1>
   </div>
 </div>
