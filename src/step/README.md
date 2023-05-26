@@ -70,13 +70,11 @@ Then, you can define your position with a parameter, either the quantity or the 
 
 The quantity is the number of contracts you want to trade (1 contract = 1 USD). For a given quantity and leverage, initial margin and liquidation price are automatically computed.
 
-The initial margin is the amount in sats to deposit in collateral to open a position.
+The initial margin is the minimum amount to deposit in collateral to open a trade. It is equal to a margin computed for a given quantity and leverage plus a maintenance margin, which is the minimum amount to keep your position open (it includes closing fees).
 
-The initial margin is equal to a margin plus a maintenance margin, which is the minimum amount to keep your position open (it includes opening and closing fees).
+The opening fee is deducted from the maintenance margin. This opening fee depends on the tier fee in which you belong. The more volume you trade, the lower the fee.
 
 You can also add optional take profit and stop loss orders, to specify the exact BTC/USD prices at which to close out a running position for a profit or to limit losses.
-
-Finally, in order to open your position, you have to pay a trading fee to open a position, which is deducted from the maintenance margin. This trading fee depends on the tier fee in which you belong. 
 
 You can see all your trades in the Open / Running / Closed blotters in the lower section:
 

@@ -78,9 +78,9 @@ También puede agregar órdenes opcionales de toma de ganancias y ‘‘detener 
 
 ## ¿Cómo ingresar una posición en LN Markets?
 
-Para abrir una posición, debe pagar el margen inicial. Al pulsar el botón para confirmar, aparece un resumen de la nueva posición para su confirmación.
+Para abrir una posición, debe pagar el margen. Al pulsar el botón para confirmar, aparece un resumen de la nueva posición para su confirmación.
 
-Si ha depositado fondos suficientes para cubrir el pago del margen inicial, su posición se abre inmediatamente.
+Si ha depositado fondos suficientes para cubrir el pago del margen, su posición se abre inmediatamente.
 
 De lo contrario, se genera una factura Lightning para que pague el monto restante del margen. La nueva posición solo se confirma después del pago de la factura.
 
@@ -111,7 +111,7 @@ El margen se expresa en sats (1 BTC = 100.000.000 satoshis o sats).
 
 El margen inicial es la cantidad en sats que hay que depositar en garantía para abrir una posición. 
 
-El margen inicial es igual a un margen más un margen de mantenimiento, que es la cantidad mínima para mantener su posición abierta (incluye las comisiones de apertura y cierre).
+El margen inicial es igual a un margen más un margen de mantenimiento, que es la cantidad mínima para mantener su posición abierta (incluye las comisiones de cierre).
 
 ## ¿Qué es margen de mantenimiento?
 
@@ -178,20 +178,22 @@ Ejemplo de cálculo de tarifa nocturna: con una tasa de financiación (funding r
 
 Su comisión (tasa) de trading depende del nivel de comisión a la que pertenezca. Cuanto mayor sea su volumen, menor será su tasa de trading.
 
-Tier | Volumen mensual de trading | Tasa de trading
+Tier | Volumen de trading acumulado de 30 días | Tasa de trading
 ------------ | ------------- | ------------
 Tier 1 | < $250.000 | 0.1%
 Tier 2 | < $1.000.000 | 0.08%
 Tier 3 | < $2.500.000 | 0.07%
 Tier 4 | < $5.000.000 | 0.06%
 
+El Volumen de trading acumulado de 30 días se calcula a cada hora a partir de las posiciones cerradas. Las posiciones en curso no se incluyen en el cómputo.
+
 ## ¿Cuáles son las especificaciones de contrato de los productos enumerados en LN Markets?
 
 Fuente BTCUSD | XBTUSD Index (BitMEX)
 ------------ | -------------
 Precio de referencia | Precio de puja (para posición largas/de compra) y Precio de oferta (para posiciones cortas/de venta)
-Pérdidas y ganancias (P&L) | Cantidad * (1/Precio de entrada -1/Precio de referencia
-Nivel de liquidación | (1 / Precio de entrada + Margen Inicial / Cantidad) ^-1
+Pérdidas y ganancias (P&L) | Cantidad * (1/Precio de entrada -1/Precio de referencia)
+Nivel de liquidación | (1 / Precio de entrada + Margen / Cantidad) ^-1
 Indicador de disparador | Precio de referencia
 Apalancamiento máximo | x100
 Margen máximo (por cuenta) | 10.000.000 sats

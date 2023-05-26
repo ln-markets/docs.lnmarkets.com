@@ -67,9 +67,9 @@ You can also add optional take profit and stop loss orders, expressed in BTC/USD
 
 ## How can I open a trading position?
 
-To enter in a position, you must pay for your initial margin. When clicking on the button Submit, a summary of the new position pops up for confirmation.
+To enter in a position, you must pay for your margin. When clicking on the button Submit, a summary of the new position pops up for confirmation.
 
-If you have deposited enough funds to cover the initial margin payment, your position is immediately opened.
+If you have deposited enough funds to cover the margin payment, your position is immediately opened.
 
 Else, you need to deposit more funds to your account.
 
@@ -98,9 +98,7 @@ Margin is expressed in sats (1 BTC = 100,000,000 satoshis or sats).
 
 ## What is the initial margin?
 
-The initial margin is the amount in sats to deposit in collateral to open a position. 
-
-The initial margin is equal to a margin plus a maintenance margin, which is the minimum amount to keep your position open (it includes opening and closing fees).
+The initial margin is the minimum amount to deposit in collateral to open a trade. It is equal to a margin computed for a given quantity and leverage plus a maintenance margin, which is the minimum amount to keep your position open (it includes closing fees).
 
 ## What is the maintenance margin?
 
@@ -110,7 +108,7 @@ When an order is executed (whether it's an opening or closing order), the fees a
 
 ## What are the trading fees?
 
-Your trading fee depends on the Tier in which you belong. The higher your trading volume, the lower your trading fees. Check your Profile to know your Tier.
+Your opening and closing fee depend on the Tier in which you belong. The higher your trading volume, the lower your trading fees. Check your Profile to know your Tier.
 
 ## How are computed fees?
 
@@ -165,14 +163,14 @@ Example of funding fee calculation: for a funding rate of 0.01%, a long position
 
 Your trading fee depends on the Tier fee in which you belong. The more volume you make, the lower your trading fee will be.
 
-Tier | Monthly Trading Volume | Trading Fee
+Tier | 30-Day Cumulative Trading Volume | Trading Fee
 ------------ | ------------- | ------------
 Tier 1 | < $250,000 | 0.1%
 Tier 2 | < $1,000,000 | 0.08%
 Tier 3 | < $2,500,000 | 0.07%
 Tier 4 | < $5,000,000 | 0.06%
 
-The Monthly Trading Volume is computed every hour on the closed positions. Running positions are not included in the computation.
+The 30-Day Cumulative Trading Volume Trading Volume is computed every hour on the closed positions. Running positions are not included in the computation.
 
 ## What is the contract specification of the CFD BTCUSD listed on LN Markets?
 
@@ -180,7 +178,7 @@ BTCUSD Source | XBTUSD Index (BitMEX)
 ------------ | -------------
 Price Ref | Bid Price (for long position) / Offer Price (for short position)
 P&L | Quantity * (1/Entry Price -1/Price Ref)
-Liquidation Level | (1 / Entry Price + Initial Margin / Quantity)^-1
+Liquidation Level | (1 / Entry Price + Margin / Quantity)^-1
 Leverage Max | x100
 Margin max (per account) | 10,000,000 sats
 

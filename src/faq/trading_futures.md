@@ -52,7 +52,9 @@ When buyers and sellers want to enter a Bitcoin derivatives position, to make su
 
 For a given margin and leverage, quantity and liquidation are automatically computed (margin = quantity / (price * leverage)).
 
-On LN Markets, each margin is dedicated to a specific position. Hence, a trader can have different positions with a specific margin policy for each one.
+On LN Markets, each margin is dedicated to a specific position. Hence, a trader can have different
+
+ positions with a specific margin policy for each one.
 
 Margin is expressed in sats (1 BTC = 100,000,000 satoshis or sats).
 
@@ -60,7 +62,7 @@ Margin is expressed in sats (1 BTC = 100,000,000 satoshis or sats).
 
 The initial margin is the amount in sats to deposit in collateral to open a position. 
 
-The initial margin is equal to a margin plus a maintenance margin, which is the minimum amount to keep your position open (it includes opening and closing fees).
+The initial margin is equal to a margin plus a maintenance margin, which is the minimum amount to keep your position open (it includes closing fees).
 
 ## What is the maintenance margin?
 

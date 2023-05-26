@@ -64,11 +64,11 @@ La cantidad es el número de contratos que desea negociar (1 contrato = 1 USD). 
 
 El margen inicial es la cantidad en sats que hay que depositar en garantía para abrir una posición.
 
-El margen inicial es igual a un margen más un margen de mantenimiento, que es la cantidad mínima para mantener su posición abierta (incluye las comisiones de apertura y cierre).
+El margen inicial es igual a un margen más un margen de mantenimiento, que es la cantidad mínima para mantener su posición abierta (incluye las comisiones de cierre).
+
+Para abrir su posición, tiene que pagar una comisión de trading por abrir una posición, que se deduce del margen de mantenimiento. Esta comisión de negociación depende de la comisión de nivel de comisiones en el que te encuentres en dicho momento.
 
 También puede añadir órdenes opcionales de take profit y stop loss, para especificar los precios exactos de BTC/USD a los que cerrar una posición en curso para obtener beneficios o limitar las pérdidas.
-
-Por último, para abrir su posición, tiene que pagar una comisión de trading por abrir una posición, que se deduce del margen de mantenimiento. Esta comisión de negociación depende de la comisión de nivel de comisiones en el que te encuentres en dicho momento. 
 
 Después de confirmar su orden, la posición queda abierta y puede verla en la sección inferior de la hoja de operaciones:
 

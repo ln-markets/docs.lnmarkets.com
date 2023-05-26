@@ -66,7 +66,7 @@ El margen se expresa en sats (1 BTC = 100.000.000 satoshis o sats).
 
 El margen inicial es la cantidad en sats que hay que depositar en garantía para abrir una posición. 
 
-El margen inicial es igual a un margen más un margen de mantenimiento, que es la cantidad mínima para mantener su posición abierta (incluye las comisiones de apertura y cierre).
+El margen inicial es igual a un margen más un margen de mantenimiento, que es la cantidad mínima para mantener su posición abierta (incluye las comisiones de cierre).
 
 ## ¿Qué es margen de mantenimiento?
 
