@@ -92,6 +92,7 @@ The maximum leverage you can take is currently set at x100.
 When buyers and sellers want to enter a Bitcoin derivatives position, to make sure they honor their contractual obligations, exchanges and trading platforms require them to deposit and maintain an account funded with Bitcoin as collateral: this is called the margin.
 
 For a given margin and leverage, quantity and liquidation are automatically computed (margin = quantity / (price * leverage)).
+
 On LN Markets, each margin is dedicated to a specific position. Hence, a trader can have different positions with a specific margin policy for each one.
 
 Margin is expressed in sats (1 BTC = 100,000,000 satoshis or sats).
@@ -116,7 +117,7 @@ Initially, Total fee paid = 0 and maintenance margin = opening fee reserved + cl
 
 At the time of trading, Total fee paid = opening fee and maintenance margin = opening fee reserved + closing fee reserved - opening fee. Opening fee reserved and opening fee can be different in case of change of Tier fee.
 
-When closing a position, Total fee paid = opening fee + closing fee and opening fee reserved + closing fee reserved - opening fee - closing fee.
+When closing a position, Total fee paid = opening fee + closing fee and maintenance margin = opening fee reserved + closing fee reserved - opening fee - closing fee.
 And users will receive P&L + margin + maintenance margin.
 
 ## What is the liquidation?

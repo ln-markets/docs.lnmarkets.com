@@ -58,13 +58,13 @@ El primer contrato que enumeramos es un CFD (Contrato por Diferencia) sobre el p
 
 Para introducir una posición, primero tiene que definir un lado (compra o venta) y el tipo de orden: orden de mercado u orden limitada.
 
-A continuación, puede definir su posición con un parámetro, ya sea la cantidad o el margen inicial.
+A continuación, puede definir su posición con un parámetro, ya sea la cantidad o el margen.
 
 La cantidad es el número de contratos que desea negociar (1 contrato = 1 USD). Para una cantidad y un apalancamiento determinados, el margen y la liquidación se calculan automáticamente.
 
-El margen inicial es la cantidad en sats que hay que depositar en garantía para abrir una posición.
+El margen es la cantidad en sats que hay que depositar en garantía para abrir una posición.
 
-El margen inicial es igual a un margen más un margen de mantenimiento, que es la cantidad mínima para mantener su posición abierta (incluye las comisiones de cierre).
+El margen es igual a un margen más un margen de mantenimiento, que es la cantidad mínima para mantener su posición abierta (incluye las comisiones de cierre).
 
 Para abrir su posición, tiene que pagar una comisión de trading por abrir una posición, que se deduce del margen de mantenimiento. Esta comisión de negociación depende de la comisión de nivel de comisiones en el que te encuentres en dicho momento.
 

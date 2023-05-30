@@ -66,11 +66,11 @@ A market order is a buy or sell order to be executed immediately.
 
 A limit order is an order to buy or sell at a specific price. A buy limit order can only be executed at the limit price or lower. A sell limit order can only be executed at the limit price or higher. A limit order is not guaranteed to execute and you can cancel this order at any time before it is executed.
 
-Then, you can define your position with a parameter, either the quantity or the initial margin.
+Then, you can define your position with a parameter, either the quantity or the margin.
 
-The quantity is the number of contracts you want to trade (1 contract = 1 USD). For a given quantity and leverage, initial margin and liquidation price are automatically computed.
+The quantity is the number of contracts you want to trade (1 contract = 1 USD). For a given quantity and leverage, margin and liquidation price are automatically computed.
 
-The initial margin is the minimum amount to deposit in collateral to open a trade. It is equal to a margin computed for a given quantity and leverage plus a maintenance margin, which is the minimum amount to keep your position open (it includes closing fees).
+The margin is the minimum amount to deposit in collateral to open a trade. It is equal to a margin computed for a given quantity and leverage plus a maintenance margin, which is the minimum amount to keep your position open (it includes closing fees).
 
 The opening fee is deducted from the maintenance margin. This opening fee depends on the tier fee in which you belong. The more volume you trade, the lower the fee.
 
