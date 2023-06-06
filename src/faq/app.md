@@ -177,11 +177,10 @@ The 30-Day Cumulative Trading Volume Trading Volume is computed every hour on th
 
 BTCUSD Source | XBTUSD Index (BitMEX)
 ------------ | -------------
-Price Ref | Bid Price (for long position) / Offer Price (for short position)
 P&L | Quantity * (1/Entry Price -1/Price Ref)
-Liquidation Level | (1 / Entry Price + Margin / Quantity)^-1
+Liquidation Level | (1 / Entry Price + (Initial Margin - Maintenance Margin) / Quantity)^-1
 Leverage Max | x100
-Margin max (per account) | 10,000,000 sats
+Margin max (per trade) | 10,000,000 sats
 
 ## How to use LN Markets API?
 

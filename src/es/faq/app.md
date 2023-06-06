@@ -191,12 +191,11 @@ El Volumen de trading acumulado de 30 días se calcula a cada hora a partir de l
 
 Fuente BTCUSD | XBTUSD Index (BitMEX)
 ------------ | -------------
-Precio de referencia | Precio de puja (para posición largas/de compra) y Precio de oferta (para posiciones cortas/de venta)
 Pérdidas y ganancias (P&L) | Cantidad * (1/Precio de entrada -1/Precio de referencia)
-Nivel de liquidación | (1 / Precio de entrada + Margen / Cantidad) ^-1
+Nivel de liquidación | (1 / Precio de entrada + (Margen Inicial - Margen de Mantenimiento) / Cantidad) ^-1
 Indicador de disparador | Precio de referencia
 Apalancamiento máximo | x100
-Margen máximo (por cuenta) | 10.000.000 sats
+Margen máximo (por posición) | 10.000.000 sats
 
 ## ¿Cómo puedo utilizar la API de LN Markets?
 
