@@ -91,7 +91,7 @@ Para un lado determinado (comprar o vender), el botón ‘‘Ir con todo’’ g
 
 ## ¿Existe algún límite en LN Markets?
 
-Sí, hay un margen máximo disponible para operar por nodo. Este límite de saldo se ha establecido actualmente en 0.1 BTC = 10,000,000 sats por nodo y se revisará según la actividad.
+Sí, hay un margen máximo disponible para operar por nodo. Este límite de saldo se ha establecido actualmente en 0.1 BTC = 10,000,000 sats de Margen por posición y 1 BTC = 100,000,000 sats de Margen usada para posiciones abiertas por cuenta.
 
 ## ¿Existe un apalancamiento máximo en LN Markets?
 
@@ -118,10 +118,6 @@ El margen inicial es igual a un margen más un margen de mantenimiento, que es l
 El margen de mantenimiento representa el saldo mínimo necesario para mantener activa su posición u orden. Engloba una reserva para cubrir los costes asociados a la apertura y cierre de la posición.
 
 Cuando se ejecuta una orden (ya sea de apertura o de cierre), las comisiones se restan del margen de mantenimiento. En el caso de las órdenes ‘’a mercado’’, esta deducción se produce inmediatamente después de colocar la orden, ya que la ejecución es instantánea.
-
-## ¿Qué son comisiones de trading?
-
-Su comisión de trading depende del nivel de comisión en la que se encuentre el usuario. Cuanto más volumen haga un usuario, más baja será su comisión de negociación. Consulta tu perfil para conocer tu nivel.
 
 ## ¿Cómo se calculan las comisiones?
 

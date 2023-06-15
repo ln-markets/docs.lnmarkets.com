@@ -81,7 +81,7 @@ For a given side (buy or sell), the All In button generates a market order which
 
 There is a maximum margin available for trading per node. 
 
-This limit is currently set to 0.1 BTC = 10,000,000 sats per account for Margin Used for open positions.
+This limit is currently set to 0.1 BTC = 10,000,000 sats of Margin per trade and 1 BTC = 100,000,000 sats of Margin Used for open positions per account.
 
 ## What is the maximum leverage on LN Markets?
 
@@ -106,10 +106,6 @@ The initial margin is the minimum amount to deposit in collateral to open a trad
 The maintenance margin represents the lowest required balance to keep your position or order active. It encompasses a reserve to cover the costs associated with opening and closing the position. 
 
 When an order is executed (whether it's an opening or closing order), the fees are subtracted from the maintenance margin. For market orders, this deduction occurs immediately upon placing the order, as the execution is instantaneous.
-
-## What are the trading fees?
-
-Your opening and closing fee depend on the Tier in which you belong. The higher your trading volume, the lower your trading fees. Check your Profile to know your Tier.
 
 ## How are computed fees?
 
