@@ -19,7 +19,7 @@ When we designed our options trading offering, we paid attention to making it si
 - They are all 24-hour options: they expire 1 day after opening the position (you can close them at any time before expiry).
 - The underlying of the option is the LNM perpetual future. The forward is the price of this future discounted at the time of expiry. Note that the forward is very close not to say equal to the price of the future because the expiry is only 24h.
 - We quote Bitcoin options with BTC as domestic currency, like is the case for inverse futures. Which means that the forward price parameter is expressed as USD/BTC. However, we display it as BTC/USD for simplicity reasons.
-- The Strike price parameter (price at which the option can be exercised) is expressed as USD/BTC, since BTC is the domestic currency. However, we display it as BTC/USD for simplicity reasons. We list 3 strikes 3 strikes for calls (next thousand down and 2 next thousands up) and for puts (next thousand up and two next thousands down), and 2 strikes for straddles (the two common to calls and puts).
+- The Strike price parameter (price at which the option can be exercised) is expressed as USD/BTC, since BTC is the domestic currency. However, we display it as BTC/USD for simplicity reasons. We list 3 strikes for calls (next thousand down and 2 next thousands up) and for puts (next thousand up and two next thousands down), and 2 strikes for straddles (the two common to calls and puts).
 For example, if bid price = 45,684.5 and offer price = 45,749.86:
     for call: Strike 1 = K1 = 45,000; Strike 2 =  K2 = 46,000; Strike 3 =  K3 = 47,000
     for put: Strike 1 = K1 = 46,000; Strike 2 =  K2 = 45,000; Strike 3 =  K3 = 44,000
@@ -29,7 +29,7 @@ With Cash delivery, you receive the PL of the option at the expiry = Max(Xt - K,
 With Physical delivery, if the option is “In-The-Money” at expiry, you receive delivery of a futures contract running for the given strike. This futures contract can be managed in the Futures section.
 - For the Volatility (%) parameter, we compute an implied volatility from market prices, which gives an indication of the expected movement of the underlying.
 - Delta is a risk metric that estimates the change in price of the option, given a 1 unit change in its underlying asset. It is computed with Black Scholes formula. With Bitcoin as a domestic currency, Delta is expressed in USD. It corresponds to the number of BTCUSD future contracts you would have to sell or buy to be delta hedged.
-- Margin is the premium of the option, expressed in sats. It is computed with Black Scholes formula, and depends on the volatility and the forward price. Margin corresponds to the amount you have to pay to buy a call or a put option. This amount is deducted from your Margin Available and added to your Margin Used.
+- Margin is the premium of the option, expressed in sats. It is equal to the option premium plus a maintenance margin. The option premium is computed with Black Scholes formula, and depends on the volatility and the forward price. The maintenance margin is the minimum amount to keep your position open (it includes closing fees). This margin amount is deducted from your Margin Available and added to your Margin Used.
 - Expiry is the exact time at which the option expires, 1 day after opening the position.
 
 ## How to trade options?
@@ -44,15 +44,18 @@ In order to trade options, the steps are:
 ## How to follow the life of an option?
 
 After buying an option, you can see it in the Running section of the deal blotter, at the bottom of the screen. Each line corresponds to an option, with:
-- Expiry of the option
 - Type: Call or Put
 - Quantity in USD
 - Strike
+- Expiry of the option
+- Delta (the Delta of a portfolio of options is the sum of all its Deltas)
+- Breakeven
+- Settlement: Cash or Physical
 - Volatility in %
 - Margin
 - PL = Mark-to-Market - margin (Mark-to-Market of the option is its price with the current volatility level, other parameters remaining the same)
-- Delta (the Delta of a portfolio of options is the sum of all its Deltas)
-- Settlement: Cash or Physical
+- Maintenance Margin
+
 
 In the risk section, on the lower left hand side of the screen, you can see in the PL section your global PL (sum of the PL of your options) and your global Delta (sum of the Deltas of your options).
 

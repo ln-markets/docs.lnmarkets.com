@@ -103,9 +103,9 @@ Puede encontrar todas sus posiciones cerradas en el registro cerrado de la secci
 
 ## Operar Opciones
 
-LN Markets cotiza una oferta [bid] y una demanda [offer] (en la barra superior) y es la contraparte directa de todas las operaciones.
+LN Markets cotiza el precio de los Futuros (en la barra superior) y es la contraparte directa de todas las operaciones.
 
-En la sección de Opciones, puede negociar dos tipos de Opciones sobre el precio a plazo del BTCUSD: calls (opciones de compra) y puts (opciones de venta).
+En la sección de Opciones, puede negociar tres tipos de Opciones sobre el precio a plazo del BTCUSD: calls (opciones de compra) y puts (opciones de venta).
 
 <img :src="$withBase('/assets/options_trading.png')" alt="options_trading">
 
@@ -113,7 +113,7 @@ Queremos desmitificar las operaciones de opciones y hacerlas accesibles para tod
 - Sólo puedes comprar opciones. Si eres alcista, compra opciones de calls. Si eres bajista, compra opciones de puts. Si espera volatilidad pero no está seguro de la dirección, compre straddles.
 - Son opciones de 24 horas: expiran un día después de abrir la posición (puede cerrarlos en cualquier momento antes de que expiren).
 - Hay 3 strikes para las opciones de compra (el siguiente mil hacia abajo y los dos siguientes miles hacia arriba) y para las opciones de venta (el siguiente mil hacia arriba y los dos siguientes miles hacia abajo), y 2 strikes para las straddles (los dos comunes a call y put).
-- Al igual que con los futuros, tiene que pagar un margen para abrir el contrato de opciones (que corresponde a la prima de la opción).
+- Al igual que con los futuros, tiene que pagar un margen para abrir el contrato de opciones. Es igual a la prima de la opción más un margen de mantenimiento, que es la cantidad mínima para mantener su posición abierta (incluye tarifas de cierre). La tarifa de apertura se establece en 5 pb del nocional expresado en BTC al nivel de ejercicio (como el tarifa).
 - Para la entrega al vencimiento, puede elegir entre la entrega en efectivo (PL de la opción) o la entrega física: obtiene un contrato de futuros para el strike determinado.
 
 <img :src="$withBase('/assets/options_conf.png')" alt="options_conf">

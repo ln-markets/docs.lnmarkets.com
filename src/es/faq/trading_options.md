@@ -34,7 +34,7 @@ Con la entrega física, si la opción está "In-The-Money" al vencimiento, usted
 
 - La delta es una métrica de riesgo que estima el cambio en el precio de la opción, dado un cambio de 1 unidad en su activo subyacente. Se calcula con la fórmula de Black Scholes. Con Bitcoin como moneda doméstica, la Delta se expresa en USD. Corresponde al número de contratos futuros de BTCUSD que tendría que vender para estar cubierto por Delta. Al igual que con los futuros, tiene que pagar un margen para abrir el contrato de opciones (que corresponde a la prima de la opción).
 
-- El margen es la prima de la opción, expresada en sats. Se calcula con la fórmula de Black Scholes, y depende de la volatilidad y del precio a plazo. El margen corresponde a la cantidad que tiene que pagar para comprar una opción de compra o de venta. Esta cantidad se deduce de su Margen Disponible y se añade a su Margen Utilizado. 
+- El margen es la prima de la opción, expresada en sats. Es igual a la prima de la opción más un margen de mantenimiento. La prima de la opción se calcula con la fórmula de Black Scholes y depende de la volatilidad y el precio a plazo. El margen de mantenimiento es la cantidad mínima para mantener su posición abierta (incluye tarifas de cierre). El margen se deduce de su Margen Disponible y se añade a su Margen Utilizado. 
 
 - El vencimiento es el momento exacto en que la opción expira, 1 día después de la apertura de la posición.
 
@@ -50,15 +50,17 @@ Para operar con opciones, los pasos son los siguientes:
 ## ¿Cómo seguir la evolución de una opción?
 
 Después de comprar una opción, puede verla en el historial de operaciones, en la parte inferior de la pantalla. Cada línea corresponde a una opción, con las variables:
-- Vencimiento de la opción
 - Tipo: Call o Put
 - Cantidad en USD
 - Precio de ejercicio
-- Volatilidad en %
-- Margen
-- PL = Mark-to-Market - margen (el Mark-to-Market de la opción es su precio con el nivel de volatilidad actual, permaneciendo los demás parámetros iguales)
+- Vencimiento de la opción
 - Delta (la Delta de una cartera de opciones es la suma de todas sus Deltas)
+- Equilibrio
 - Liquidación: Efectivo o físico
+- Volatilidad en %
+- Margen Inicial
+- PL = Mark-to-Market - margen (el Mark-to-Market de la opción es su precio con el nivel de volatilidad actual, permaneciendo los demás parámetros iguales)
+- Margen de mantenimiento
 
 En la sección de riesgo, en la parte inferior izquierda de la pantalla, puede ver en la sección PL en su PL global (suma de los PL de sus opciones) y su Delta global (suma de los Deltas de sus opciones).
 
