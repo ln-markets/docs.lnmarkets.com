@@ -64,7 +64,7 @@ To enter a position, you first have to define a side (buy or sell) and the order
 
 A market order is a buy or sell order to be executed immediately.
 
-A limit order is an order to buy or sell at a specific price. A buy limit order can only be executed at the limit price or lower. A sell limit order can only be executed at the limit price or higher. A limit order is not guaranteed to execute and you can cancel this order at any time before it is executed.
+A limit order is an order to buy or sell at a specific price. A limit order is not guaranteed to execute and you can cancel this order at any time before it is executed.
 
 Then, you can define your position with a parameter, either the quantity or the margin.
 

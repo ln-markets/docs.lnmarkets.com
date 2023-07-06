@@ -99,9 +99,7 @@ A market order is a buy or sell order to be executed immediately at the offer or
 
 ## What is a limit order?
 
-A limit order is an order to buy or sell at a specific price. A buy limit order can only be executed at the limit price or lower. A sell limit order can only be executed at the limit price or higher.
-
-A limit order is not guaranteed to execute and you can cancel this order at any time before it is executed.
+A limit order is an order to buy or sell at a specific price. A limit order is not guaranteed to execute and you can cancel this order at any time before it is executed.
 
 ## What is a take profit?
 

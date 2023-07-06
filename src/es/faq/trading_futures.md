@@ -102,9 +102,7 @@ Una orden de mercado es una orden de compra o de venta, que se ejecuta inmediata
 
 ## ¿Qué es una orden limitada?
 
-Una orden limitada es una orden de compra o de venta a un precio determinado. Una orden limitada de compra sólo puede ejecutarse al precio límite o inferior. Una orden limitada de venta sólo puede ejecutarse al precio límite o superior.
-
-La ejecución de una orden limitada no está garantizada y usted puede cancelar esta orden en cualquier momento, antes de que se ejecute.
+Una orden limitada es una orden de compra o de venta a un precio determinado. La ejecución de una orden limitada no está garantizada y usted puede cancelar esta orden en cualquier momento, antes de que se ejecute.
 
 ## ¿Qué es un take profit (tomar ganancias/beneficios)?
 

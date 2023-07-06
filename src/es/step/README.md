@@ -58,6 +58,10 @@ El primer contrato que enumeramos es un CFD (Contrato por Diferencia) sobre el p
 
 Para introducir una posición, primero tiene que definir un lado (compra o venta) y el tipo de orden: orden de mercado u orden limitada.
 
+Una orden de mercado es una orden de compra o venta que se ejecutará inmediatamente.
+
+Una orden limitada es una orden para comprar o vender a un precio específico. No se garantiza la ejecución de una orden limitada y puede cancelar esta orden en cualquier momento antes de que se ejecute.
+
 A continuación, puede definir su posición con un parámetro, ya sea la cantidad o el margen.
 
 La cantidad es el número de contratos que desea negociar (1 contrato = 1 USD). Para una cantidad y un apalancamiento determinados, el margen y la liquidación se calculan automáticamente.
