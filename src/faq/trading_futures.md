@@ -74,7 +74,7 @@ When an order is executed (whether it's an opening or closing order), the fees a
 
 Your trading fee depends on the Tier in which you belong. The higher your trading volume, the lower your trading fees. Check your Profile to know your Tier.
 
-## How are computed fees?
+## How are computed trading fees?
 
 
 Initially, Total fee paid = 0 and maintenance margin = opening fee reserved + closing fee reserved, with opening fee reserved = quantity / entry price * Tier1 fee and closing fee reserved = quantity / initial liquidation price * Tier 1 fee. 
@@ -84,6 +84,16 @@ At the time of trading, Total fee paid = opening fee and maintenance margin = op
 When closing a position, Total fee paid = opening fee + closing fee and maintenance margin = opening fee reserved + closing fee reserved - opening fee - closing fee.
 
 And users will receive P&L + margin + maintenance margin.
+
+## What are the funding fees?
+
+CFD Positions are subject to a funding fee. This is because when you buy or sell a CFD, LN Markets is effectively lending you BTC.
+
+The funding fee is updated every 8 hours according to market conditions and applies to running positions (limit orders become running once they are executed).
+
+The funding fee is computed with the quantity expressed in BTC and withdrawn from each margin position every 8 hours at 4:00 am, 12:00 pm and 8:00pm UTC.
+
+Example of funding fee calculation: for a funding rate of 0.01%, a long position of Quantity = 10, with BTCUSD rate = $30,000, the funding fee is = (10/30,000)*0.01%*100,000,000 = 3 satoshis.
 
 ## What is the liquidation?
 

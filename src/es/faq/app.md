@@ -119,7 +119,7 @@ El margen de mantenimiento representa el saldo mínimo necesario para mantener a
 
 Cuando se ejecuta una orden (ya sea de apertura o de cierre), las comisiones se restan del margen de mantenimiento. En el caso de las órdenes ‘’a mercado’’, esta deducción se produce inmediatamente después de colocar la orden, ya que la ejecución es instantánea.
 
-## ¿Cómo se calculan las comisiones?
+## ¿Cómo se calculan las comisiones de trading?
 
 Inicialmente, (Comisión total pagada) = 0 y (margen de mantenimiento) = comisión de apertura reservada + comisión de cierre reservada, con comisión de apertura reservada = cantidad / precio de entrada * comisión de nivel 1 y comisión de cierre reservada = cantidad / precio de liquidación inicial * comisión de nivel 1.
 

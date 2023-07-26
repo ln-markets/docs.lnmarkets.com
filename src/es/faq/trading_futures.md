@@ -78,7 +78,7 @@ Cuando se ejecuta una orden (ya sea de apertura o de cierre), las comisiones se 
 
 Su comisión de trading depende del nivel de comisión en la que se encuentre el usuario. Cuanto más volumen haga un usuario, más baja será su comisión de negociación. Consulta tu perfil para conocer tu nivel.
 
-## ¿Cómo se calculan las comisiones?
+## ¿Cómo se calculan las comisiones de trading?
 
 Inicialmente, (Comisión total pagada) = 0 y (margen de mantenimiento) = comisión de apertura reservada + comisión de cierre reservada, con comisión de apertura reservada = cantidad / precio de entrada * comisión de nivel 1 y comisión de cierre reservada = cantidad / precio de liquidación inicial * comisión de nivel 1.
 
@@ -87,6 +87,16 @@ En el momento de la operación, Comisión total pagada = comisión de apertura y
 Al cerrar una posición, la comisión total pagada = comisión de apertura + comisión de cierre y margen de mantenimiento = comisión de apertura reservada + comisión de cierre reservada - comisión de apertura - comisión de cierre.
 
 Los usuarios recibirán P&L + margen + margen de mantenimiento.
+
+## ¿Cuáles son las tarifas de financiación (funding fees)?
+
+Las posiciones de CFD están sujetas a un cargo de financiación. Esto se debe a que cuando compra o vende un CFD, LN Markets efectivamente le presta BTC.
+
+La tarifa de financiación se actualiza cada 8 horas, de acuerdo con las condiciones del mercado y se aplica a las posiciones activas (las órdenes límite se vuelven activas una vez que se ejecutan).
+
+La tarifa de financiación se aplica a la cantidad expresada en BTC, calculada y retirada de cada posición de margen a las 4:00 am, 12:00 pm y 8:00 pm UTC. Puede ver las tarifas nocturnas anteriores y las tarifas nocturnas siguientes en su página de negociación en Trading info.
+
+Ejemplo de cálculo de tarifa nocturna: con una tasa de financiación (funding rate) de 0.01%, para una posición larga de Cantidad = 10, con tasa BTC/USD = $ 30.000, la tarifa de financiamento es = (10/30.000) * 0,01% * 100.000.000 = 3 satoshis.
 
 ## ¿Qué es liquidación?
 

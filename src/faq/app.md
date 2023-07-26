@@ -107,7 +107,7 @@ The maintenance margin represents the lowest required balance to keep your posit
 
 When an order is executed (whether it's an opening or closing order), the fees are subtracted from the maintenance margin. For market orders, this deduction occurs immediately upon placing the order, as the execution is instantaneous.
 
-## How are computed fees?
+## How are computed trading fees?
 
 Initially, Total fee paid = 0 and maintenance margin = opening fee reserved + closing fee reserved, with opening fee reserved = quantity / entry price * Tier1 fee and closing fee reserved = quantity / initial liquidation price * Tier1 fee. 
 
